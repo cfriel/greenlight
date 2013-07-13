@@ -6,3 +6,8 @@
 autopublish
 insecure
 preserve-inputs
+backbone
+accounts-base
+accounts-password
+accounts-ui
+bootstrap
