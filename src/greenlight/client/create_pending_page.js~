@@ -1,6 +1,0 @@
-Template.create_pending_page.rendered = function() {
-    Meteor.defer(function () {
-	$("#progress_text").delay(1000).text("test");
-    });
-    return "";
-}

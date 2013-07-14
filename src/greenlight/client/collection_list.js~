@@ -1,4 +1,0 @@
-Template.collection_list.templates = function()
-{
-    return PageTemplates.find({ tags : { $in : ["all"]}});
-};
