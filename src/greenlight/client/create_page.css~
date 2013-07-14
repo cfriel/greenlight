@@ -1,0 +1,4 @@
+.collection-list-container
+{
+    margin-top: 10px;
+}

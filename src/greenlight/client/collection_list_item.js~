@@ -1,0 +1,7 @@
+Template.collection_list_item.events({
+ 
+    'click' : function(e,t)
+    {
+	
+    }
+}

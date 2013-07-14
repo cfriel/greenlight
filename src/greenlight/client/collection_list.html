@@ -1,0 +1,14 @@
+<template name="collection_list">
+  <ul class="collection-list">
+    {{#each results}}
+    <div>
+      {{> collection_list_item }}
+    </div>
+    {{/each}}
+
+    <div class="pull-left">
+      {{{pagination}}}
+    </div>
+
+  </ul>
+</template>

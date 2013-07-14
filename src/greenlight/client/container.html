@@ -23,4 +23,14 @@
   {{#if page_is "preview" }}
   {{> preview_page }}
   {{/if}}
+  {{#if page_is "user_information" }}
+  {{> user_information_page }}
+  {{/if}}
+  {{#if page_is "create_pending" }}
+  {{> create_pending_page }}
+  {{/if}}
+  {{#if page_is "create_completed" }}
+  {{> create_completed_page }}
+  {{/if}}
+
 </template>

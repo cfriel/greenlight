@@ -1,0 +1,5 @@
+Template.user_information_list.collections = function()
+{
+    return UserInformation.find();
+};
+

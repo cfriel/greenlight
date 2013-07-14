@@ -1,0 +1,43 @@
+ul.collection-list
+{
+   background: #F9F9F9;
+}
+
+ul.collection-list li {
+    position: relative;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden; 
+    border-bottom: 1px solid #CCC;
+    margin: 0px;
+}
+
+ul.collection-list  li div {
+    position: absolute;
+    top: 0px;
+}
+
+ul.collection-list li .left {
+    left: 0;
+    width: 100px;
+    font-weight: bold;
+}
+
+ul.collection-list li .right {
+    right: 0;
+}
+
+ul.collection-list li .center {
+    left: 150px;
+    right: 100px;
+}
+
+ul.collection-list li .right img {
+    height: 20px;
+    width: 20px;
+}
+
+ul.collection-list li.selected
+{
+    background: #fff2a8;
+}

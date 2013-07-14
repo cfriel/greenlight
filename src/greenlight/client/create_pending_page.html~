@@ -1,0 +1,5 @@
+<template name="create_pending_page">
+  <div class="span12">
+    <h2>Creating your site</h2>
+  </div>
+</template>

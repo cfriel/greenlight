@@ -1,7 +1,11 @@
 PageTemplates = new Meteor.Collection("page_templates");
 SiteTemplates = new Meteor.Collection("site_templates");
+DataCollections = new Meteor.Collection("data_collections");
+UserInformation = new Meteor.Collection("user_information");
 
 if (Meteor.isClient) {
+
+
     Template.user_logged_in.events({
 	'click #logout' : function(e,t)
 	{
@@ -12,15 +16,11 @@ if (Meteor.isClient) {
     Template.login.events({
 	
 	'submit #login-form' : function(e, t){
+
 	    e.preventDefault();
-	    // retrieve the input field values
-	    var email = t.find('#login-email').value
-            , password = t.find('#login-password').value;
+	    var email = t.find('#login-email').value;
+            var password = t.find('#login-password').value;
 	    
-            // Trim and validate your fields here.... 
-	    
-            // If validation passes, supply the appropriate fields to the
-            // Meteor.loginWithPassword() function.
             Meteor.loginWithPassword(email, password, function(err){
 		if (err)
 		{
@@ -35,39 +35,53 @@ if (Meteor.isClient) {
 
 Template.register.events({
     'submit #register-form' : function(e, t) {
-      e.preventDefault();
-      var email = t.find('#account-email').value
-        , password = t.find('#account-password').value;
+	e.preventDefault();
+	var email = t.find('#account-email').value;
+	var password = t.find('#account-password').value;
 
-        // Trim and validate the input
-
-      Accounts.createUser({email: email, password : password}, function(err){
-          if (err) {
-            // Inform the user that account creation failed
-          } else {
-            // Success. Account has been created and the user
-            // has logged in successfully. 
-          }
-
+	Accounts.createUser({email: email, password : password}, function(err){
+            if (err) {
+            } else {
+            }
+	    
         });
-
-      return false;
+	
+	return false;
     }
-  });
-
+});
+    
     var Router = Backbone.Router.extend({
-
+	
 	routes: {
 	    "":			"main",
 	    "about":"about",
 	    "tour":"tour",
 	    "help":		"help",
 	    "create": "create",
+	    "create/collection/:page": "create_collection",
 	    "login": "login",
 	    "register":"register",
-	    "preview/:site_template": "preview"
+	    "user_information" : "user_information",
+	    "preview/:site_template": "preview",
+	    "create/pending" : "create_pending",
+	    "create/completed" : "create_completed"
+
 	},
 
+	create_completed : function()
+	{
+	    Session.set("page", "create_completed");
+	},
+
+	create_pending : function()
+	{
+	    Session.set("page", "create_pending");
+	},
+
+	user_information: function()
+	{
+	    Session.set("page", "user_information");
+	},
 
 	register: function()
 	{
@@ -78,10 +92,17 @@ Template.register.events({
 	{
 	    Session.set("page", "login");
 	},
+	
+	create_collection: function(index)
+	{
+	    Session.set("page", "create");
+	    Session.set("collection_list_page", parseInt(index));
+	},
 
 	create: function()
 	{
 	    Session.set("page", "create");
+	    Session.set("collection_list_page", 1);
 	},
 
 	about: function()

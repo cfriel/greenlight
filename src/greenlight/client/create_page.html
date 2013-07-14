@@ -1,27 +1,14 @@
 <template name="create_page">
-<div class="span3">
-<div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li class="active"><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li class="nav-header">Sidebar</li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li class="nav-header">Sidebar</li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-            </ul>
-          </div>
-</div>
-<div class="span9">
-hello world
-</div>
+  <div class="span12">
+    <h2>Choose your Data</h2>
+    <span>Select the data collections to use with your template below.</span>
+    <div class="collection-list-container">
+      {{> collection_list }}
+      <button id="create" class="btn btn-primary pull-right" type="button">
+	<i class="icon-ok icon-white"/>
+	<span>Create</span>
+      </button>
+      <button id="cancel" class="btn pull-right" type="button">Cancel</button>
+    </div>
+  </div>
 </template>

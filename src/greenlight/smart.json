@@ -1,0 +1,8 @@
+{
+  "packages": {
+    "paginated-subscription": {},
+    "pagination": {
+    		  "git":"https://github.com/cfriel/meteor-pagination"
+    }
+  }
+}
