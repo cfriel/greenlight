@@ -15,11 +15,33 @@ A data-centric web platform built on top of mongodb.
 
 # Getting Started
 
-To run the project, you'll need to have mongodb installed and you'll need to run meteor.
+To run the project, you'll need to have mongodb installed and you'll need to run meteorite / meteor.  You'll also need node / npm installed.
+
+## Install Meteorite
+
+Instructions for installing meteorite are available from https://github.com/oortcloud/meteorite.
+
+Short version, do this -
+
+``` sh
+npm install -g meteorite
+```
 
 ## Install Meteor
 
 Instructions for installing meteor are available from https://github.com/meteor/meteor
+
+Long story short, do this -
+
+``` sh
+curl https://install.meteor.com | /bin/sh
+```
+
+## Update the meteorite dependencies
+
+``` sh
+mrt update
+```
 
 ## Run the Meteor server
 
