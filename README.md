@@ -46,3 +46,9 @@ mrt update
 ## Run the Meteor server
 
 In the src/greenlight directory, run the command "meteor".  This will launch the server listening at http://localhost:3000
+
+``` sh
+cd src
+cd greenlight
+meteor
+```
