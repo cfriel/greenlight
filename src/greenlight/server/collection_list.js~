@@ -1,8 +1,0 @@
-DataCollections = new Meteor.Collection("data_collections");
-
-if (Meteor.isServer) {
-    Meteor.startup(function () {
-	DataCollections.remove({});
-	DataCollections.insert({tags: ["all"], name: "Template 1"});
-    });
-}
