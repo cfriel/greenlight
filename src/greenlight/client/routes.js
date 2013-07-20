@@ -11,12 +11,21 @@ var Router = Backbone.Router.extend({
 
 	"user_information" : "user_information",
 	"preview/:site_template": "preview",
+
 	"create/select_collections" : "create_select_collections",
 	"create/select_collections/:page": "create_select_collections_index",
 	"create/choose_template" : "create_choose_template", 
 	"create/choose_template/:page" : "create_choose_template_index", 
+	"create/select_url" : "create_select_url",
+	"create/add_users" : "create_add_users",
+
 	"create/pending" : "create_pending",
 	"create/completed" : "create_completed"
+    },
+
+    create_select_url : function()
+    {
+	Session.set("page", "create_select_url");
     },
 
     create_select_collections : function()
