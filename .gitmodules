@@ -4,3 +4,6 @@
 [submodule "src/third-party/meteor-jquery-masonry"]
 	path = src/third-party/meteor-jquery-masonry
 	url = git://github.com/cfriel/meteor-jquery-masonry.git
+[submodule "src/templates/greenlight-analytics"]
+	path = src/templates/greenlight-analytics
+	url = git://github.com/cfriel/greenlight-analytics.git
