@@ -1,0 +1,6 @@
+[submodule "src/third-party/meteor-pagination"]
+	path = src/third-party/meteor-pagination
+	url = git://github.com/cfriel/meteor-pagination.git
+[submodule "src/third-party/meteor-jquery-masonry"]
+	path = src/third-party/meteor-jquery-masonry
+	url = git://github.com/cfriel/meteor-jquery-masonry.git
