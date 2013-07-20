@@ -7,6 +7,8 @@ var Router = Backbone.Router.extend({
 	"help":	"help",
 	"login" : "login",
 	"register" : "register",
+	"create" : "create",
+
 	"user_information" : "user_information",
 	"preview/:site_template": "preview",
 	"create/select_collections" : "create_select_collections",
@@ -37,6 +39,11 @@ var Router = Backbone.Router.extend({
     {
 	Session.set("page", "create_choose_template");
 	Session.set("choose_template_page", parseInt(index));
+    },
+
+    create : function()
+    {
+	this.create_choose_template();
     },
 
     create_completed : function()
@@ -90,3 +97,4 @@ var Router = Backbone.Router.extend({
 });
 
 var app = new Router;
+
