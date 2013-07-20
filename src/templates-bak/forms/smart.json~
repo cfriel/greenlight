@@ -1,9 +1,0 @@
-{
-	"name": "greenlight forms",
-	"description": "Greenlight forms site template",
-	"homepage": "https://github.com/cfriel/greenlight-forms",
-	"author": "cfriel",
-	"version": "0.1.0",
-	"git": "https://github.com/cfriel/greenlight/src/templates/greenlight-forms.git",
-	"packages": {}
-}
