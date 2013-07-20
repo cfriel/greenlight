@@ -7,3 +7,6 @@
 [submodule "src/templates/greenlight-analytics"]
 	path = src/templates/greenlight-analytics
 	url = git://github.com/cfriel/greenlight-analytics.git
+[submodule "src/templates/greenlight-forms"]
+	path = src/templates/greenlight-forms
+	url = https://github.com/cfriel/greenlight-forms.git
