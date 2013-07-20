@@ -6,7 +6,12 @@
       "pagination": {
         "git": "https://github.com/cfriel/meteor-pagination",
         "branch": "master"
-      }
+      },
+      "jquery-masonry": {
+        "git": "https://github.com/cfriel/meteor-jquery-masonry",
+        "branch": "master"
+      },
+      "jquery-ui": {}
     },
     "packages": {
       "paginated-subscription": {
@@ -18,6 +23,16 @@
         "git": "https://github.com/cfriel/meteor-pagination",
         "branch": "master",
         "commit": "07f3156d52639a3c95cb0c0ca5fefdbdf6a64272"
+      },
+      "jquery-masonry": {
+        "git": "https://github.com/cfriel/meteor-jquery-masonry",
+        "branch": "master",
+        "commit": "2e468f1def679438936989d434a6bdedfacea932"
+      },
+      "jquery-ui": {
+        "git": "https://github.com/TimHeckel/meteor-jquery-ui.git",
+        "tag": "v1.9.2",
+        "commit": "c437d45edcf1367df8d5ffa8bad2867758030bd2"
       }
     }
   }

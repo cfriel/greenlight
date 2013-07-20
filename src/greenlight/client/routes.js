@@ -1,21 +1,44 @@
 var Router = Backbone.Router.extend({
     
     routes: {
-	"":			"main",
-	"about":"about",
-	"tour":"tour",
-	"help":		"help",
-	"create": "create",
-	"create/collection/:page": "create_collection",
-	"login": "login",
-	"register":"register",
+	"" : "main",
+	"about" : "about",
+	"tour" : "tour",
+	"help":	"help",
+	"login" : "login",
+	"register" : "register",
 	"user_information" : "user_information",
 	"preview/:site_template": "preview",
+	"create/select_collections" : "create_select_collections",
+	"create/select_collections/:page": "create_select_collections_index",
+	"create/choose_template" : "create_choose_template", 
+	"create/choose_template/:page" : "create_choose_template_index", 
 	"create/pending" : "create_pending",
 	"create/completed" : "create_completed"
-	
     },
-    
+
+    create_select_collections : function()
+    {
+	this.create_select_collections_index("1");
+    },
+
+    create_select_collections_index: function(index)
+    {
+	Session.set("page", "create_select_collection");
+	Session.set("collection_list_page", parseInt(index));
+    },
+
+    create_choose_template : function()
+    {
+	this.create_choose_template_index("1");
+    },
+        
+    create_choose_template_index : function(index)
+    {
+	Session.set("page", "create_choose_template");
+	Session.set("choose_template_page", parseInt(index));
+    },
+
     create_completed : function()
     {
 	Session.set("page", "create_completed");
@@ -41,17 +64,6 @@ var Router = Backbone.Router.extend({
 	Session.set("page", "login");
     },
     
-    create_collection: function(index)
-    {
-	Session.set("page", "create");
-	Session.set("collection_list_page", parseInt(index));
-    },
-    
-    create: function()
-    {
-	Session.set("page", "create");
-	Session.set("collection_list_page", 1);
-    },
     
     about: function()
     {

@@ -4,9 +4,6 @@
   {{/if}}  
   {{#if page_is "register" }}
   {{> register_page }}
-  {{/if}}  
-  {{#if page_is "create" }}
-  {{> create_page }}
   {{/if}}
   {{#if page_is "home" }}
   {{> home_page }}
@@ -32,5 +29,10 @@
   {{#if page_is "create_completed" }}
   {{> create_completed_page }}
   {{/if}}
-
+  {{#if page_is "create_choose_template" }}
+  {{> create_choose_template_page }}
+  {{/if}}
+  {{#if page_is "create_select_collection" }}
+  {{> create_page }}
+  {{/if}}
 </template>

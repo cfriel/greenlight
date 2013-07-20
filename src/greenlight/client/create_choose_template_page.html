@@ -1,0 +1,29 @@
+<template name="create_choose_template_page">
+  
+  <div>
+
+    <span>
+      choose template    
+    </span>
+    <div class="pull-right">
+    <button id="next" class="btn btn-primary pull-right" type="button">
+      <i class="icon-ok icon-white"/>
+      <span>Next</span>
+    </button>
+    <button id="cancel" class="btn pull-right" type="button">Cancel</button>
+    </div>
+  </div>
+
+  <div id="template_container">
+    {{#each results}}
+    <div/>
+    {{> site_template_item }}
+    {{/each}}
+  </div>
+
+  <div class="pull-left">
+    {{{pagination}}}
+  </div>
+
+  {{ rendered }}
+</template>

@@ -2,7 +2,11 @@
   "packages": {
     "paginated-subscription": {},
     "pagination": {
-    		  "git":"https://github.com/cfriel/meteor-pagination"
-    }
+      "git": "https://github.com/cfriel/meteor-pagination"
+    },
+    "jquery-masonry": {
+      "git": "https://github.com/cfriel/meteor-jquery-masonry"
+    },
+    "jquery-ui": {}
   }
 }
