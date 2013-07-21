@@ -10,3 +10,6 @@
 [submodule "src/templates/greenlight-forms"]
 	path = src/templates/greenlight-forms
 	url = https://github.com/cfriel/greenlight-forms.git
+[submodule "src/templates/greenlight-services"]
+	path = src/templates/greenlight-services
+	url = https://github.com/cfriel/greenlight-services.git
