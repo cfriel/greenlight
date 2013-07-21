@@ -7,6 +7,10 @@
     "jquery-masonry": {
       "git": "https://github.com/cfriel/meteor-jquery-masonry"
     },
-    "jquery-ui": {}
+    "jquery-ui": {},
+    "greenlight-services": {
+      "path": "../templates/greenlight-services"
+    },
+    "npm": {}
   }
 }
