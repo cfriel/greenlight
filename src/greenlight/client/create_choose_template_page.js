@@ -1,7 +1,11 @@
 Template.create_choose_template_page.events({
     'click #next' : function(e,t)
     {
-	window.location.href = "/create/select_collections";
+	$('#template_container .selected').each(function(){
+	    Session.set("selected_template", $(this).attr("data-id"));
+	});
+
+	app.navigate('create/select_collections', {trigger: true});
     }
 });
 

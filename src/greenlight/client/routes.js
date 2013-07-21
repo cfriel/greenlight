@@ -105,5 +105,5 @@ var Router = Backbone.Router.extend({
     }
 });
 
-var app = new Router;
+app = new Router;
 

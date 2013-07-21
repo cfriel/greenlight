@@ -1,6 +1,6 @@
 Template.create_page.events({
     'click #create' : function(e,t)
     {
-	window.location.href = "/create/select_url";
+	app.navigate('/create/select_url', {trigger: true});
     }
 });
