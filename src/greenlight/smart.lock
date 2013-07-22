@@ -15,6 +15,9 @@
       "greenlight-services": {
         "path": "../templates/greenlight-services"
       },
+      "examples": {
+        "path": "../examples/databases"
+      },
       "npm": {}
     },
     "packages": {
@@ -40,6 +43,9 @@
       },
       "greenlight-services": {
         "path": "../templates/greenlight-services"
+      },
+      "examples": {
+        "path": "../examples/databases"
       },
       "npm": {
         "git": "https://github.com/arunoda/meteor-npm.git",

@@ -11,6 +11,9 @@
     "greenlight-services": {
       "path": "../templates/greenlight-services"
     },
+    "examples" : {
+      "path" : "../examples/databases"
+    },  
     "npm": {}
   }
 }
