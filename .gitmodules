@@ -13,3 +13,6 @@
 [submodule "src/templates/greenlight-services"]
 	path = src/templates/greenlight-services
 	url = https://github.com/cfriel/greenlight-services.git
+[submodule "src/third-party/variety"]
+	path = src/third-party/variety
+	url = https://github.com/cfriel/variety.git
