@@ -1,4 +1,4 @@
-console.log("initializing people");
+//console.log("initializing people");
 
 var fs = Npm.require('fs');
 var path = Npm.require('path');
@@ -9,11 +9,13 @@ var __filename = module.uri;
 var __dirname = path.dirname(__filename);
 var dir = path.resolve(__dirname, "../examples/databases/people");
 
+var numImages = 190;
+
 csv()
     .from.path(path.resolve(dir, 'people.csv'), { delimiter: ',', escape: '"', columns: true })
     .to.array( function(data, count){
 	
-	console.log("read into array " + count + " records");
+	//console.log("read into array " + count + " records");
 	
 	var people = data;
 	var mongo = Npm.require('mongodb');
@@ -39,7 +41,7 @@ csv()
 		var start = i * batchSize;
 		var end = Math.min(people.length-1, (i+1)*batchSize);
 		
-		console.log("Inserting batch from " + i*batchSize + " to " + end + "...");	   
+		//console.log("Inserting batch from " + i*batchSize + " to " + end + "...");	   
 		
 		db.collection('people').insert(people.slice(i*batchSize, end), {w:1}, function(err, result) {});
 	    }	

@@ -1,4 +1,4 @@
-console.log("Creating zips object");
+//console.log("Creating zips object");
 
 var Zips = function(){
 
@@ -29504,7 +29504,7 @@ Zips.prototype.load = function()
 	    var start = i * batchSize;
 	    var end = Math.min(zips.length-1, (i+1)*batchSize);
 
-	    console.log("Inserting batch from " + i*batchSize + " to " + end + "...");	   
+	    //console.log("Inserting batch from " + i*batchSize + " to " + end + "...");	   
 
 	   
 	    db.collection('zips').insert(zips.slice(i*batchSize, end), {w:1}, function(err, result) {

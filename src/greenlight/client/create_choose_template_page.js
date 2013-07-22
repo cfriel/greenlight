@@ -5,7 +5,7 @@ Template.create_choose_template_page.events({
 	    Session.set("selected_template", $(this).attr("data-id"));
 	});
 
-	app.navigate('create/select_collections', {trigger: true});
+	Meteor.Router.to('/create/select_collections');
     }
 });
 

@@ -1,6 +1,5 @@
 {
   "packages": {
-    "paginated-subscription": {},
     "pagination": {
       "git": "https://github.com/cfriel/meteor-pagination"
     },
@@ -11,9 +10,12 @@
     "greenlight-services": {
       "path": "../templates/greenlight-services"
     },
+    "greenlight-forms": {
+      "path": "../templates/greenlight-forms"
+    },
     "examples" : {
       "path" : "../examples/databases"
-    },  
+    },
     "npm": {}
   }
 }

@@ -6,7 +6,7 @@ var SampleData = function()
     {
 	var self = this;
 	
-	console.log(self);
+	//console.log(self);
 	
 	var mongo = Npm.require('mongodb');
 	
@@ -27,7 +27,7 @@ var SampleData = function()
 		
 		for(var i = 0; i < databases.length; i++)
 		{
-		    console.log(databases[i]);
+		    //console.log(databases[i]);
 		    
 		    if(databases[i].name == self._databaseName)
 		    {
@@ -37,11 +37,11 @@ var SampleData = function()
 		
 		if(databaseFound)
 		{
-		    console.log(self._databaseName + " exists");
+		    //console.log(self._databaseName + " exists");
 		}
 		else
 		{
-		    console.log(self._databaseName + " doesn't exist");
+		    //console.log(self._databaseName + " doesn't exist");
 		}
 		
 	    });

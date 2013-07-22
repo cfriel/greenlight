@@ -15,7 +15,7 @@ Template.create_pending_page.rendered = function() {
 			setTimeout(function(){
 			    $("#progress_text").text("Ready to go!");
 			    $("#progress_bar").css("width", "100%");
-			    	app.navigate('/create/completed', {trigger: true});
+			    Meteor.Router.to('/create/completed');
 			}, 2000);
 		    }, 2000);
 		}, 2000);

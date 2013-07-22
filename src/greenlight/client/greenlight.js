@@ -52,7 +52,7 @@ Template.register.events({
     
     Meteor.startup(function(){
 	Session.set("selectedTemplate", "all");
-	Backbone.history.start({pushState: true});
+	//Backbone.history.start({pushState: true});
     });
     
     Template.page_template_browser.browsable_templates = function()
