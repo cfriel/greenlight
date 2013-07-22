@@ -1,3 +1,9 @@
+SiteTemplates = new Meteor.Collection("site_templates");
+
+Deps.autorun(function(){
+    Meteor.subscribe("site_templates");
+});
+
 Template.create_choose_template_page.events({
     'click #next' : function(e,t)
     {
@@ -20,6 +26,7 @@ Template.create_choose_template_page.rendered = function(){
 Template.create_choose_template_page.results = function () {
     Pagination.perPage(10);
     Pagination.currentPage(Session.get("choose_template_page"));
+    
     return Pagination.collection(SiteTemplates.find({}).fetch());
 }
 

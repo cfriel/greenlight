@@ -1,6 +1,4 @@
 PageTemplates = new Meteor.Collection("page_templates");
-SiteTemplates = new Meteor.Collection("site_templates");
-DataCollections = new Meteor.Collection("data_collections");
 UserInformation = new Meteor.Collection("user_information");
 
 if (Meteor.isClient) {
