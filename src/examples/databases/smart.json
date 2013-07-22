@@ -1,0 +1,10 @@
+{
+	"name": "greenlight sample data",
+	"description": "Greenlight sample data",
+	"homepage": "https://github.com/cfriel/greenlight",
+	"author": "cfriel",
+	"version": "0.1.0",
+	"git": "https://github.com/cfriel/greenlight.git",
+	"packages": {
+	}
+}
