@@ -11,6 +11,9 @@
         "branch": "master"
       },
       "jquery-ui": {},
+      "greenlight-analytics": {
+        "path": "../templates/greenlight-analytics"
+      },
       "greenlight-services": {
         "path": "../templates/greenlight-services"
       },
@@ -37,6 +40,9 @@
         "git": "https://github.com/TimHeckel/meteor-jquery-ui.git",
         "tag": "v1.9.2",
         "commit": "c437d45edcf1367df8d5ffa8bad2867758030bd2"
+      },
+      "greenlight-analytics": {
+        "path": "../templates/greenlight-analytics"
       },
       "greenlight-services": {
         "path": "../templates/greenlight-services"

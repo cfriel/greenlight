@@ -16,3 +16,6 @@
 [submodule "src/third-party/variety"]
 	path = src/third-party/variety
 	url = https://github.com/cfriel/variety.git
+[submodule "src/third-party/meteor-slickgrid"]
+	path = src/third-party/meteor-slickgrid
+	url = https://github.com/cfriel/meteor-slickgrid.git
