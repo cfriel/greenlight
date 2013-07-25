@@ -7,6 +7,9 @@
       "git": "https://github.com/cfriel/meteor-jquery-masonry"
     },
     "jquery-ui": {},
+    "meteor-select2" : {
+       "path" : "../third-party/meteor-select2"
+    },  
     "greenlight-analytics" : {
        "path" : "../templates/greenlight-analytics"
     },

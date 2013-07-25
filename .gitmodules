@@ -19,3 +19,6 @@
 [submodule "src/third-party/meteor-slickgrid"]
 	path = src/third-party/meteor-slickgrid
 	url = https://github.com/cfriel/meteor-slickgrid.git
+[submodule "src/third-party/meteor-select2"]
+	path = src/third-party/meteor-select2
+	url = https://github.com/cfriel/meteor-select2.git
