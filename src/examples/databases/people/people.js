@@ -1,5 +1,3 @@
-//console.log("initializing people");
-
 var fs = Npm.require('fs');
 var path = Npm.require('path');
 var csv = Npm.require('csv');

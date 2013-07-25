@@ -10,6 +10,7 @@ Package.on_use(function (api, where) {
     api.add_files('sample_data.js', 'server');
     api.add_files('zips/zips.js', 'server');
     api.add_files('people/people.js', 'server');
+    api.add_files('crunchbase/crunchbase.js', 'server');
 });
 
 Package.on_test(function (api) {
