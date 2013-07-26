@@ -28,3 +28,9 @@
 [submodule "src/templates/greenlight-feeds"]
 	path = src/templates/greenlight-feeds
 	url = https://github.com/cfriel/greenlight-feeds.git
+[submodule "src/templates/greenlight-sheets"]
+	path = src/templates/greenlight-sheets
+	url = https://github.com/cfriel/greenlight-sheets.git
+[submodule "src/templates/greenlight-visualization"]
+	path = src/templates/greenlight-visualization
+	url = https://github.com/cfriel/greenlight-visualization.git

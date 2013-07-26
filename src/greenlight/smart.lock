@@ -17,6 +17,9 @@
       "greenlight-create": {
         "path": "../templates/greenlight-create"
       },
+      "greenlight-sheets": {
+        "path": "../templates/greenlight-sheets"
+      },
       "greenlight-analytics": {
         "path": "../templates/greenlight-analytics"
       },
@@ -52,6 +55,9 @@
       },
       "greenlight-create": {
         "path": "../templates/greenlight-create"
+      },
+      "greenlight-sheets": {
+        "path": "../templates/greenlight-sheets"
       },
       "greenlight-analytics": {
         "path": "../templates/greenlight-analytics"
