@@ -1,4 +1,3 @@
-PageTemplates = new Meteor.Collection("page_templates");
 UserInformation = new Meteor.Collection("user_information");
 
 if (Meteor.isClient) {
@@ -30,38 +29,26 @@ if (Meteor.isClient) {
 	}
     });
 
-Template.register.events({
-    'submit #register-form' : function(e, t) {
-	e.preventDefault();
-	var email = t.find('#account-email').value;
-	var password = t.find('#account-password').value;
-
-	Accounts.createUser({email: email, password : password}, function(err){
-            if (err) {
-            } else {
-            }
+    Template.register.events({
+	'submit #register-form' : function(e, t) {
+	    e.preventDefault();
+	    var email = t.find('#account-email').value;
+	    var password = t.find('#account-password').value;
 	    
-        });
-	
-	return false;
-    }
-});
-    
+	    Accounts.createUser({email: email, password : password}, function(err){
+		if (err) {
+		} else {
+		}
+		
+            });
+	    
+	    return false;
+	}
+    });    
     
     Meteor.startup(function(){
-	Session.set("selectedTemplate", "all");
-	//Backbone.history.start({pushState: true});
     });
     
-    Template.page_template_browser.browsable_templates = function()
-    {
-	return PageTemplates.find({ tags : { $in : ["all"]}});
-    };
-    
-    Template.container.page_is = function(page)
-    {
-	return Session.get("page") == page;
-    };
 
 }
 

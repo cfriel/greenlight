@@ -22,3 +22,6 @@
 [submodule "src/third-party/meteor-select2"]
 	path = src/third-party/meteor-select2
 	url = https://github.com/cfriel/meteor-select2.git
+[submodule "src/templates/greenlight-create"]
+	path = src/templates/greenlight-create
+	url = https://github.com/cfriel/greenlight-create.git

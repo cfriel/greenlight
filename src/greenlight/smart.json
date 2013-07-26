@@ -10,6 +10,9 @@
     "meteor-select2" : {
        "path" : "../third-party/meteor-select2"
     },  
+    "greenlight-create" : {
+       "path" : "../templates/greenlight-create"
+    },	
     "greenlight-analytics" : {
        "path" : "../templates/greenlight-analytics"
     },
