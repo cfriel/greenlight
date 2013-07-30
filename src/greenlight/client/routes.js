@@ -1,3 +1,4 @@
 Meteor.Router.add({
-    "/": "home_page"    
+    "/": "home_page",
+    "/register" : "register_page"
 })
