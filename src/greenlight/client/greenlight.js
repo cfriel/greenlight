@@ -1,4 +1,4 @@
-UserInformation = new Meteor.Collection("user_information");
+Sites = new Meteor.Collection("sites");
 
 if (Meteor.isClient) {
 
@@ -47,6 +47,7 @@ if (Meteor.isClient) {
     });    
     
     Meteor.startup(function(){
+	
     });
     
 
