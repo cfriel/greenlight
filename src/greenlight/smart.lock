@@ -2,15 +2,14 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "pagination": {
-        "git": "https://github.com/cfriel/meteor-pagination",
-        "branch": "master"
-      },
       "jquery-masonry": {
         "git": "https://github.com/cfriel/meteor-jquery-masonry",
         "branch": "master"
       },
       "jquery-ui": {},
+      "pagination": {
+        "path": "../third-party/meteor-pagination"
+      },
       "meteor-select2": {
         "path": "../third-party/meteor-select2"
       },
@@ -35,11 +34,6 @@
       "npm": {}
     },
     "packages": {
-      "pagination": {
-        "git": "https://github.com/cfriel/meteor-pagination",
-        "branch": "master",
-        "commit": "b38525f26e5f617e60f5dd7d167bfead42dd9860"
-      },
       "jquery-masonry": {
         "git": "https://github.com/cfriel/meteor-jquery-masonry",
         "branch": "master",
@@ -49,6 +43,9 @@
         "git": "https://github.com/TimHeckel/meteor-jquery-ui.git",
         "tag": "v1.9.2",
         "commit": "c437d45edcf1367df8d5ffa8bad2867758030bd2"
+      },
+      "pagination": {
+        "path": "../third-party/meteor-pagination"
       },
       "meteor-select2": {
         "path": "../third-party/meteor-select2"

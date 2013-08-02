@@ -1,12 +1,12 @@
 {
   "packages": {
-    "pagination": {
-      "git": "https://github.com/cfriel/meteor-pagination"
-    },
     "jquery-masonry": {
       "git": "https://github.com/cfriel/meteor-jquery-masonry"
     },
     "jquery-ui": {},
+    "pagination": {
+       "path": "../third-party/meteor-pagination"
+    },
     "meteor-select2" : {
        "path" : "../third-party/meteor-select2"
     },  
