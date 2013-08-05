@@ -34,3 +34,6 @@
 [submodule "src/packages/greenlight-visualization"]
 	path = src/packages/greenlight-visualization
 	url = https://github.com/cfriel/greenlight-visualization.git
+[submodule "src/packages/greenlight-sites"]
+	path = src/packages/greenlight-sites
+	url = https://github.com/cfriel/greenlight-sites.git
