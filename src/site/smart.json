@@ -1,0 +1,36 @@
+{
+  "packages": {
+    "greenlight" : {
+       "path" : "../packages/greenlight"
+    },
+    "jquery-masonry": {
+      "git": "https://github.com/cfriel/meteor-jquery-masonry"
+    },
+    "jquery-ui": {},
+    "pagination": {
+       "path": "../third-party/meteor-pagination"
+    },
+    "meteor-select2" : {
+       "path" : "../third-party/meteor-select2"
+    },  
+    "greenlight-create" : {
+       "path" : "../packages/greenlight-create"
+    },	
+    "greenlight-sheets" : {
+       "path" : "../packages/greenlight-sheets"
+    },
+    "greenlight-analytics" : {
+       "path" : "../packages/greenlight-analytics"
+    },
+    "greenlight-services": {
+      "path": "../packages/greenlight-services"
+    },
+    "greenlight-forms": {
+      "path": "../packages/greenlight-forms"
+    },
+    "examples" : {
+      "path" : "../examples/databases"
+    },
+    "npm": {}
+  }
+}

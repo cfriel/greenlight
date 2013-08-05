@@ -1,0 +1,39 @@
+ul.user-information-list
+{
+   border-top: 1px solid #CCC;
+}
+
+ul.user-information-list li {
+    position: relative;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden; 
+    border-bottom: 1px solid #CCC;
+    margin: 0px;
+}
+
+ul.user-information-list  li div {
+    position: absolute;
+    top: 0px;
+}
+
+ul.user-information-list li .left {
+    left: 0;
+    width: 100px;
+    font-weight: bold;
+}
+
+ul.user-information-list li .right {
+    right: 0;
+}
+
+ul.user-information-list li .center {
+    left: 110px;
+    right: 100px;
+}
+
+ul.user-information-list li .right img {
+    height: 25px;
+    width: 25px;
+}
+

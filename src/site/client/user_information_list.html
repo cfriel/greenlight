@@ -1,0 +1,9 @@
+<template name="user_information_list">
+  <ul class="user-information-list">
+    {{#each user_information}}
+    <div>
+      {{> user_information_list_item }}
+    </div>
+    {{/each}}
+  </ul>
+</template>
