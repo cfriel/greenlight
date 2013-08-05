@@ -28,6 +28,11 @@ if(Meteor.isClient)
     {
 	console.log("registering " + name + " with version " + version);
 
+	if(template.routes)
+	{
+	    Meteor.Router.add(template.routes);
+	}
+
 	var f = function(n, v, t)
 	{
 	    Deps.autorun(function(){
