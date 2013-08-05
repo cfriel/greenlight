@@ -2,6 +2,9 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
+      "greenlight": {
+        "path": "../packages/greenlight"
+      },
       "jquery-masonry": {
         "git": "https://github.com/cfriel/meteor-jquery-masonry",
         "branch": "master"
@@ -14,19 +17,19 @@
         "path": "../third-party/meteor-select2"
       },
       "greenlight-create": {
-        "path": "../templates/greenlight-create"
+        "path": "../packages/greenlight-create"
       },
       "greenlight-sheets": {
-        "path": "../templates/greenlight-sheets"
+        "path": "../packages/greenlight-sheets"
       },
       "greenlight-analytics": {
-        "path": "../templates/greenlight-analytics"
+        "path": "../packages/greenlight-analytics"
       },
       "greenlight-services": {
-        "path": "../templates/greenlight-services"
+        "path": "../packages/greenlight-services"
       },
       "greenlight-forms": {
-        "path": "../templates/greenlight-forms"
+        "path": "../packages/greenlight-forms"
       },
       "examples": {
         "path": "../examples/databases"
@@ -34,6 +37,9 @@
       "npm": {}
     },
     "packages": {
+      "greenlight": {
+        "path": "../packages/greenlight"
+      },
       "jquery-masonry": {
         "git": "https://github.com/cfriel/meteor-jquery-masonry",
         "branch": "master",
@@ -51,19 +57,19 @@
         "path": "../third-party/meteor-select2"
       },
       "greenlight-create": {
-        "path": "../templates/greenlight-create"
+        "path": "../packages/greenlight-create"
       },
       "greenlight-sheets": {
-        "path": "../templates/greenlight-sheets"
+        "path": "../packages/greenlight-sheets"
       },
       "greenlight-analytics": {
-        "path": "../templates/greenlight-analytics"
+        "path": "../packages/greenlight-analytics"
       },
       "greenlight-services": {
-        "path": "../templates/greenlight-services"
+        "path": "../packages/greenlight-services"
       },
       "greenlight-forms": {
-        "path": "../templates/greenlight-forms"
+        "path": "../packages/greenlight-forms"
       },
       "examples": {
         "path": "../examples/databases"
