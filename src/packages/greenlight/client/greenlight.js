@@ -74,6 +74,11 @@ if(Meteor.isClient)
 				
 				t.routes['/'+site.url+key]=route;
     			    }
+
+			    if(t.default_route)
+			    {
+				t.routes['/' + site.url] = t.default_route['/'];
+			    }
 			}
 			
 			Meteor.Router.add(t.routes);

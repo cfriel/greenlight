@@ -15,7 +15,7 @@ greenlight.prototype.register_template = function(name, version, template)
 
     if(!SiteTemplates.findOne( { name: name, version: version }))
     {
-	SiteTemplates.insert( { name : name, version : version, template: template } );
+	SiteTemplates.insert( { name : name, version : version } );
     }
     
     // var f = function(n, v, t)
