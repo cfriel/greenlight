@@ -4,14 +4,14 @@
 [submodule "src/third-party/meteor-jquery-masonry"]
 	path = src/third-party/meteor-jquery-masonry
 	url = git://github.com/cfriel/meteor-jquery-masonry.git
-[submodule "src/templates/greenlight-analytics"]
-	path = src/templates/greenlight-analytics
+[submodule "src/packages/greenlight-analytics"]
+	path = src/packages/greenlight-analytics
 	url = https://github.com/cfriel/greenlight-analytics.git
-[submodule "src/templates/greenlight-forms"]
-	path = src/templates/greenlight-forms
+[submodule "src/packages/greenlight-forms"]
+	path = src/packages/greenlight-forms
 	url = https://github.com/cfriel/greenlight-forms.git
-[submodule "src/templates/greenlight-services"]
-	path = src/templates/greenlight-services
+[submodule "src/packages/greenlight-services"]
+	path = src/packages/greenlight-services
 	url = https://github.com/cfriel/greenlight-services.git
 [submodule "src/third-party/variety"]
 	path = src/third-party/variety
@@ -22,15 +22,15 @@
 [submodule "src/third-party/meteor-select2"]
 	path = src/third-party/meteor-select2
 	url = https://github.com/cfriel/meteor-select2.git
-[submodule "src/templates/greenlight-create"]
-	path = src/templates/greenlight-create
+[submodule "src/packages/greenlight-create"]
+	path = src/packages/greenlight-create
 	url = https://github.com/cfriel/greenlight-create.git
-[submodule "src/templates/greenlight-feeds"]
-	path = src/templates/greenlight-feeds
+[submodule "src/packages/greenlight-feeds"]
+	path = src/packages/greenlight-feeds
 	url = https://github.com/cfriel/greenlight-feeds.git
-[submodule "src/templates/greenlight-sheets"]
-	path = src/templates/greenlight-sheets
+[submodule "src/packages/greenlight-sheets"]
+	path = src/packages/greenlight-sheets
 	url = https://github.com/cfriel/greenlight-sheets.git
-[submodule "src/templates/greenlight-visualization"]
-	path = src/templates/greenlight-visualization
+[submodule "src/packages/greenlight-visualization"]
+	path = src/packages/greenlight-visualization
 	url = https://github.com/cfriel/greenlight-visualization.git
