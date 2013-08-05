@@ -31,6 +31,9 @@
       "greenlight-forms": {
         "path": "../packages/greenlight-forms"
       },
+      "greenlight-sites": {
+        "path": "../packages/greenlight-sites"
+      },
       "examples": {
         "path": "../examples/databases"
       },
@@ -70,6 +73,9 @@
       },
       "greenlight-forms": {
         "path": "../packages/greenlight-forms"
+      },
+      "greenlight-sites": {
+        "path": "../packages/greenlight-sites"
       },
       "examples": {
         "path": "../examples/databases"
