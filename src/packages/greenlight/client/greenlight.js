@@ -17,16 +17,83 @@ if(Meteor.isClient)
 
     greenlight.prototype = new greenlight();
 
+    greenlight.prototype.routes = {};
+
     greenlight.prototype.register_site = function(site, callback)
     {
 	Meteor.call('register_site', site, function(err, res){
+	    if(!err)
+	    {
+		var template = SiteTemplates.findOne({ _id : site.template });
+
+		if(template)
+		{
+		    var route = Greenlight.map_route(site);
+
+		    if(route)
+		    {
+			Meteor.Router.add(route);
+		    }
+		}
+	    }
+	    
 	    callback(err, res);
 	});
-    }
+    };
+
+    greenlight.prototype.get_default_route = function(template)
+    {
+	return this.routes[template._id];
+    };
+
+    greenlight.prototype.map_route = function(site)
+    {
+	var url = site.url;
+	var templateId = site.template;
+
+	var template = SiteTemplates.findOne({ _id : templateId });
+
+	if(template)
+	{
+	    var path = '/' + url;
+	    
+	    var fun = this.get_default_route(site.template);
+
+	    var ret = {};
+	    ret[path] = fun;
+
+	    return ret;
+	}
+
+	return null;
+    };
 
     greenlight.prototype.register_template = function(name, version, template)
     {
 	console.log("registering " + name + " with version " + version);
+
+	var templateId;
+	
+	if(!SiteTemplates.findOne( { name: name, version: version }))
+	{
+	    SiteTemplates.insert( { name : name, version : version }, function(err,id){
+		if(!err)
+		{
+		    templateId = id;
+		}
+	    } );
+	}
+	else
+	{
+	    var t = SiteTemplates.findOne({ name: name, version: version});
+	    
+	    templateId = t._id;
+	}
+	
+	if(templateId && template.default_route)
+	{
+	    this.routes[templateId] = template.default_route['/'];
+	}
 
 	if(template.routes)
 	{
@@ -88,7 +155,7 @@ if(Meteor.isClient)
 	};
 
 	f(name,version,template);
-    }
+    };
 
     Greenlight = greenlight.prototype;
 
