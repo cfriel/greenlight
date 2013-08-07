@@ -4,6 +4,7 @@ content_assist_proposals_foreground=60,60,60
 eclipse.preferences.version=1
 fontPropagated=true
 formatter_profile=Camel Java Conventions
+org.eclipse.jdt.internal.ui.navigator.layout=2
 org.eclipse.jdt.ui.editor.tab.width=
 org.eclipse.jdt.ui.enable.visibility.order=true
 org.eclipse.jdt.ui.exception.name=e

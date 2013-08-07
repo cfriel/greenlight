@@ -31,6 +31,9 @@
       "greenlight-forms": {
         "path": "../packages/greenlight-forms"
       },
+      "greenlight-feeds": {
+        "path": "../packages/greenlight-feeds"
+      },
       "greenlight-sites": {
         "path": "../packages/greenlight-sites"
       },
@@ -73,6 +76,9 @@
       },
       "greenlight-forms": {
         "path": "../packages/greenlight-forms"
+      },
+      "greenlight-feeds": {
+        "path": "../packages/greenlight-feeds"
       },
       "greenlight-sites": {
         "path": "../packages/greenlight-sites"
