@@ -10,6 +10,9 @@
     "pagination": {
        "path": "../third-party/meteor-pagination"
     },
+    "meteor-bootstrap" : {
+       "path" : "../third-party/meteor-bootstrap"
+    },
     "meteor-select2" : {
        "path" : "../third-party/meteor-select2"
     },  

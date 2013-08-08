@@ -1,24 +1,26 @@
 <template name="menu">
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="menu-container">
-	<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-	  <span class="icon-bar"></span>
-	  <span class="icon-bar"></span>
-	  <span class="icon-bar"></span>
-	</a>
-	<a class="brand" href="/"></a>
-	<div class="nav-collapse">
-	  <ul id="nav" class="nav">
-	    <li><a href="/about">About</a></li>
-	    <li><a href="/create">Create</a></li>
-	    <li><a href="/sites">Sites</a></li>
-	  </ul>
-	  <div class="nav pull-right">
-	  {{>user_info}}
-	  </div>
-	</div>
-      </div>
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <!-- Be sure to leave the brand out there if you want it shown -->
+    <a class="navbar-brand" href="#">Greenlight</a>
+
+    <div class="nav-collapse collapse navbar-responsive-collapse">
+      <ul id="nav" class="nav navbar-nav">
+	<li><a href="/about">About</a></li>
+	<li><a href="/create">Create</a></li>
+	<li><a href="/sites">Sites</a></li>
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+	{{>user_info}}
+      </ul>
     </div>
   </div>
+</div>
 </template>

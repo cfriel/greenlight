@@ -40,3 +40,9 @@
 [submodule "src/third-party/camel"]
 	path = src/third-party/camel
 	url = https://github.com/cfriel/camel.git
+[submodule "src/third-party/bootstrap"]
+	path = src/third-party/bootstrap
+	url = https://github.com/cfriel/bootstrap.git
+[submodule "src/third-party/meteor-bootstrap"]
+	path = src/third-party/meteor-bootstrap
+	url = https://github.com/cfriel/meteor-bootstrap.git

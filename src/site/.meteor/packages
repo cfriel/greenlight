@@ -8,7 +8,6 @@ backbone
 accounts-base
 accounts-password
 accounts-ui
-bootstrap
 jquery
 d3
 livedata
