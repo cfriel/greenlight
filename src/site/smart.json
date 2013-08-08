@@ -1,7 +1,6 @@
 {
     "packages": {
-	"greenlight" : {
-	    "path" : "../packages/greenlight"
+	"npm": {
 	},
 	"jquery-masonry": {
 	    "git": "https://github.com/cfriel/meteor-jquery-masonry"
@@ -17,8 +16,11 @@
 	"meteor-select2" : {
 	    "path" : "../third-party/meteor-select2"
 	},
+	"greenlight" : {
+	    "path" : "../packages/greenlight"
+	},
 	"greenlight-profile" : {
-	    "path" : "../package/greenlight-profile"
+	    "path" : "../packages/greenlight-profile"
 	},  
 	"greenlight-create" : {
 	    "path" : "../packages/greenlight-create"
@@ -43,8 +45,6 @@
 	},
 	"examples" : {
 	    "path" : "../examples/databases"
-	},
-	"npm": {
 	}
     }
 }

@@ -2,9 +2,7 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "greenlight": {
-        "path": "../packages/greenlight"
-      },
+      "npm": {},
       "jquery-masonry": {
         "git": "https://github.com/cfriel/meteor-jquery-masonry",
         "branch": "master"
@@ -18,6 +16,12 @@
       },
       "meteor-select2": {
         "path": "../third-party/meteor-select2"
+      },
+      "greenlight": {
+        "path": "../packages/greenlight"
+      },
+      "greenlight-profile": {
+        "path": "../packages/greenlight-profile"
       },
       "greenlight-create": {
         "path": "../packages/greenlight-create"
@@ -42,12 +46,13 @@
       },
       "examples": {
         "path": "../examples/databases"
-      },
-      "npm": {}
+      }
     },
     "packages": {
-      "greenlight": {
-        "path": "../packages/greenlight"
+      "npm": {
+        "git": "https://github.com/arunoda/meteor-npm.git",
+        "tag": "v0.1.4",
+        "commit": "68ab2b952ab21a5bbba879b37be9385ec8ff6d63"
       },
       "jquery-masonry": {
         "git": "https://github.com/cfriel/meteor-jquery-masonry",
@@ -68,6 +73,12 @@
       "meteor-select2": {
         "path": "../third-party/meteor-select2"
       },
+      "greenlight": {
+        "path": "../packages/greenlight"
+      },
+      "greenlight-profile": {
+        "path": "../packages/greenlight-profile"
+      },
       "greenlight-create": {
         "path": "../packages/greenlight-create"
       },
@@ -91,11 +102,6 @@
       },
       "examples": {
         "path": "../examples/databases"
-      },
-      "npm": {
-        "git": "https://github.com/arunoda/meteor-npm.git",
-        "tag": "v0.1.4",
-        "commit": "68ab2b952ab21a5bbba879b37be9385ec8ff6d63"
       },
       "router": {
         "git": "https://github.com/tmeasday/meteor-router.git",

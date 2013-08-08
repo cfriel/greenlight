@@ -4,3 +4,8 @@ Template.user_logged_in.events({
 	Meteor.logout();
     }
 });
+
+Template.user_logged_in.userId = function()
+{
+    return Meteor.userId();
+}
