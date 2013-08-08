@@ -46,3 +46,6 @@
 [submodule "src/third-party/meteor-bootstrap"]
 	path = src/third-party/meteor-bootstrap
 	url = https://github.com/cfriel/meteor-bootstrap.git
+[submodule "src/packages/greenlight-profile"]
+	path = src/packages/greenlight-profile
+	url = https://github.com/cfriel/greenlight-profile.git
