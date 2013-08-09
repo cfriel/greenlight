@@ -13,6 +13,29 @@
     background-color: #056839 !important;
 }
 
+.social
+{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.social-buttons
+{
+    display: inline-block;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.social-buttons li 
+{
+    display: inline-block;
+    line-height: 1;
+}
+
+.social-buttons li + li {
+    margin-left: 15px;
+}
 
 .masthead h1 
 {
