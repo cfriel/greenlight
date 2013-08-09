@@ -1,0 +1,46 @@
+.masthead
+{
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 30px 15px;
+    padding-top: 100px;
+    text-align: center;
+    color: #BFE3CB;
+    margin-top: 0px;
+    background-color: #056839;
+    background-color: #056839 !important;
+}
+
+
+.masthead h1 
+{
+    font-size: 100px;
+    line-height: 1;
+    color: white;
+}
+
+.masthead .lead
+{
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 200;
+    line-height: 1.4;
+}
+
+.masthead .btn-outline
+{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    padding: 18px 24px;
+    font-size: 21px;
+}
+
+#download
+{
+    color: white;
+    border-color: white;
+}
