@@ -49,3 +49,9 @@
 [submodule "src/packages/greenlight-profile"]
 	path = src/packages/greenlight-profile
 	url = https://github.com/cfriel/greenlight-profile.git
+[submodule "src/packages/greenlight-hosted"]
+	path = src/packages/greenlight-hosted
+	url = https://github.com/cfriel/greenlight-hosted.git
+[submodule "src/packages/greenlight-quality"]
+	path = src/packages/greenlight-quality
+	url = https://github.com/cfriel/greenlight-quality.git

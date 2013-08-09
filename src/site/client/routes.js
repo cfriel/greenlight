@@ -1,5 +1,5 @@
 Meteor.Router.add({
-    "/": "home_page",
+    "/": "about_page",
     "/register" : "register_page",
     "/login": "login_page",
     "/about" : "about_page"
