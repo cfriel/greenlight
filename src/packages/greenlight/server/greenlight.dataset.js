@@ -1,0 +1,3 @@
+greenlight.prototype.Dataset = function()
+{
+};
