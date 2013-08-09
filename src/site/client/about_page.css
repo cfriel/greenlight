@@ -62,6 +62,12 @@
     font-size: 21px;
 }
 
+.masthead-image
+{
+    width: 600px;
+    margin-bottom: 50px;
+}
+
 #download
 {
     color: white;

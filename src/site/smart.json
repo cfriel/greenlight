@@ -43,6 +43,12 @@
 	"greenlight-sites": {
 	    "path": "../packages/greenlight-sites"
 	},
+	"greenlight-hosted": {
+	    "path" : "../packages/greenlight-hosted"
+	},
+	"greenlight-quality" : {
+	    "path" : "../packages/greenlight-quality"
+	},
 	"examples" : {
 	    "path" : "../examples/databases"
 	}
