@@ -5,13 +5,13 @@ greenlight.prototype.Service = function()
 greenlight.prototype.Service.prototype = new Greenlight.Entity();
 greenlight.prototype.Service.prototype.constructor = greenlight.prototype.Service;
 
-Services = new Meteor.Collection("services");
+Greenlight.Services = new Meteor.Collection("services");
 
 Meteor.publish("services", function(){
-    return Services.find();
+    return Greenlight.Services.find();
 });
 
-Services.allow({
+Greenlight.Services.allow({
 
     insert: function (userId, doc) {
 	

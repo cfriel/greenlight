@@ -5,13 +5,13 @@ greenlight.prototype.Process = function()
 greenlight.prototype.Process.prototype = new Greenlight.Entity();
 greenlight.prototype.Process.prototype.constructor = greenlight.prototype.Process;
 
-Processes = new Meteor.Collection("processes");
+Greenlight.Processes = new Meteor.Collection("processes");
 
 Meteor.publish("processes", function(){
-    return Processes.find();
+    return Greenlight.Processes.find();
 });
 
-Processes.allow({
+Greenlight.Processes.allow({
 
     insert: function (userId, doc) {
 	

@@ -32,20 +32,20 @@ greenlight.prototype.Dataset.prototype.save = function()
 {
     var self = this;
 
-    if(!Datasets.findOne({name: this.name}))
+    if(!Greenlight.Datasets.findOne({name: this.name}))
     {
-	Datasets.insert({ server: this.server, database: this.database, collection: this.collection, name: this.name, description: this.description, schema: this.schema });
+	Greenlight.Datasets.insert({ server: this.server, database: this.database, collection: this.collection, name: this.name, description: this.description, schema: this.schema });
     }
 
 };
 
-Datasets = new Meteor.Collection("datasets");
+Greenlight.Datasets = new Meteor.Collection("datasets");
 
 Meteor.publish("datasets", function(){
-    return Datasets.find();
+    return Greenlight.Datasets.find();
 });
 
-Datasets.allow({
+Greenlight.Datasets.allow({
 
     insert: function (userId, doc) {
 	

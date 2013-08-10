@@ -5,13 +5,13 @@ greenlight.prototype.Activity = function()
 greenlight.prototype.Activity.prototype = new Greenlight.Entity();
 greenlight.prototype.Activity.prototype.constructor = greenlight.prototype.Activity;
 
-Activities = new Meteor.Collection("activities");
+Greenlight.Activities = new Meteor.Collection("activities");
 
 Meteor.publish("activities", function(){
-    return Activities.find();
+    return Greenlight.Activities.find();
 });
 
-Activities.allow({
+Greenlight.Activities.allow({
 
     insert: function (userId, doc) {
 	

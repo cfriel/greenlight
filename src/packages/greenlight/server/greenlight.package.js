@@ -5,13 +5,13 @@ greenlight.prototype.Package = function()
 greenlight.prototype.Package.prototype = new Greenlight.Entity();
 greenlight.prototype.Package.prototype.constructor = greenlight.prototype.Package;
 
-Packages = new Meteor.Collection("packages");
+Greenlight.Packages = new Meteor.Collection("packages");
 
 Meteor.publish("packages", function(){
-    return Packages.find();
+    return Greenlight.Packages.find();
 });
 
-Packages.allow({
+Greenlight.Packages.allow({
 
     insert: function (userId, doc) {
 	

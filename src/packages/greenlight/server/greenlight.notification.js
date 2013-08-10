@@ -5,13 +5,13 @@
 greenlight.prototype.Notification.prototype = new Greenlight.Entity();
 greenlight.prototype.Notification.prototype.constructor = greenlight.prototype.Notification;
 
-Notifications = new Meteor.Collection("notifications");
+Greenlight.Notifications = new Meteor.Collection("notifications");
 
 Meteor.publish("notifications", function(){
-    return Notifications.find();
+    return Greenlight.Notifications.find();
 });
 
-Notifications.allow({
+Greenlight.Notifications.allow({
 
     insert: function (userId, doc) {
 	

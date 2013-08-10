@@ -27,7 +27,7 @@ greenlight.prototype.Dataset = function()
 greenlight.prototype.Dataset.prototype = new Greenlight.Entity();
 greenlight.prototype.Dataset.prototype.constructor = greenlight.prototype.Dataset;
 
-greenlight.prototype.Dataset.Datasets = new Meteor.Collection("datasets");
+Greenlight.Datasets = new Meteor.Collection("datasets");
 
 Deps.autorun(function(){
     Meteor.subscribe("datasets");
@@ -35,12 +35,12 @@ Deps.autorun(function(){
 
 greenlight.prototype.Dataset.findOne = function(query)
 {
-    return Greenlight.Dataset.Datasets.findOne(query);
+    return Greenlight.Datasets.findOne(query);
 }
 
 greenlight.prototype.Dataset.find = function(query)
 {
-    return Greenlight.Dataset.Datasets.find(query);
+    return Greenlight.Datasets.find(query);
 };
 
 greenlight.prototype.Dataset.load = function(dataset)

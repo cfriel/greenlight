@@ -5,13 +5,13 @@ greenlight.prototype.Entitlement = function()
 greenlight.prototype.Entitlement.prototype = new Greenlight.Entity();
 greenlight.prototype.Entitlement.prototype.constructor = greenlight.prototype.Entitlement;
 
-Entitlements = new Meteor.Collection("entitlements");
+Greenlight.Entitlements = new Meteor.Collection("entitlements");
 
 Meteor.publish("entitlements", function(){
-    return Entitlements.find();
+    return Greenlight.Entitlements.find();
 });
 
-Entitlements.allow({
+Greenlight.Entitlements.allow({
 
     insert: function (userId, doc) {
 	

@@ -5,13 +5,13 @@ greenlight.prototype.Server = function()
 greenlight.prototype.Server.prototype = new Greenlight.Entity();
 greenlight.prototype.Server.prototype.constructor = greenlight.prototype.Server;
 
-Servers = new Meteor.Collection("servers");
+Greenlight.Servers = new Meteor.Collection("servers");
 
 Meteor.publish("servers", function(){
-    return Servers.find();
+    return Greenlight.Servers.find();
 });
 
-Servers.allow({
+Greenlight.Servers.allow({
 
     insert: function (userId, doc) {
 	
