@@ -11,6 +11,7 @@ greenlight.prototype.Dataset =
 };
 
 greenlight.prototype.Dataset.prototype = new Greenlight.Entity();
+greenlight.prototype.Dataset.prototype.constructor = greenlight.prototype.Dataset;
 
 greenlight.prototype.Dataset.load = function(dataset)
 {

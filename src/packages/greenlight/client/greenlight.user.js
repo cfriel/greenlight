@@ -16,6 +16,7 @@ Deps.autorun(function(){
 });
 
 greenlight.prototype.User.prototype = new Greenlight.Entity();
+greenlight.prototype.User.prototype.constructor = greenlight.prototype.User;
 
 greenlight.prototype.User.prototype.save = function()
 {

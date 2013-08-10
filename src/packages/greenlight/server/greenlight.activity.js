@@ -3,6 +3,7 @@ greenlight.prototype.Activity = function()
 };
 
 greenlight.prototype.Activity.prototype = new Greenlight.Entity();
+greenlight.prototype.Activity.prototype.constructor = greenlight.prototype.Activity;
 
 Activities = new Meteor.Collection("activities");
 

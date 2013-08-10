@@ -27,6 +27,7 @@ Deps.autorun(function(){
 });
 
 greenlight.prototype.Activity.prototype = new Greenlight.Entity();
+greenlight.prototype.Activity.prototype.constructor = greenlight.prototype.Activity;
 
 greenlight.prototype.Activity.prototype.save = function()
 {

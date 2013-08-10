@@ -24,6 +24,9 @@ greenlight.prototype.Dataset = function()
     this.query = null;
 };
 
+greenlight.prototype.Dataset.prototype = new Greenlight.Entity();
+greenlight.prototype.Dataset.prototype.constructor = greenlight.prototype.Dataset;
+
 greenlight.prototype.Dataset.Datasets = new Meteor.Collection("datasets");
 
 Deps.autorun(function(){

@@ -20,6 +20,9 @@ greenlight.prototype.Entitlement = function()
     var created = null;
 };
 
+greenlight.prototype.Entitlement.prototype = new Greenlight.Entity();
+greenlight.prototype.Entitlement.prototype.constructor = greenlight.prototype.Entitlement;
+
 greenlight.prototype.Entitlement.prototype.create = function()
 {
 };

@@ -19,6 +19,9 @@ greenlight.prototype.Notification = function()
     var routes = null;
 };
 
+greenlight.prototype.Notification.prototype = new Greenlight.Entity();
+greenlight.prototype.Notification.prototype.constructor = greenlight.prototype.Notification;
+
 greenlight.prototype.Notification.prototype.create = function()
 {
 };

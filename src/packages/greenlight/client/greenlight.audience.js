@@ -15,6 +15,9 @@ greenlight.prototype.Audience = function()
     var groups = [];
 };
 
+greenlight.prototype.Audience.prototype = new Greenlight.Entity();
+greenlight.prototype.Audience.prototype.constructor = greenlight.prototype.Audience;
+
 greenlight.prototype.Audience.prototype.create = function()
 {
 };

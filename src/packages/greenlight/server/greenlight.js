@@ -1,3 +1,9 @@
+SiteTemplates = new Meteor.Collection("site_templates");
+
+Meteor.publish("site_templates", function(){
+    return SiteTemplates.find();
+});
+
 var mongo = Npm.require('mongodb');
 var ObjectID = Npm.require('mongodb').ObjectID;
 
@@ -38,9 +44,9 @@ greenlight.prototype.register_site = function(site)
 {
     console.log("Registering user site");
     
-    if(!Sites.findOne({ url : site.url }))
+    if(!Greenlight.Sites.findOne({ url : site.url }))
     {
-	Sites.insert(site);
+	Greenlight.Sites.insert(site);
 	return site;
     }
     else
@@ -48,8 +54,6 @@ greenlight.prototype.register_site = function(site)
 	return null;
     }
 };
-
-Greenlight = greenlight.prototype;
 
 Meteor.methods({
     
@@ -59,6 +63,9 @@ Meteor.methods({
     }
     
 });
+
+Greenlight = greenlight.prototype;
+Greenlight.Packages = {};
 
 Meteor.startup(function () {
     

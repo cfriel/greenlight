@@ -17,6 +17,9 @@ greenlight.prototype.Server = function()
     var created = null;
 };
 
+greenlight.prototype.Server.prototype = new Greenlight.Entity();
+greenlight.prototype.Server.prototype.constructor = greenlight.prototype.Server;
+
 greenlight.prototype.Server.prototype.create = function()
 {
 };

@@ -19,6 +19,15 @@ greenlight.prototype.Site = function()
     var description = null;
 };
 
+Greenlight.Sites = new Meteor.Collection("sites");
+
+Deps.autorun(function(){
+    Meteor.subscribe("sites");
+});
+
+greenlight.prototype.Site.prototype = new Greenlight.Entity();
+greenlight.prototype.Site.prototype.constructor = greenlight.prototype.Site;
+
 greenlight.prototype.Site.prototype.create = function()
 {
 };

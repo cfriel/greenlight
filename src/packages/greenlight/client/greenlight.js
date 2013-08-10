@@ -1,9 +1,7 @@
-Sites = new Meteor.Collection("sites");
 SiteTemplates = new Meteor.Collection("site_templates");
 
 Deps.autorun(function(){
     Meteor.subscribe("site_templates");
-    Meteor.subscribe("sites");
 });
 
 Meteor.startup(function(){
@@ -116,7 +114,7 @@ greenlight.prototype.register_template = function(name, version, template)
 		    var templateId = siteTemplate._id;
 
 
-		    var sites = Sites.find
+		    var sites = Greenlight.Sites.find
 		    (
 			{$and: 
 			 [
@@ -162,3 +160,4 @@ greenlight.prototype.register_template = function(name, version, template)
 
 Greenlight = greenlight.prototype;
 
+Greenlight.Packages = {};

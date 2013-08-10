@@ -26,6 +26,9 @@ greenlight.prototype.Package = function()
     var instantiable = null;
 };
 
+greenlight.prototype.Package.prototype = new Greenlight.Entity();
+greenlight.prototype.Package.prototype.constructor = greenlight.prototype.Package;
+
 greenlight.prototype.Package.prototype.create = function()
 {
 };

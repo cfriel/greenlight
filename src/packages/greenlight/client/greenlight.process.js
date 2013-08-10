@@ -9,6 +9,9 @@ greenlight.prototype.Process = function()
 {
 };
 
+greenlight.prototype.Process.prototype = new Greenlight.Entity();
+greenlight.prototype.Process.prototype.constructor = greenlight.prototype.Process;
+
 greenlight.prototype.Process.prototype.create = function()
 {
 };

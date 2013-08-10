@@ -16,6 +16,9 @@ greenlight.prototype.Service = function()
     var owner = null;
 };
 
+greenlight.prototype.Service.prototype = new Greenlight.Entity();
+greenlight.prototype.Service.prototype.constructor = greenlight.prototype.Service;
+
 greenlight.prototype.Service.prototype.create = function()
 {
 };
