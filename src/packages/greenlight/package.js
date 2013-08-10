@@ -10,6 +10,9 @@ Package.on_use(function (api, where) {
     api.add_files('client/greenlight.js', 'client');
     api.add_files('server/greenlight.js', 'server');
 
+    api.add_files('client/greenlight.entity.js', 'client');
+    api.add_files('server/greenlight.entity.js', 'server');
+
     api.add_files('client/greenlight.site.js', 'client');
     api.add_files('server/greenlight.site.js', 'server');
 

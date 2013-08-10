@@ -55,3 +55,6 @@
 [submodule "src/packages/greenlight-quality"]
 	path = src/packages/greenlight-quality
 	url = https://github.com/cfriel/greenlight-quality.git
+[submodule "src/third-party/meteor"]
+	path = src/third-party/meteor
+	url = https://github.com/cfriel/meteor.git
