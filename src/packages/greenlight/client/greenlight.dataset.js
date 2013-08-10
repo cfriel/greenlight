@@ -12,14 +12,23 @@
  */
 greenlight.prototype.Dataset = function()
 {
-    var name = null;
-    var owner = null;
-    var description = null;
-    var data = null;
-    var created = null;
-    var modified = null;
-    var entitlements = null;
+    this.name = null;
+    this.owner = null;
+    this.description = null;
+    this.data = null;
+    this.created = null;
+    this.modified = null;
+    this.entitlements = null;
+    this.database = null;
+    this.collection = null;
+    this.query = null;
 };
+
+greenlight.prototype.Dataset.Datasets = new Meteor.Collection("datasets");
+
+Deps.autorun(function(){
+    Meteor.subscribe("datasets");
+});
 
 greenlight.prototype.Dataset.prototype.create = function()
 {

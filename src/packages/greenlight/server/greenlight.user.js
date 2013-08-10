@@ -1,16 +1,14 @@
-greenlight.prototype.Dataset = function()
+greenlight.prototype.User = function()
 {
 };
 
-greenlight.prototype.Dataset.prototype = new Greenlight.Entity();
+greenlight.prototype.User.prototype = new Greenlight.Entity();
 
-Datasets = new Meteor.Collection("datasets");
-
-Meteor.publish("datasets", function(){
-    return Datasets.find();
+Meteor.publish("users", function(){
+    return Meteor.users.find();
 });
 
-Datasets.allow({
+Meteor.users.allow({
 
     insert: function (userId, doc) {
 	

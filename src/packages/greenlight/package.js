@@ -2,10 +2,15 @@ Package.describe({
   summary: "Greenlight core"
 });
 
+Npm.depends({mongodb: "1.3.4"});
+
 Package.on_use(function (api, where) {
 
     api.use('router', ['client', 'server']);
     api.use(['templating'], 'client');
+
+    api.add_files('lib/sprintf.js', 'client');
+    api.add_files('lib/sprintf.js', 'server');
     
     api.add_files('client/greenlight.js', 'client');
     api.add_files('server/greenlight.js', 'server');
@@ -42,6 +47,12 @@ Package.on_use(function (api, where) {
 
     api.add_files('client/greenlight.process.js', 'client');
     api.add_files('server/greenlight.process.js', 'server');
+
+    api.add_files('client/greenlight.user.js', 'client');
+    api.add_files('server/greenlight.user.js', 'server');
+
+    api.add_files('client/greenlight.helpers.js', 'client');
+    api.add_files('server/greenlight.helpers.js', 'server');
 
 
 });

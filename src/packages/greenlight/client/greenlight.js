@@ -38,6 +38,11 @@ greenlight.prototype.register_site = function(site, callback)
     });
 };
 
+greenlight.prototype.log = function(format, args)
+{
+    console.log(sprintf(format, args));
+}
+
 greenlight.prototype.get_default_route = function(template)
 {
     return this.routes[template._id];
