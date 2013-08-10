@@ -54,7 +54,6 @@ Package.on_use(function (api, where) {
     api.add_files('client/greenlight.helpers.js', 'client');
     api.add_files('server/greenlight.helpers.js', 'server');
 
-
 });
 
 Package.on_test(function (api) {

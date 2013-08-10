@@ -50,7 +50,7 @@ helpers.prototype.load_schema =
 
     if(found)
     {
-	Greenlight.log("found", []);
+	Greenlight.log("found schema for %s, %s, %s", [server, database, collection]);
 
 	return;
     }
@@ -76,6 +76,52 @@ helpers.prototype.load_schema =
 	}	
     }
     
+};
+
+helpers.prototype.load_and_analyze_databases = function(server)
+{
+    Greenlight.log("loading and analyzing databases %s", [server]);
+
+    var databases = Databases.find().fetch();
+
+    if(databases.length == 0)
+    {
+	this.load_databases(server);
+
+	databases = Databases.find().fetch();
+    }
+
+    for(var i = 0; i < databases.length; i++)
+    {
+	var database = databases[i];
+
+	Greenlight.log("considering database %s", [database]);
+
+	if(database && database.collections)
+	{
+	    var collections = database.collections;
+
+	    for(var j = 0; j < collections.length; j++)
+	    {
+		var collection = collections[j];
+
+		this.load_schema(server, database.name, collection.name);
+		
+		(function(){
+		    var _server = server;
+		    var _database = database.name;
+		    var _collection = collection.name;
+		    var _name = _database + "." + _collection +  " full collection";
+		    var _description = "default full collection (autodiscovered)";
+		    
+		    var dataset = new Greenlight.Dataset(_server, _database, _collection, _name, _description);
+		    
+		    dataset.save();
+		}());
+	    }
+	}
+    }    
+
 };
 
 helpers.prototype.load_databases = 
