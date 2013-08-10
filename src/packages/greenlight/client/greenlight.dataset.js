@@ -30,9 +30,19 @@ Deps.autorun(function(){
     Meteor.subscribe("datasets");
 });
 
-greenlight.prototype.Dataset.prototype.load = function()
+greenlight.prototype.Dataset.findOne = function(query)
 {
-    Meteor.call('dataset_load', this);
+    return Greenlight.Dataset.Datasets.findOne(query);
+}
+
+greenlight.prototype.Dataset.find = function(query)
+{
+    return Greenlight.Dataset.Datasets.find(query);
+};
+
+greenlight.prototype.Dataset.load = function(dataset)
+{
+    Meteor.call('dataset_load', dataset);
 };
 
 greenlight.prototype.Dataset.prototype.create = function()

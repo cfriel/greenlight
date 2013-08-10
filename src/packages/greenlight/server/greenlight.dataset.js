@@ -12,12 +12,17 @@ greenlight.prototype.Dataset =
 
 greenlight.prototype.Dataset.prototype = new Greenlight.Entity();
 
-greenlight.prototype.Dataset.prototype.load = function()
+greenlight.prototype.Dataset.load = function(dataset)
 {
-    
+    Greenlight.Helpers.load_data(dataset.server,
+				 dataset.database,
+				 dataset.collection, 
+				 {},
+				 0, 
+				 100);
 };
 
-greenlight.prototype.Dataset.prototype.watch = function()
+greenlight.prototype.Dataset.watch = function(dataset)
 {
     
 };
@@ -63,14 +68,14 @@ Meteor.methods({
 
     dataset_load : function(dataset)
     {
-	Greenlight.Entities(dataset).load();
+	Greenlight.Dataset.load(dataset);
 	
 	return;
     },
     
     dataset_watch : function(dataset)
     {
-	Greenlight.Entities(dataset).watch();
+	Greenlight.Dataset.watch(dataset);
 	
 	return;
     }
