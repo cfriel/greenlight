@@ -19,6 +19,7 @@ greenlight.prototype.routes = {};
 greenlight.prototype.register_site = function(site, callback)
 {
     Meteor.call('register_site', site, function(err, res){
+
 	if(!err)
 	{
 	    var template = SiteTemplates.findOne({ _id : site.template });

@@ -30,6 +30,11 @@ Deps.autorun(function(){
     Meteor.subscribe("datasets");
 });
 
+greenlight.prototype.Dataset.prototype.load = function()
+{
+    Meteor.call('dataset_load', this);
+};
+
 greenlight.prototype.Dataset.prototype.create = function()
 {
 };
@@ -40,4 +45,5 @@ greenlight.prototype.Dataset.prototype.destroy = function()
 
 greenlight.prototype.Dataset.prototype.watch = function()
 {
+    Meteor.call('dataset_watch', this);
 };

@@ -43,38 +43,30 @@ helpers.prototype.load_schema =
     {
 	if(collections[i].name == collection && collections[i].schema)
 	{
-	    found = true;
-	    break;
+	    Greenlight.log("found schema for %s, %s, %s", [server, database, collection]);
+
+	    return collections[i].schema;
 	}
     }
 
-    if(found)
+    var schema = this.analyze_schema(server, database, collection);
+    
+    var collections = db.collections;
+    
+    if(collections)
     {
-	Greenlight.log("found schema for %s, %s, %s", [server, database, collection]);
-
-	return;
-    }
-    else
-    {
-	var schema = this.analyze_schema(server, database, collection);
-	
-	var collections = db.collections;
-	
-	if(collections)
+	for(var i = 0; i < collections.length; i++)
 	{
-	    for(var i = 0; i < collections.length; i++)
+	    if(collections[i].name == collection)
 	    {
-		if(collections[i].name == collection)
-		{
-		    collections[i].schema = schema;
+		collections[i].schema = schema;
 		    
-		    Databases.update({_id: db._id}, db);
+		Databases.update({_id: db._id}, db);
 
-		    return;
-		}
-	    }   
-	}	
-    }
+		return schema;
+	    }
+	}   
+    }	
     
 };
 
@@ -105,16 +97,17 @@ helpers.prototype.load_and_analyze_databases = function(server)
 	    {
 		var collection = collections[j];
 
-		this.load_schema(server, database.name, collection.name);
-		
+		var schema = this.load_schema(server, database.name, collection.name);
+
 		(function(){
 		    var _server = server;
 		    var _database = database.name;
 		    var _collection = collection.name;
-		    var _name = _database + "." + _collection +  " full collection";
+		    var _name = _database + "." + _collection +  ".full";
 		    var _description = "default full collection (autodiscovered)";
-		    
-		    var dataset = new Greenlight.Dataset(_server, _database, _collection, _name, _description);
+		    var _schema = schema;
+
+		    var dataset = new Greenlight.Dataset(_server, _database, _collection, _name, _description, _schema);
 		    
 		    dataset.save();
 		}());
@@ -208,6 +201,7 @@ helpers.prototype.load_data =
 	var count = params[5];
 	    
 	var res = Meteor.sync(function(done){
+
 	    MongoClient.connect(
 
 		server+database, function(err, db) 
@@ -427,7 +421,7 @@ helpers.prototype.analyze_schema = function(server, database, collection)
 	    if(obj.hasOwnProperty(key)) 
 	    {
 		var value = obj[key];
-		key = (parentKey + "." + key).replace(/\.\d+/g,'.XX');
+		key = (parentKey + "[" + key + "]").replace(/\.\d+/g,'_XX');
 		addRecordResult(key, value, result);
 		if (level < maxDepth - 1 && varietyCanHaveChildren(value)) 
 		{

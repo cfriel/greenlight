@@ -1,22 +1,35 @@
 greenlight.prototype.Dataset = 
     function(server, database, collection,
-	     name, description)
+	     name, description, schema)
 {
     this.server = server;
     this.database = database;
     this.collection = collection;
     this.name = name;
-    this.description = description;
-    
+    this.description = description;  
+    this.schema = schema;
 };
 
 greenlight.prototype.Dataset.prototype = new Greenlight.Entity();
+
+greenlight.prototype.Dataset.prototype.load = function()
+{
+    
+};
+
+greenlight.prototype.Dataset.prototype.watch = function()
+{
+    
+};
 
 greenlight.prototype.Dataset.prototype.save = function()
 {
     var self = this;
 
-    Datasets.insert({ server: this.server, database: this.database, collection: this.collection, name: this.name, description: this.description });
+    if(!Datasets.findOne({name: this.name}))
+    {
+	Datasets.insert({ server: this.server, database: this.database, collection: this.collection, name: this.name, description: this.description, schema: this.schema });
+    }
 
 };
 
@@ -44,4 +57,22 @@ Datasets.allow({
     },
 
     fetch: ['owner']    
+});
+
+Meteor.methods({
+
+    dataset_load : function(dataset)
+    {
+	Greenlight.Entities(dataset).load();
+	
+	return;
+    },
+    
+    dataset_watch : function(dataset)
+    {
+	Greenlight.Entities(dataset).watch();
+	
+	return;
+    }
+
 });
