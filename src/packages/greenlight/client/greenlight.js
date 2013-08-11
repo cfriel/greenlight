@@ -172,12 +172,12 @@ greenlight.prototype.instantiate_sites = function()
 
 	    for(var i = 0; i < owned.length; i++)
 	    {
-		sites[owned._id] = owned[i];
+		sites[owned[i]._id] = owned[i];
 	    }
 
 	    for(var i = 0; i < user.length; i++)
 	    {
-		sites[user._id] = user[i];
+		sites[user[i]._id] = user[i];
 	    }
 
 	    var keys = Object.keys(sites);
