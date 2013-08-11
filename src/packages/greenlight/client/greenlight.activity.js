@@ -8,22 +8,21 @@
  * or audience and shown in an activity stream.
  *
  **/
-greenlight.prototype.Activity = function(title, description, source, audience)
+greenlight.prototype.Activity = function(obj)
 {
-    // fixme
-    // if(obj)
-    // {
-    // 	this.init(obj);
-    // }
+    if(obj)
+    {
+    	this.init(obj);
+    }
 
-    this.created = new Date().getTime();
-    this.start = null;
-    this.end = null;
-    this.title = title;
-    this.description = description;
-    this.audience = audience;
-    this.source = source;
-    this.updates = [];
+    // this.created = new Date().getTime();
+    // this.start = null;
+    // this.end = null;
+    // this.title = title;
+    // this.description = description;
+    // this.audience = audience;
+    // this.source = source;
+    // this.updates = [];
 };
 
 Greenlight.Activities = new Meteor.Collection("activities");
