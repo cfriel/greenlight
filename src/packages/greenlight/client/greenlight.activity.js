@@ -10,6 +10,12 @@
  **/
 greenlight.prototype.Activity = function(title, description, source, audience)
 {
+    // fixme
+    // if(obj)
+    // {
+    // 	this.init(obj);
+    // }
+
     this.created = new Date().getTime();
     this.start = null;
     this.end = null;
@@ -20,7 +26,7 @@ greenlight.prototype.Activity = function(title, description, source, audience)
     this.updates = [];
 };
 
-Activities = new Meteor.Collection("activities");
+Greenlight.Activities = new Meteor.Collection("activities");
 
 Deps.autorun(function(){
     Meteor.subscribe("activities");
@@ -28,12 +34,16 @@ Deps.autorun(function(){
 
 greenlight.prototype.Activity.prototype = new Greenlight.Entity();
 greenlight.prototype.Activity.prototype.constructor = greenlight.prototype.Activity;
+Greenlight.Activities.entity = greenlight.prototype.Activity;
 
 greenlight.prototype.Activity.prototype.save = function()
 {
     var self = this;
 
-    Activities.insert({ owner: Meteor.userId(), created: self.created, title: self.title, description: self.description, source: self.source, audience: self.audience });
+    Greenlight.Activities.insert({ owner: Meteor.userId(), 
+				   created: self.created, title: self.title, 
+				   description: self.description, source: self.source, 
+				   audience: self.audience });
 };
 
 greenlight.prototype.Activity.prototype.start = function()

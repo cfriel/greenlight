@@ -9,14 +9,26 @@
 
 greenlight.prototype.Audience = function()
 {
-    var name = null;
-    var created = null;
-    var users = [];
-    var groups = [];
+    if(obj)
+    {
+	this.init(obj);
+    }
+
+    // var name = null;
+    // var created = null;
+    // var users = [];
+    // var groups = [];
 };
+
+Greenlight.Audiences = new Meteor.Collection("audiences");
+
+Deps.autorun(function(){
+    Meteor.subscribe("audiences");
+});
 
 greenlight.prototype.Audience.prototype = new Greenlight.Entity();
 greenlight.prototype.Audience.prototype.constructor = greenlight.prototype.Audience;
+Greenlight.Audiences.entity = greenlight.prototype.Audience;
 
 greenlight.prototype.Audience.prototype.create = function()
 {

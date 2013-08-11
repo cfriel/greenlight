@@ -8,15 +8,20 @@
  * Site data can be packaged and migrated.
  *
  */
-greenlight.prototype.Site = function()
+greenlight.prototype.Site = function(obj)
 {
-    var name = null;
-    var created = null;
-    var modified = null;
-    var owner = null;
-    var url = null;
-    var users = null;
-    var description = null;
+    if(obj)
+    {
+	this.init(obj);
+    }
+
+    // var name = null;
+    // var created = null;
+    // var modified = null;
+    // var owner = null;
+    // var url = null;
+    // var users = null;
+    // var description = null;
 };
 
 Greenlight.Sites = new Meteor.Collection("sites");
@@ -27,6 +32,7 @@ Deps.autorun(function(){
 
 greenlight.prototype.Site.prototype = new Greenlight.Entity();
 greenlight.prototype.Site.prototype.constructor = greenlight.prototype.Site;
+Greenlight.Sites.entity = greenlight.prototype.Site;
 
 greenlight.prototype.Site.prototype.create = function()
 {

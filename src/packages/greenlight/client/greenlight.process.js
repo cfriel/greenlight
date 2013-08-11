@@ -5,12 +5,24 @@
  * In the feeds and quality packages, they might be a feed or
  * a data mastering process, respectively.  
  */
-greenlight.prototype.Process = function()
+greenlight.prototype.Process = function(obj)
 {
+    if(obj)
+    {
+	this.init(obj);
+    }
+
 };
+
+Greenlight.Processes = new Meteor.Collection("processes");
+
+Deps.autorun(function(){
+    Meteor.subscribe("processes");
+});
 
 greenlight.prototype.Process.prototype = new Greenlight.Entity();
 greenlight.prototype.Process.prototype.constructor = greenlight.prototype.Process;
+Greenlight.Processes.entity = greenlight.prototype.Process;
 
 greenlight.prototype.Process.prototype.create = function()
 {

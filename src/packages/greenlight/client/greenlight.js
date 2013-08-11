@@ -1,13 +1,3 @@
-SiteTemplates = new Meteor.Collection("site_templates");
-
-Deps.autorun(function(){
-    Meteor.subscribe("site_templates");
-});
-
-Meteor.startup(function(){
-    
-});
-
 greenlight = function(){};
 
 greenlight.prototype = new greenlight();
@@ -20,7 +10,7 @@ greenlight.prototype.register_site = function(site, callback)
 
 	if(!err)
 	{
-	    var template = SiteTemplates.findOne({ _id : site.template });
+	    var template = Greenlight.Packages.findOne({ _id : site.template });
 
 	    if(template)
 	    {
@@ -52,7 +42,7 @@ greenlight.prototype.map_route = function(site)
     var url = site.url;
     var templateId = site.template;
 
-    var template = SiteTemplates.findOne({ _id : templateId });
+    var template = Greenlight.Packages.findOne({ _id : templateId });
 
     if(template)
     {
@@ -69,15 +59,15 @@ greenlight.prototype.map_route = function(site)
     return null;
 };
 
-greenlight.prototype.register_template = function(name, version, template)
+greenlight.prototype.register_package = function(name, version, template)
 {
     console.log("registering " + name + " with version " + version);
 
     var templateId;
     
-    if(!SiteTemplates.findOne( { name: name, version: version }))
+    if(!Greenlight.Packages.findOne( { name: name, version: version }))
     {
-	SiteTemplates.insert( { name : name, version : version }, function(err,id){
+	Greenlight.Packages.insert( { name : name, version : version }, function(err,id){
 	    if(!err)
 	    {
 		templateId = id;
@@ -86,7 +76,7 @@ greenlight.prototype.register_template = function(name, version, template)
     }
     else
     {
-	var t = SiteTemplates.findOne({ name: name, version: version});
+	var t = Greenlight.Packages.findOne({ name: name, version: version});
 	
 	templateId = t._id;
     }
@@ -104,10 +94,11 @@ greenlight.prototype.register_template = function(name, version, template)
     var f = function(n, v, t)
     {
 	Deps.autorun(function(){
+
 	    if(t.routes)
 	    {
 		var userId = Meteor.userId();
-		var siteTemplate = SiteTemplates.findOne( { name: n, version: v});
+		var siteTemplate = Greenlight.Packages.findOne( { name: n, version: v});
 		
 		if(siteTemplate)
 		{
@@ -145,7 +136,7 @@ greenlight.prototype.register_template = function(name, version, template)
 
 			if(t.default_route)
 			{
-			    t.routes['/' + site.url] = t.default_route['/'];
+			    //t.routes['/' + site.url] = t.default_route['/'];
 			}
 		    }
 		    
@@ -158,6 +149,68 @@ greenlight.prototype.register_template = function(name, version, template)
     f(name,version,template);
 };
 
+greenlight.prototype.init = function()
+{
+    this.instantiate_sites();
+};
+
+greenlight.prototype.instantiate_sites = function()
+{
+    Deps.autorun(function(){
+    
+	// for this user, loop over all of the sites
+	// that he owns or is entitled to, and instantiate
+	// them by url
+	var userId = Meteor.userId();
+
+	if(userId)
+	{
+	    var owned = Greenlight.Sites.find( { owner : userId }).fetch();
+	    var user = Greenlight.Sites.find( { users : {$in : [userId]}} ).fetch();
+
+	    var sites = {};
+
+	    for(var i = 0; i < owned.length; i++)
+	    {
+		sites[owned._id] = owned[i];
+	    }
+
+	    for(var i = 0; i < user.length; i++)
+	    {
+		sites[user._id] = user[i];
+	    }
+
+	    var keys = Object.keys(sites);
+
+	    for(var i = 0; i < keys.length; i++)
+	    {
+		var site = sites[keys[i]];
+
+		var s = new Greenlight.Site(site);
+
+		var pkg = Greenlight.Packages.findOne({ _id: site.template });
+
+		if(pkg)
+		{
+		    Greenlight.log("Instantiating %s, %s, %s", [site.template, site.url, pkg.name]);
+
+		    var obj = new Greenlight.Package(pkg);
+
+		    obj.instantiate(s);
+		}
+	    }
+	    
+	}
+
+    });
+
+};
+
 Greenlight = greenlight.prototype;
 
-Greenlight.Packages = {};
+Meteor.startup(function(){
+    
+    Greenlight.init();
+ 
+});
+

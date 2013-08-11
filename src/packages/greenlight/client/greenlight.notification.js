@@ -9,18 +9,30 @@
  * site at the time, or delivered over email.
  *
  */
-greenlight.prototype.Notification = function()
+greenlight.prototype.Notification = function(obj)
 {
-    var title = null;
-    var contents = null;
-    var source = null;
-    var audience = null;
-    var created = null;
-    var routes = null;
+    if(obj)
+    {
+	this.init(obj);
+    }
+
+    // var title = null;
+    // var contents = null;
+    // var source = null;
+    // var audience = null;
+    // var created = null;
+    // var routes = null;
 };
+
+Greenlight.Notifications = new Meteor.Collection("notifications");
+
+Deps.autorun(function(){
+    Meteor.subscribe("notifications");
+});
 
 greenlight.prototype.Notification.prototype = new Greenlight.Entity();
 greenlight.prototype.Notification.prototype.constructor = greenlight.prototype.Notification;
+Greenlight.Notifications.entity = greenlight.prototype.Notification;
 
 greenlight.prototype.Notification.prototype.create = function()
 {

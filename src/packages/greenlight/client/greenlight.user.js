@@ -6,10 +6,17 @@
  * social pieces.  By convention the id is equal to the meteor id.
  *
  **/
-greenlight.prototype.User = function(id)
+greenlight.prototype.User = function(obj)
 {
-    this.id = id;
+    if(obj)
+    {
+	this.init(obj);
+    }
+
+    // this.id = id;
 };
+
+Greenlight.Users = Meteor.users;
 
 Deps.autorun(function(){
     Meteor.subscribe("users");
@@ -17,6 +24,7 @@ Deps.autorun(function(){
 
 greenlight.prototype.User.prototype = new Greenlight.Entity();
 greenlight.prototype.User.prototype.constructor = greenlight.prototype.User;
+Greenlight.Users.entity = greenlight.prototype.User;
 
 greenlight.prototype.User.prototype.save = function()
 {

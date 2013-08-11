@@ -5,19 +5,31 @@
  * that can be called from within the platform.
  *
  */
-greenlight.prototype.Service = function()
+greenlight.prototype.Service = function(obj)
 {
-    var name = null;
-    var parameters = null;
-    var sample = null;
-    var entitlements = null;
-    var status = null;
-    var created = null;
-    var owner = null;
+    if(obj)
+    {
+	this.init(obj);
+    }
+
+    // var name = null;
+    // var parameters = null;
+    // var sample = null;
+    // var entitlements = null;
+    // var status = null;
+    // var created = null;
+    // var owner = null;
 };
+
+Greenlight.Services = new Meteor.Collection("services");
+
+Deps.autorun(function(){
+    Meteor.subscribe("services");
+});
 
 greenlight.prototype.Service.prototype = new Greenlight.Entity();
 greenlight.prototype.Service.prototype.constructor = greenlight.prototype.Service;
+Greenlight.Services.entity = greenlight.prototype.Service;
 
 greenlight.prototype.Service.prototype.create = function()
 {

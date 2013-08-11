@@ -10,28 +10,34 @@
  * keeping the local datastore synchronized with the data
  * store on the server.
  */
-greenlight.prototype.Dataset = function()
+greenlight.prototype.Dataset = function(obj)
 {
-    this.name = null;
-    this.owner = null;
-    this.description = null;
-    this.data = null;
-    this.created = null;
-    this.modified = null;
-    this.entitlements = null;
-    this.database = null;
-    this.collection = null;
-    this.query = null;
+    if(obj)
+    {
+	this.init(obj);
+    }
+
+    // this.name = null;
+    // this.owner = null;
+    // this.description = null;
+    // this.data = null;
+    // this.created = null;
+    // this.modified = null;
+    // this.entitlements = null;
+    // this.database = null;
+    // this.collection = null;
+    // this.query = null;
 };
 
-greenlight.prototype.Dataset.prototype = new Greenlight.Entity();
-greenlight.prototype.Dataset.prototype.constructor = greenlight.prototype.Dataset;
- 
 Greenlight.Datasets = new Meteor.Collection("datasets");
 
 Deps.autorun(function(){
     Meteor.subscribe("datasets");
 });
+
+greenlight.prototype.Dataset.prototype = new Greenlight.Entity();
+greenlight.prototype.Dataset.prototype.constructor = greenlight.prototype.Dataset;
+Greenlight.Datasets.entity = greenlight.prototype.Dataset;
 
 greenlight.prototype.Dataset.findOne = function(query)
 {

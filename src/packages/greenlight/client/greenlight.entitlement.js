@@ -11,17 +11,29 @@
  * allow add, then deny delete, then allow delete
  * for items owned by the user.
  */
-greenlight.prototype.Entitlement = function()
+greenlight.prototype.Entitlement = function(obj)
 {
-    var name = null;
-    var action = null;
-    var resource = null;
-    var operation = null;
-    var created = null;
+    if(obj)
+    {
+	this.init(obj);
+    }
+
+    // var name = null;
+    // var action = null;
+    // var resource = null;
+    // var operation = null;
+    // var created = null;
 };
+
+Greenlight.Entitlements = new Meteor.Collection("entitlements");
+
+Deps.autorun(function(){
+    Meteor.subscribe("entitlements");
+});
 
 greenlight.prototype.Entitlement.prototype = new Greenlight.Entity();
 greenlight.prototype.Entitlement.prototype.constructor = greenlight.prototype.Entitlement;
+Greenlight.Entitlements.entity = greenlight.prototype.Entitlement;
 
 greenlight.prototype.Entitlement.prototype.create = function()
 {
