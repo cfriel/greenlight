@@ -1,3 +1,5 @@
+Greenlight = {};
+
 var mongo = Npm.require('mongodb');
 var ObjectID = Npm.require('mongodb').ObjectID;
 
@@ -7,12 +9,17 @@ greenlight.prototype = new greenlight();
 
 greenlight.prototype.log = function(format, args)
 {
+    if(!args)
+    {
+	args = [];
+    }
+
     console.log(vsprintf(format, args));
 }
 
 greenlight.prototype.register_package = function(name, version, template)
 {
-    console.log("registering " + name + " with version " + version);
+    Greenlight.log("registering " + name + " with version " + version);
     
     if(!Greenlight.Packages.findOne( { name: name, version: version }))
     {
@@ -36,7 +43,7 @@ greenlight.prototype.get_templates = function()
  
 greenlight.prototype.register_site = function(site)
 {
-    console.log("Registering user site");
+    Greenlight.log("Registering user site");
     
     if(!Greenlight.Sites.findOne({ url : site.url }))
     {

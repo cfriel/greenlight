@@ -1,3 +1,5 @@
+Greenlight = {};
+
 greenlight = function(){};
 
 greenlight.prototype = new greenlight();
@@ -29,7 +31,13 @@ greenlight.prototype.register_site = function(site, callback)
 
 greenlight.prototype.log = function(format, args)
 {
+    if(!args)
+    {
+	args = [];
+    }
+    
     console.log(sprintf(format, args));
+    
 }
 
 greenlight.prototype.get_default_route = function(template)
@@ -61,7 +69,7 @@ greenlight.prototype.map_route = function(site)
 
 greenlight.prototype.register_package = function(name, version, template)
 {
-    console.log("registering " + name + " with version " + version);
+    Greenlight.log("registering " + name + " with version " + version);
 
     var templateId;
     
