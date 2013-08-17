@@ -58,3 +58,9 @@
 [submodule "src/third-party/meteor"]
 	path = src/third-party/meteor
 	url = https://github.com/cfriel/meteor.git
+[submodule "src/third-party/xsd-forms"]
+	path = src/third-party/xsd-forms
+	url = https://github.com/cfriel/xsd-forms.git
+[submodule "src/third-party/CodeMirror"]
+	path = src/third-party/CodeMirror
+	url = https://github.com/cfriel/CodeMirror.git

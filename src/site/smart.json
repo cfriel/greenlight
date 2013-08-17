@@ -2,9 +2,6 @@
     "packages": {
 	"npm": {
 	},
-	"jquery-masonry": {
-	    "git": "https://github.com/cfriel/meteor-jquery-masonry"
-	},
 	"jquery-ui": {
 	},
 	"pagination": {

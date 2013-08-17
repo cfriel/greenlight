@@ -4,8 +4,7 @@
     "basePackages": {
       "npm": {},
       "jquery-masonry": {
-        "git": "https://github.com/cfriel/meteor-jquery-masonry",
-        "branch": "master"
+        "path": "../third-party/meteor-jquery-masonry"
       },
       "jquery-ui": {},
       "pagination": {
@@ -61,9 +60,7 @@
         "commit": "68ab2b952ab21a5bbba879b37be9385ec8ff6d63"
       },
       "jquery-masonry": {
-        "git": "https://github.com/cfriel/meteor-jquery-masonry",
-        "branch": "master",
-        "commit": "2e468f1def679438936989d434a6bdedfacea932"
+        "path": "../third-party/meteor-jquery-masonry"
       },
       "jquery-ui": {
         "git": "https://github.com/TimHeckel/meteor-jquery-ui.git",
@@ -117,13 +114,18 @@
       },
       "router": {
         "git": "https://github.com/tmeasday/meteor-router.git",
-        "tag": "v0.5.3",
-        "commit": "7bd3a1bdd1099625bb8b49406d9b8f961d6f4a17"
+        "tag": "v0.5.4",
+        "commit": "e40ee450a756b54a32ed67be4595772403256fb5"
       },
       "page-js-ie-support": {
         "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",
         "tag": "v1.3.5",
         "commit": "b99ed8380aefd10b2afc8f18d9eed4dd0d8ea9cb"
+      },
+      "HTML5-History-API": {
+        "git": "https://github.com/tmeasday/meteor-HTML5-History-API.git",
+        "tag": "v4.0.0",
+        "commit": "dc4965f1424cfca625ec3fbea17eace03f8e32c5"
       }
     }
   }
