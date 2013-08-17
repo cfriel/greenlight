@@ -1,0 +1,70 @@
+package com.greenlight.integration;
+
+import java.util.Arrays;
+
+import org.apache.camel.Exchange;
+import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.dataformat.xmljson.XmlJsonDataFormat;
+import org.apache.camel.spring.Main;
+
+/**
+ * A simple example router from a file system to an ActiveMQ queue and then to a file system
+ *
+ * @version 
+ */
+public class FeedRouteBuilder extends RouteBuilder {
+
+    /**
+     * Allow this route to be run as an application
+     */
+    public static void main(String[] args) throws Exception {
+        new Main().run(args);
+    }
+
+    public void configure() {
+        
+        
+        
+        // populate the message queue with some messages
+        from("file:src/data?noop=true").
+                to("jms:test.MyQueue");
+
+        from("jms:test.MyQueue").
+                to("direct:marshal");
+        
+        XmlJsonDataFormat xmlJsonFormat = new XmlJsonDataFormat();
+
+        xmlJsonFormat.setForceTopLevelObject(true);
+        xmlJsonFormat.setTrimSpaces(true);
+        xmlJsonFormat.setRootName("newRoot");
+        xmlJsonFormat.setSkipNamespaces(true);
+        xmlJsonFormat.setRemoveNamespacePrefixes(true);
+        xmlJsonFormat.setExpandableProperties(Arrays.asList("d", "e"));
+
+        from("direct:marshal")
+            .marshal(xmlJsonFormat).convertBodyTo(String.class).to("direct:json");
+        
+        from("direct:json")
+               .to("mongodb:myDb?database=examples&collection=camel&operation=insert");        
+        
+        from("mongodb:meteor?database=meteor&collection=feeds&tailTrackIncreasingField=created")
+            .id("feedConsumer")
+            .autoStartup(false)
+            .filter()
+            .method(FeedListener.class, "onFeedUpdated")
+            .to("mock:test");
+
+    }
+    
+    public static class FeedListener
+    {
+        public FeedListener() {
+        }
+        
+        public boolean onFeedUpdated(Exchange exchange)
+        {
+            return true;
+        }
+        
+    }
+}

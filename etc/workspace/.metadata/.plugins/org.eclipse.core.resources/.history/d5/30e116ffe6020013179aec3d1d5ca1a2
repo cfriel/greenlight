@@ -1,0 +1,171 @@
+package com.greenlight.integration;
+
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.io.StringReader;
+import java.io.StringWriter;
+import java.util.Arrays;
+import java.util.HashMap;
+
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+
+import net.sf.json.JSONObject;
+import net.sf.json.xml.XMLSerializer;
+
+import org.apache.camel.Exchange;
+import org.apache.camel.Message;
+import org.apache.camel.Processor;
+import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.dataformat.xmljson.XmlJsonDataFormat;
+import org.apache.camel.model.RoutesDefinition;
+import org.apache.camel.spring.Main;
+import org.codehaus.jackson.map.ObjectMapper;
+
+/**
+ * A simple example router from a file system to an ActiveMQ queue and then to a file system
+ *
+ * @version 
+ */
+public class FeedRouteBuilder extends RouteBuilder {
+
+    /**
+     * Allow this route to be run as an application
+     */
+    public static void main(String[] args) throws Exception {
+        new Main().run(args);
+    }
+
+    public void configure() {
+            
+        // populate the message queue with some messages
+        from("file:src/data?noop=true").
+                to("jms:test.MyQueue");
+
+        from("jms:test.MyQueue").
+                to("direct:marshal");
+        
+        XmlJsonDataFormat xmlToJson = new XmlJsonDataFormat();
+
+        xmlToJson.setForceTopLevelObject(true);
+        xmlToJson.setTrimSpaces(true);
+        xmlToJson.setRootName("newRoot");
+        xmlToJson.setSkipNamespaces(true);
+        xmlToJson.setRemoveNamespacePrefixes(true);
+        xmlToJson.setExpandableProperties(Arrays.asList("d", "e"));
+
+        from("direct:marshal")
+            .marshal(xmlToJson).convertBodyTo(String.class).to("direct:json");
+        
+        from("direct:json")
+               .to("mongodb:myDb?database=examples&collection=camel&operation=insert");        
+
+        from("timer://foo?period=5000").process(new Processor() {
+            public void process(Exchange exchange) {
+                Message in = exchange.getIn();
+                in.setBody("{}");
+            }})
+            .to("direct:mongo");
+        
+        from("direct:mongo")
+            .to("mongodb:meteor?database=meteor&collection=feeds&operation=findAll")
+            .filter()
+            .method(FeedListener.class, "onFeedUpdated")
+            .to("mock:end");
+
+    }
+    
+    public static class FeedListener
+    {
+        public FeedListener() {
+        }
+        
+        public boolean onFeedUpdated(Exchange exchange)
+        {
+            try
+            {
+                
+                String str = "<routes xmlns='http://camel.apache.org/schema/spring'>"+
+                        "<!-- here we define the bar route -->"+
+                        "<route id='bar'>"+
+                        "   <from uri='direct:bar'/>"+
+                        "  <to uri='mock:bar'/>"+
+                        "</route>"+   
+                        "    <!-- we could add more routes if we like,"+
+                        "        but in this example we stick to one route only -->"+
+                        "</routes>";
+                
+//                JSONObject json = JSONObject.fromObject("{ \"routes\" : [ { \"route\" : { \"id\" : \"bar\", \"from\" : { \"uri\" : \"direct:bar\" }, \"to\" : { \"uri\" :\"mock:bar\"}} }] }");  
+//                XMLSerializer xmlSerializer = new XMLSerializer();  
+//                xmlSerializer.addNamespace(null, "http://camel.apache.org/schema/spring");
+//                //xmlSerializer.setRootName( "root" );  
+//                xmlSerializer.setExpandableProperties( new String[]{ "element" } );  
+//                xmlSerializer.setTypeHintsEnabled(false);
+//                String xml = xmlSerializer.write(json);  
+                  
+                String json = "{ \"routes\" : "+
+                "    [ "+
+                "      { \"route\" : "+
+                "          { \"id\" : \"bar\" , \"children\" : " +
+                "              [ "+
+                "                 {\"from\" : {\"uri\" : \"direct:bar\" }, \"to\" : {\"uri\" : \"uri:mock:bar\"} }"+
+                "              ]"+
+                "          }" +
+                "      }" +
+                "    ]" +
+                "}";
+                
+//                String json = "{\"routes\":{\"name\":\"Banana\",\"id\":123"
+//                    + ",\"price\":23.0}}";
+                
+                HashMap<String,Object> result =
+                    new ObjectMapper().readValue(json, HashMap.class);
+                    
+                XStream xStream = new XStream(new DomDriver());
+                xStream.alias("map", java.util.Map.class);
+                String xml = xStream.toXML(result);
+                
+                System.out.println(xml);
+                
+                StringReader reader = new StringReader("<xml>blabla</xml>");
+                StringWriter writer = new StringWriter();
+                TransformerFactory tFactory = TransformerFactory.newInstance();
+                Transformer transformer = tFactory.newTransformer(
+                        new javax.xml.transform.stream.StreamSource("styler.xsl"));
+
+                transformer.transform(
+                        new javax.xml.transform.stream.StreamSource(reader), 
+                        new javax.xml.transform.stream.StreamResult(writer));
+
+                String mapped = writer.toString();
+                
+                System.out.println(mapped);
+                
+//                XStream xstream = new XStream();
+//                xstream.alias("blog", Blog.class);
+//                xstream.alias("entry", Entry.class);
+//
+//                xstream.addImplicitCollection(Blog.class, "entries");
+//
+//                xstream.useAttributeFor(Blog.class, "author");
+//                xstream.registerConverter(new AuthorConverter());
+//                
+//                InputStream is = new ByteArrayInputStream(str.getBytes());
+//         
+//                RoutesDefinition routes = exchange.getContext().loadRoutesDefinition(is);
+//
+//                exchange.getContext().addRouteDefinitions(routes.getRoutes());
+            }
+            catch(Exception ex)
+            {
+                System.out.println(ex.getMessage());
+            }
+            return true;
+        }
+        
+    }
+}

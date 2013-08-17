@@ -1,0 +1,39 @@
+package com.greenlight.integration;
+
+import org.apache.xerces.xs.XSImplementation;
+import org.apache.xerces.xs.XSLoader;
+
+import org.w3c.dom.bootstrap.DOMImplementationRegistry;
+
+public class SchemaParser {
+
+    public static void main(String[] args) {
+
+        // Get DOM Implementation using DOM Registry
+        System.setProperty(DOMImplementationRegistry.PROPERTY,
+                           "org.apache.xerces.dom.DOMXSImplementationSourceImpl");
+
+        DOMImplementationRegistry registry;
+        try {
+            registry = DOMImplementationRegistry.newInstance();
+            XSImplementation impl = (XSImplementation)registry.getDOMImplementation("XS-Loader");
+
+            XSLoader schemaLoader = impl.createXSLoader(null);
+
+        } catch (ClassCastException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+    }
+
+}

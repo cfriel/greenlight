@@ -1,0 +1,79 @@
+package com.greenlight.integration;
+
+import java.util.Arrays;
+
+import org.apache.camel.Exchange;
+import org.apache.camel.Message;
+import org.apache.camel.Processor;
+import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.dataformat.xmljson.XmlJsonDataFormat;
+import org.apache.camel.spring.Main;
+
+/**
+ * A simple example router from a file system to an ActiveMQ queue and then to a file system
+ *
+ * @version 
+ */
+public class FeedRouteBuilder extends RouteBuilder {
+
+    /**
+     * Allow this route to be run as an application
+     */
+    public static void main(String[] args) throws Exception {
+        new Main().run(args);
+    }
+
+    public void configure() {
+            
+        // populate the message queue with some messages
+        from("file:src/data?noop=true").
+                to("jms:test.MyQueue");
+
+        from("jms:test.MyQueue").
+                to("direct:marshal");
+        
+        XmlJsonDataFormat xmlToJson = new XmlJsonDataFormat();
+
+        xmlToJson.setForceTopLevelObject(true);
+        xmlToJson.setTrimSpaces(true);
+        xmlToJson.setRootName("newRoot");
+        xmlToJson.setSkipNamespaces(true);
+        xmlToJson.setRemoveNamespacePrefixes(true);
+        xmlToJson.setExpandableProperties(Arrays.asList("d", "e"));
+
+        from("direct:marshal")
+            .marshal(xmlToJson).convertBodyTo(String.class).to("direct:json");
+        
+        from("direct:json")
+               .to("mongodb:myDb?database=examples&collection=camel&operation=insert");        
+
+        from("timer://foo?period=5000").process(new Processor() {
+            public void process(Exchange exchange) {
+                Message in = exchange.getIn();
+                in.setBody("{}");
+            }})
+            .to("direct:poll");
+        
+        from("direct:poll")
+            .marshal(xmlToJson).convertBodyTo(String.class).to("direct:mongo");
+        
+        from("direct:mongo")
+            .to("mongodb:meteor?database=meteor&collection=feeds&operation=findAll")
+            .filter()
+            .method(FeedListener.class, "onFeedUpdated")
+            .to("direct:trash");
+
+    }
+    
+    public static class FeedListener
+    {
+        public FeedListener() {
+        }
+        
+        public boolean onFeedUpdated(Exchange exchange)
+        {
+            return true;
+        }
+        
+    }
+}
