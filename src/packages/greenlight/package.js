@@ -9,6 +9,7 @@ Package.on_use(function (api, where) {
     api.use('router', ['client', 'server']);
     api.use(['templating'], 'client');
     api.use('deps', ['client','server']);
+    api.use('npm', ['server']);
 
     api.add_files('lib/sprintf.js', 'client');
     api.add_files('lib/sprintf.js', 'server');
@@ -57,6 +58,8 @@ Package.on_use(function (api, where) {
 
     api.export('Greenlight', 'client');
     api.export('Greenlight', 'server');
+    api.export('Data', 'client');
+    api.export('Data', 'server');
 
 });
 

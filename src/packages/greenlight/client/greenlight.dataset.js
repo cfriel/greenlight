@@ -29,9 +29,15 @@ greenlight.prototype.Dataset = function(obj)
     // this.query = null;
 };
 
+Data = new Meteor.Collection("data");
+
+Meteor.startup(function(){
+});
+
 Greenlight.Datasets = new Meteor.Collection("datasets");
 
 Deps.autorun(function(){
+    Meteor.subscribe("data");
     Meteor.subscribe("datasets");
 });
 

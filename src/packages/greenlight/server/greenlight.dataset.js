@@ -10,6 +10,12 @@ greenlight.prototype.Dataset =
     this.schema = schema;
 };
 
+Data = new Meteor.Collection("data");
+
+Meteor.publish("data", function(){
+    return Data.find();
+});
+    
 greenlight.prototype.Dataset.prototype = new Greenlight.Entity();
 greenlight.prototype.Dataset.prototype.constructor = greenlight.prototype.Dataset;
 

@@ -2,13 +2,12 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "npm": {},
-      "jquery-masonry": {
-        "path": "../third-party/meteor-jquery-masonry"
-      },
       "jquery-ui": {},
       "pagination": {
         "path": "../third-party/meteor-pagination"
+      },
+      "npm": {
+        "path": "../third-party/meteor-npm"
       },
       "meteor-bootstrap": {
         "path": "../third-party/meteor-bootstrap"
@@ -54,14 +53,6 @@
       }
     },
     "packages": {
-      "npm": {
-        "git": "https://github.com/arunoda/meteor-npm.git",
-        "tag": "v0.1.4",
-        "commit": "68ab2b952ab21a5bbba879b37be9385ec8ff6d63"
-      },
-      "jquery-masonry": {
-        "path": "../third-party/meteor-jquery-masonry"
-      },
       "jquery-ui": {
         "git": "https://github.com/TimHeckel/meteor-jquery-ui.git",
         "tag": "v1.9.2",
@@ -69,6 +60,9 @@
       },
       "pagination": {
         "path": "../third-party/meteor-pagination"
+      },
+      "npm": {
+        "path": "../third-party/meteor-npm"
       },
       "meteor-bootstrap": {
         "path": "../third-party/meteor-bootstrap"

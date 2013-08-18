@@ -64,3 +64,6 @@
 [submodule "src/third-party/CodeMirror"]
 	path = src/third-party/CodeMirror
 	url = https://github.com/cfriel/CodeMirror.git
+[submodule "src/third-party/meteor-npm"]
+	path = src/third-party/meteor-npm
+	url = https://github.com/cfriel/meteor-npm.git

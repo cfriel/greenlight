@@ -1,11 +1,12 @@
 {
     "packages": {
-	"npm": {
-	},
 	"jquery-ui": {
 	},
 	"pagination": {
 	    "path": "../third-party/meteor-pagination"
+	},
+	"npm" : {
+	    "path" : "../third-party/meteor-npm"
 	},
 	"meteor-bootstrap" : {
 	    "path" : "../third-party/meteor-bootstrap"
