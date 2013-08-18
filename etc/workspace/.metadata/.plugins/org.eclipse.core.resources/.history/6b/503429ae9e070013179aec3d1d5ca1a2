@@ -1,0 +1,13 @@
+package com.greenlight.integration;
+
+import java.util.HashMap;
+
+public class Feed {
+
+    public Feed(HashMap<String, Object> result) {
+
+    }
+    
+    
+
+}

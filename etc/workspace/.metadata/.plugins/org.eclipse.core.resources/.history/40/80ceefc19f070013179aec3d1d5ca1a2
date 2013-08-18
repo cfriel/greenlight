@@ -1,0 +1,48 @@
+package com.greenlight.integration;
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.util.HashMap;
+
+import org.apache.camel.Exchange;
+import org.apache.camel.model.RoutesDefinition;
+
+public class Job {
+
+    private Exchange exchange;
+    private JobStatus status;
+
+    public Job(Exchange exchange) {
+        this.exchange = exchange;
+        this.status = JobStatus.New;
+    }
+
+    public void update(HashMap<String, Object> result) {
+
+        try {
+
+            String xml = (String)result.get("xml");
+            String newStatus = (String) result.get("state");
+            
+            if(status == JobStatus.New)
+            {
+                run(xml);
+            }
+        
+        } catch (Exception ex) {
+
+        }
+
+    }
+
+    private void run(String xml) {
+
+        InputStream is = new ByteArrayInputStream(xml.getBytes());
+
+        RoutesDefinition routes = exchange.getContext().loadRoutesDefinition(is);
+
+        exchange.getContext().addRouteDefinitions(routes.getRoutes());
+        
+    }
+
+}

@@ -1,0 +1,27 @@
+package com.greenlight.integration;
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.util.HashMap;
+
+import org.apache.camel.model.RoutesDefinition;
+
+public class Feed {
+
+    public Feed() {
+
+    }
+
+    public void update(HashMap<String, Object> result) {
+
+        InputStream is = new ByteArrayInputStream(xml.getBytes());
+
+        RoutesDefinition routes = exchange.getContext().loadRoutesDefinition(is);
+
+        exchange.getContext().addRouteDefinitions(routes.getRoutes());
+   
+    }
+    
+    
+
+}
