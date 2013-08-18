@@ -205,8 +205,12 @@ greenlight.prototype.instantiate_sites = function()
 		    var obj = new Greenlight.Package(pkg);
 
 		    obj.instantiate(s);
+
+		    Session.set("Greenlight:routes-changed", pkg.name);
+
 		}
 	    }
+	 
 	    
 	}
 

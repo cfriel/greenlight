@@ -4,4 +4,5 @@ Meteor.Router.add({
     "/login": "login_page",
     "/about" : "about_page",
     "/packages" : "packages_page"
-})
+});
+
