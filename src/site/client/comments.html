@@ -1,0 +1,44 @@
+<template name="comments">
+
+  <div class="comments">
+    <table class="table table-hover table-bordered">
+      <thead>
+	<tr>
+	  <td>Owner</td>
+	  <td>Text</td>
+	</tr>
+      </thead>
+      <tbody>
+	{{#each comments}}
+	<tr>
+	  <td>
+	    <img class="user-icon-small" src="/{{owner}}"/>
+	    <span>{{username}}</span>
+	  </td>
+	  <td>
+	    {{text}}
+	  </td>
+	</tr>
+	{{/each}}
+      </tbody>
+    </table>
+    
+    <div>
+      <form>
+	<fieldset>
+	  <div class="form-group">
+	    <textarea id="comment" class="form-control" rows="3" ></textarea>
+	  </div>	  
+	  <div class="form-group">
+	    <button id="cancel" class="btn" type="button">Cancel</button>
+	    <button id="create" class="btn btn-primary" type="button">
+	      <i class="icon-ok icon-white"/>
+	      <span>Create</span>
+	    </button>
+	  </div>
+	</fieldset>
+      </form>
+    </div>
+  </div>
+  
+</template>
