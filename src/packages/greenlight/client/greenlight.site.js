@@ -58,4 +58,17 @@ greenlight.prototype.Site.prototype.stop = function()
 {
 };
 
+greenlight.prototype.Site.prototype.attach = function(name, attachment)
+{
+    var self = this;
+    
+    if(!self.attachments)
+    {
+	self.attachments = {};
+    }
+
+    self.attachments[name] = attachment;
+
+    Greenlight.Sites.update({_id: self._id}, {$set : {attachments: self.attachments}});
+};
 
