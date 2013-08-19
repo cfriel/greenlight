@@ -69,8 +69,7 @@ var bindUsers = function()
 
 		var notification = new Greenlight.Notification({ title: title, audience: audience, url: url});
 		
-		notification.save();
-		
+		notification.save();		
 	    }
 	});
     }
@@ -82,6 +81,7 @@ Template.share.events = {
     
     'click #share-button' : function()
     {
+	$('#share').select2("val","");
 	$('#share-controls').toggle();
     }
 
