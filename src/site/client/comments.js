@@ -18,6 +18,9 @@ Template.comments.events = {
 	var url = document.location.pathname;
 
 	Greenlight.Activities.insert({ owner: owner, text: text, type: type, url: url });
+
+	$('#comment').val('');
+
     }
 
 };
@@ -29,5 +32,8 @@ Template.comments.username = function()
 
     var owner = Meteor.users.findOne({_id: ownerId});
     
-    return owner.username;
+    if(owner)
+    {
+	return owner.username;
+    }
 };

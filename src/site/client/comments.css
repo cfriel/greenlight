@@ -2,3 +2,8 @@
 {
     margin-top: 20px;
 }
+
+td.owner
+{
+    width: 110px;
+}
