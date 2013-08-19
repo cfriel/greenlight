@@ -49,3 +49,12 @@ greenlight.prototype.Notification.prototype.cancel = function()
 greenlight.prototype.Notification.prototype.destroy = function()
 {
 };
+
+greenlight.prototype.Notification.prototype.save = function()
+{
+    var self = this;
+
+    Greenlight.Notifications.insert({ owner: Meteor.userId(), 
+				      url: self.url,
+				      audience: self.audience });
+};

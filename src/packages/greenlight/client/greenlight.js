@@ -36,7 +36,7 @@ greenlight.prototype.log = function(format, args)
 	args = [];
     }
     
-    console.log(sprintf(format, args));
+    console.log(vsprintf(format, args));
     
 }
 
