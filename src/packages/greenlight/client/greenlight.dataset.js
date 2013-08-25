@@ -57,6 +57,11 @@ greenlight.prototype.Dataset.find = function(query)
 
 greenlight.prototype.Dataset.load = function(dataset)
 {
+    if(!dataset.count)
+    {
+	dataset.count = 1000;
+    }
+
     Meteor.call('dataset_load', dataset);
 };
 

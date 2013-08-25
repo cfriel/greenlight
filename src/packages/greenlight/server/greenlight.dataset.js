@@ -26,7 +26,7 @@ greenlight.prototype.Dataset.load = function(dataset)
 				 dataset.collection, 
 				 {},
 				 0, 
-				 500);
+				 dataset.count);
 };
 
 greenlight.prototype.Dataset.watch = function(dataset)
