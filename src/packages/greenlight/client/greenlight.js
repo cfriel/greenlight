@@ -160,6 +160,13 @@ greenlight.prototype.register_package = function(name, version, template)
 greenlight.prototype.init = function()
 {
     this.instantiate_sites();
+    this.create_index();
+};
+
+greenlight.prototype.create_index = function()
+{
+    Greenlight.Search.Index.add(["foo"], "foo", "/foo");
+    Greenlight.Search.Index.add(["bar"], "foo", "/bar");
 };
 
 greenlight.prototype.instantiate_sites = function()
@@ -204,9 +211,12 @@ greenlight.prototype.instantiate_sites = function()
 
 		    var obj = new Greenlight.Package(pkg);
 
+		    Greenlight.Search.Index.add([pkg.name], pkg.name, site.url);
+
 		    obj.instantiate(s);
 
 		    Session.set("Greenlight:routes-changed", pkg.name);
+		  
 
 		}
 	    }
