@@ -3,22 +3,40 @@ var bind_search = function()
     Greenlight.log("rebinding search");
 
     var ta = $('.search.typeahead');
-    var index = Greenlight.Search.index();
+    var users = Greenlight.Search.index('users');
+    var sites = Greenlight.Search.index('sites');
 
-    if(index && ta.typeahead)
+    if(users && sites && ta.typeahead)
     {
 	ta.typeahead('destroy');
 
 	ta.typeahead([
 	{
-	    name: 'search-'+new Date().getTime(),
-	    local: index,
+	    name: 'search-sites-'+new Date().getTime(),
+	    local: sites,
 	    //remote: '../data/films/queries/%QUERY.json',
 	    //prefetch: '../data/films/post_1960.json',
 	    template: '<p><strong>{{value}}</strong> – {{url}}</p>',
+	    header: '<h3 class="category-name">Sites</h3>',
+	    engine: Hogan
+	},
+	{
+	    name: 'search-users'+new Date().getTime(),
+	    local: users,
+	    //remote: '../data/films/queries/%QUERY.json',
+	    //prefetch: '../data/films/post_1960.json',
+	    template: '<p><strong>{{value}}</strong> – {{url}}</p>',
+	    header: '<h3 class="category-name">Users</h3>',
 	    engine: Hogan
 	}
+
 	]);
+
+	ta.on("typeahead:selected typeahead:autocompleted", function(e,datum) { 
+	    Greenlight.log("Selected %s", [datum]);
+	    Meteor.Router.to(datum.url);
+	    $(this).val("");
+	})
     }
 };
 

@@ -165,8 +165,20 @@ greenlight.prototype.init = function()
 
 greenlight.prototype.create_index = function()
 {
-    Greenlight.Search.Index.add(["foo"], "foo", "/foo");
-    Greenlight.Search.Index.add(["bar"], "foo", "/bar");
+    Deps.autorun(function(){
+	var users = Meteor.users.find({}).fetch();
+	
+	for(var i = 0; i < users.length; i++)
+	{
+	    var user = users[i];
+	    var username = user.username;
+	    var email = user.emails[0].address;
+	    var url = '/users/'+username;
+	    
+	    Greenlight.Search.Index.add([username, email], username, url, 'users');
+	}
+    });
+
 };
 
 greenlight.prototype.instantiate_sites = function()
@@ -211,7 +223,7 @@ greenlight.prototype.instantiate_sites = function()
 
 		    var obj = new Greenlight.Package(pkg);
 
-		    Greenlight.Search.Index.add([pkg.name], pkg.name, site.url);
+		    Greenlight.Search.Index.add([pkg.name, site.url], pkg.name, '/'+site.url, 'sites');
 
 		    obj.instantiate(s);
 

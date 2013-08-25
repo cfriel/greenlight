@@ -62,3 +62,9 @@
 .tt-suggestion p {
   margin: 0;
 }
+
+.category-name {
+  margin: 0 20px 5px 20px;
+  padding: 3px 0;
+  border-bottom: 1px solid #ccc;
+}
