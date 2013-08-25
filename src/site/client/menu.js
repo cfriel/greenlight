@@ -25,7 +25,7 @@ var bind_search = function()
 	    local: users,
 	    //remote: '../data/films/queries/%QUERY.json',
 	    //prefetch: '../data/films/post_1960.json',
-	    template: '<p><strong>{{value}}</strong> – {{url}}</p>',
+	    template: '<p><img src="{{metadata.icon}}" onerror="this.onerror=null;this.src=\'/default-user.jpg\'" class="search-icon-small"/><strong>{{value}}</strong> – {{url}}</p>',
 	    header: '<h3 class="category-name">Users</h3>',
 	    engine: Hogan
 	}

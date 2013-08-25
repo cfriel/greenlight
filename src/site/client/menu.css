@@ -68,3 +68,11 @@
   padding: 3px 0;
   border-bottom: 1px solid #ccc;
 }
+
+.search-icon-small
+{
+    height: 32px;
+    width: 32px;
+    margin-right: 5px;
+    border: 1px solid #DDD;    
+}

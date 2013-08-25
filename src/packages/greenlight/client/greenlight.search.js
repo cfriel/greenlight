@@ -33,12 +33,12 @@ greenlight.prototype.Search.index = function(category)
     }
 };
 
-greenlight.prototype.Search.Index.add = function(tokens, value, url, category)
+greenlight.prototype.Search.Index.add = function(tokens, value, url, category, metadata)
 {
     if(!Greenlight.Search.Index.findOne({value: value, url: url, tokens: tokens, owner: Meteor.userId(), category: category}))
     {
-	Greenlight.log("Updating index with %s, %s, %s", [tokens, value, url]);
-	Greenlight.Search.Index.insert({ value: value, url: url, tokens: tokens, owner: Meteor.userId(), category: category });
+	Greenlight.log("Updating index with %s, %s, %s, %s, %s", [tokens, value, url, category, metadata]);
+	Greenlight.Search.Index.insert({ value: value, url: url, tokens: tokens, owner: Meteor.userId(), category: category, metadata: metadata });
 	Session.set("Greenlight:index-updated", new Date().getTime());
     }
 };

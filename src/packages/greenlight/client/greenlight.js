@@ -174,8 +174,9 @@ greenlight.prototype.create_index = function()
 	    var username = user.username;
 	    var email = user.emails[0].address;
 	    var url = '/users/'+username;
-	    
-	    Greenlight.Search.Index.add([username, email], username, url, 'users');
+	    var metadata = { icon: "/"+user._id };
+
+	    Greenlight.Search.Index.add([username, email], username, url, 'users', metadata);
 	}
     });
 
