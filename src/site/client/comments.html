@@ -12,8 +12,10 @@
 	{{#each comments}}
 	<tr>
 	  <td>
-	    <img class="user-icon-small" src="/{{owner}}"/>
-	    <span>{{username}}</span>
+	    <a href="/users/{{username}}">
+	      <img class="user-icon-small" src="/{{owner}}"/>
+	      <span>{{username}}</span>
+	    </a>
 	  </td>
 	  <td>
 	    {{text}}
