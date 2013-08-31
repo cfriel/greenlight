@@ -67,3 +67,6 @@
 [submodule "src/third-party/meteor-npm"]
 	path = src/third-party/meteor-npm
 	url = https://github.com/cfriel/meteor-npm.git
+[submodule "src/third-party/elasticsearch"]
+	path = src/third-party/elasticsearch
+	url = https://github.com/cfriel/elasticsearch.git
