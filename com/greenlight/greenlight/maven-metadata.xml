@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.greenlight</groupId>
+  <artifactId>greenlight</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0.0.Beta1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20130831034915</lastUpdated>
+  </versioning>
+</metadata>
