@@ -1,2 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.apache.camel.dataformat.xmljson.XmlJsonDataFormat"/>
+<fullyQualifiedTypeName name="org.apache.camel.component.bean.FromBeanTest"/>
+<fullyQualifiedTypeName name="org.apache.camel.Processor"/>
+<fullyQualifiedTypeName name="org.apache.camel.Message"/>
+<fullyQualifiedTypeName name="com.greenlight.integration"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.ByteArrayInputStream"/>
+<fullyQualifiedTypeName name="net.sf.json.xml.XMLSerializer"/>
+<fullyQualifiedTypeName name="javax.xml.transform.Transformer"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.apache.xerces.xs.XSImplementation"/>
+<fullyQualifiedTypeName name="org.apache.xerces.xs.XSLoader"/>
+<fullyQualifiedTypeName name="org.apache.xerces.xs.XSModel"/>
+<fullyQualifiedTypeName name="org.apache.xerces.xs.XSTypeDefinition"/>
+<fullyQualifiedTypeName name="org.apache.xerces.xs.XSNamedMap"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition"/>
+<fullyQualifiedTypeName name="org.apache.xerces.xs.XSSimpleTypeDefinition"/>
+<fullyQualifiedTypeName name="org.apache.xerces.xs.StringList"/>
+<fullyQualifiedTypeName name="org.apache.xerces.xs.XSComplexTypeDefinition"/>
+<fullyQualifiedTypeName name="org.apache.xerces.xs.XSModelGroup"/>
+<fullyQualifiedTypeName name="org.apache.xerces.xs.XSObjectList"/>
+<fullyQualifiedTypeName name="org.apache.xerces.xs.XSTerm"/>
+<fullyQualifiedTypeName name="org.apache.xerces.xs.XSParticle"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.xerces.internal.xs.XSElementDeclaration"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.xerces.internal.xs.XSAnnotation"/>
+<fullyQualifiedTypeName name="org.apache.xerces.xs.XSAnnotation"/>
+<fullyQualifiedTypeName name="org.apache.xerces.impl.xs.XSLoaderImpl"/>
+<fullyQualifiedTypeName name="org.apache.xerces.impl.xs.XSImplementationImpl"/>
+<fullyQualifiedTypeName name="org.apache.xerces.xs.XSConstants"/>
+<fullyQualifiedTypeName name="org.apache.xerces.xs.XSElementDeclaration"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="com.greenlight.integration.JobStatus"/>
+<fullyQualifiedTypeName name="org.apache.camel.spring.SpringRouteBuilder"/>
+<fullyQualifiedTypeName name="org.apache.camel.spring.SpringCamelContext"/>
+</qualifiedTypeNameHistroy>

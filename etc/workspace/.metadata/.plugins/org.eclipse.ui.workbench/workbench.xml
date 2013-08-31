@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="19" version="2.0">
+<workbench progressCount="17" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="0" y="24">
+<window height="1002" width="1340" x="0" y="24">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -12,19 +12,21 @@
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="156" y="30"/>
-<coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="40" y="30"/>
+<coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="316" y="30"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.jdt.ui.PropertiesFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page aggregateWorkingSetId="Aggregate for window 1375839796889" focus="true" label="Workspace - Java">
+<page aggregateWorkingSetId="Aggregate for window 1375839796889" focus="true" label="Workspace - Debug">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
@@ -40,82 +42,119 @@
 <part id="7"/>
 <part id="8"/>
 <part id="9"/>
-<part id="10"/>
-<part id="11"/>
-<part id="12"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MongoDbFindOperationTest.java" partName="MongoDbFindOperationTest.java" path="/data/greenlight/src/third-party/camel/components/camel-mongodb/src/test/java/org/apache/camel/component/mongodb/MongoDbFindOperationTest.java" title="MongoDbFindOperationTest.java" tooltip="camel-mongodb/src/test/java/org/apache/camel/component/mongodb/MongoDbFindOperationTest.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-mongodb/src/test/java/org/apache/camel/component/mongodb/MongoDbFindOperationTest.java"/>
-<editorState selectionHorizontalPixel="172" selectionLength="0" selectionOffset="5090" selectionTopPixel="1684"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JobRouteBuilder.java" partName="JobRouteBuilder.java" path="/data/greenlight/src/third-party/camel/examples/camel-example-spring/src/main/java/com/greenlight/integration/JobRouteBuilder.java" title="JobRouteBuilder.java" tooltip="camel-example-spring/src/main/java/com/greenlight/integration/JobRouteBuilder.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-example-spring/src/main/java/com/greenlight/integration/JobRouteBuilder.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1138" selectionTopPixel="68"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OrderBean.java" partName="OrderBean.java" path="/data/greenlight/src/third-party/camel/examples/camel-example-sql/src/main/java/org/apache/camel/example/sql/OrderBean.java" title="OrderBean.java" tooltip="camel-example-sql/src/main/java/org/apache/camel/example/sql/OrderBean.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-example-sql/src/main/java/org/apache/camel/example/sql/OrderBean.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1334" selectionTopPixel="90"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SchemaParser.java" partName="SchemaParser.java" path="/data/greenlight/src/third-party/camel/examples/camel-example-spring/src/main/java/com/greenlight/integration/SchemaParser.java" title="SchemaParser.java" tooltip="camel-example-spring/src/main/java/com/greenlight/integration/SchemaParser.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-example-spring/src/main/java/com/greenlight/integration/SchemaParser.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1570" selectionTopPixel="697"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DatabaseBean.java" partName="DatabaseBean.java" path="/data/greenlight/src/third-party/camel/examples/camel-example-sql/src/main/java/org/apache/camel/example/sql/DatabaseBean.java" title="DatabaseBean.java" tooltip="camel-example-sql/src/main/java/org/apache/camel/example/sql/DatabaseBean.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-example-sql/src/main/java/org/apache/camel/example/sql/DatabaseBean.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4" selectionTopPixel="324"/>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="pom.xml" partName="pom.xml" path="/data/greenlight/src/third-party/camel/examples/camel-example-spring/pom.xml" title="pom.xml" tooltip="camel-example-spring/pom.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-example-spring/pom.xml"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2249" selectionTopPixel="1351"/>
 </editor>
-<editor id="org.eclipse.ui.DefaultTextEditor" name="features.xml" partName="features.xml" path="/data/greenlight/src/third-party/camel/examples/camel-example-sql/src/main/resources/features.xml" title="features.xml" tooltip="camel-example-sql/src/main/resources/features.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-example-sql/src/main/resources/features.xml"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="5"/>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="HashMap.class" partName="HashMap.class" path="/tmp/HashMap.class4812525704463381828.class" title="HashMap.class" tooltip="java.util.HashMap" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=apt/\/usr\/lib\/jvm\/java-6-oracle\/jre\/lib\/rt.jar&lt;java.util(HashMap.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="12068" selectionTopPixel="4896"/>
 </editor>
-<editor id="org.eclipse.ui.DefaultTextEditor" name="camel-context.xml" partName="camel-context.xml" path="/data/greenlight/src/third-party/camel/examples/camel-example-sql/src/main/resources/META-INF/spring/camel-context.xml" title="camel-context.xml" tooltip="camel-example-sql/src/main/resources/META-INF/spring/camel-context.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-example-sql/src/main/resources/META-INF/spring/camel-context.xml"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3174" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Job.java" partName="Job.java" path="/data/greenlight/src/third-party/camel/examples/camel-example-spring/src/main/java/com/greenlight/integration/Job.java" title="Job.java" tooltip="camel-example-spring/src/main/java/com/greenlight/integration/Job.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-example-spring/src/main/java/com/greenlight/integration/Job.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1040" selectionTopPixel="576"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="/data/greenlight/src/third-party/camel/examples/camel-example-etl/src/main/java/org/apache/camel/example/etl/Main.java" title="Main.java" tooltip="camel-example-etl/src/main/java/org/apache/camel/example/etl/Main.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-example-etl/src/main/java/org/apache/camel/example/etl/Main.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JobStatus.java" partName="JobStatus.java" path="/data/greenlight/src/third-party/camel/examples/camel-example-spring/src/main/java/com/greenlight/integration/JobStatus.java" title="JobStatus.java" tooltip="camel-example-spring/src/main/java/com/greenlight/integration/JobStatus.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-example-spring/src/main/java/com/greenlight/integration/JobStatus.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="109" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.ui.DefaultTextEditor" name="camel-context.xml" partName="camel-context.xml" path="/data/greenlight/src/third-party/camel/examples/camel-example-etl/src/profiles/openjpa/META-INF/spring/camel-context.xml" title="camel-context.xml" tooltip="camel-example-etl/src/profiles/openjpa/META-INF/spring/camel-context.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-example-etl/src/profiles/openjpa/META-INF/spring/camel-context.xml"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="218"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RouteDefinition.java" partName="RouteDefinition.java" path="/data/greenlight/src/third-party/camel/camel-core/src/main/java/org/apache/camel/model/RouteDefinition.java" title="RouteDefinition.java" tooltip="camel-core/src/main/java/org/apache/camel/model/RouteDefinition.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-core/src/main/java/org/apache/camel/model/RouteDefinition.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="11871" selectionTopPixel="3898"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EtlRoutes.java" partName="EtlRoutes.java" path="/data/greenlight/src/third-party/camel/examples/camel-example-etl/src/main/java/org/apache/camel/example/etl/EtlRoutes.java" title="EtlRoutes.java" tooltip="camel-example-etl/src/main/java/org/apache/camel/example/etl/EtlRoutes.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-example-etl/src/main/java/org/apache/camel/example/etl/EtlRoutes.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1151" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TwitterWebSocketRoute.java" partName="TwitterWebSocketRoute.java" path="/data/greenlight/src/third-party/camel/examples/camel-example-twitter-websocket/src/main/java/org/apache/camel/example/websocket/TwitterWebSocketRoute.java" title="TwitterWebSocketRoute.java" tooltip="camel-example-twitter-websocket/src/main/java/org/apache/camel/example/websocket/TwitterWebSocketRoute.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-example-twitter-websocket/src/main/java/org/apache/camel/example/websocket/TwitterWebSocketRoute.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3422" selectionTopPixel="1017"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CustomerEntity.java" partName="CustomerEntity.java" path="/data/greenlight/src/third-party/camel/examples/camel-example-etl/src/main/java/org/apache/camel/example/etl/CustomerEntity.java" title="CustomerEntity.java" tooltip="camel-example-etl/src/main/java/org/apache/camel/example/etl/CustomerEntity.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-example-etl/src/main/java/org/apache/camel/example/etl/CustomerEntity.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CamelTwitterWebSocketMain.java" partName="CamelTwitterWebSocketMain.java" path="/data/greenlight/src/third-party/camel/examples/camel-example-twitter-websocket/src/main/java/org/apache/camel/example/websocket/CamelTwitterWebSocketMain.java" title="CamelTwitterWebSocketMain.java" tooltip="camel-example-twitter-websocket/src/main/java/org/apache/camel/example/websocket/CamelTwitterWebSocketMain.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-example-twitter-websocket/src/main/java/org/apache/camel/example/websocket/CamelTwitterWebSocketMain.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3005" selectionTopPixel="439"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CamelConsoleMain.java" partName="CamelConsoleMain.java" path="/data/greenlight/src/third-party/camel/examples/camel-example-console/src/main/java/org/apache/camel/example/console/CamelConsoleMain.java" title="CamelConsoleMain.java" tooltip="camel-example-console/src/main/java/org/apache/camel/example/console/CamelConsoleMain.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-example-console/src/main/java/org/apache/camel/example/console/CamelConsoleMain.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HBaseHelper.java" partName="HBaseHelper.java" path="/data/greenlight/src/third-party/camel/components/camel-hbase/src/main/java/org/apache/camel/component/hbase/HBaseHelper.java" title="HBaseHelper.java" tooltip="camel-hbase/src/main/java/org/apache/camel/component/hbase/HBaseHelper.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-hbase/src/main/java/org/apache/camel/component/hbase/HBaseHelper.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HBaseEndpoint.java" partName="HBaseEndpoint.java" path="/data/greenlight/src/third-party/camel/components/camel-hbase/src/main/java/org/apache/camel/component/hbase/HBaseEndpoint.java" title="HBaseEndpoint.java" tooltip="camel-hbase/src/main/java/org/apache/camel/component/hbase/HBaseEndpoint.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-hbase/src/main/java/org/apache/camel/component/hbase/HBaseEndpoint.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4" selectionTopPixel="1994"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HBaseConsumer.java" partName="HBaseConsumer.java" path="/data/greenlight/src/third-party/camel/components/camel-hbase/src/main/java/org/apache/camel/component/hbase/HBaseConsumer.java" title="HBaseConsumer.java" tooltip="camel-hbase/src/main/java/org/apache/camel/component/hbase/HBaseConsumer.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-hbase/src/main/java/org/apache/camel/component/hbase/HBaseConsumer.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4" selectionTopPixel="713"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CamelContext.java" partName="CamelContext.java" path="/data/greenlight/src/third-party/camel/camel-core/src/main/java/org/apache/camel/CamelContext.java" title="CamelContext.java" tooltip="camel-core/src/main/java/org/apache/camel/CamelContext.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/camel-core/src/main/java/org/apache/camel/CamelContext.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="20" selectionOffset="15457" selectionTopPixel="5754"/>
 </editor>
 </editors>
 <views>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+</viewState>
+</view>
+<view id="org.eclipse.jdt.callhierarchy.view" partName="Call Hierarchy">
+<viewState search_scope_type="1"/>
+</view>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
+<view id="org.eclipse.cdt.debug.ui.executablesView" partName="Executables">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.debug.ui.DisplayView" partName="Display">
+<viewState>scc&#x0A;&#x09; (org.apache.camel.spring.SpringCamelContext) SpringCamelContext(camel) with spring id org.springframework.context.support.ClassPathXmlApplicationContext@6076ab2f</viewState>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
+<columnWidths org.eclipse.ui.ide.completionField="40" org.eclipse.ui.ide.descriptionField="350" org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="188" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.priorityField="35" org.eclipse.ui.ide.resourceField="105"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.completionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.priorityField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.descriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.ExpressionView" partName="Expressions">
+<viewState/>
+</view>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.cview.groupmacros="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
-<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
-<viewState isPinned="false">
-<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
-<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
+<view id="org.eclipse.ui.views.ResourceNavigator" partName="Navigator">
+<viewState LINK_NAVIGATOR_TO_EDITOR="0" sorter="1">
+<filters>
+<filter element="*.class" isEnabled="false"/>
+<filter element=".*" isEnabled="false"/>
+</filters>
+<expanded>
+<element path="/spi-annotations"/>
+</expanded>
+<selection>
+<element path="/camel-example-spring"/>
+</selection>
 </viewState>
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
+<category IMemento.internal.id="Warnings (100 of 1467 items)"/>
+<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
-<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="130" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
+<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="568" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -152,25 +191,13 @@
 </customFilters>
 </viewState>
 </view>
-<view id="org.eclipse.ui.views.TaskList" partName="Tasks">
-<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
-<columnWidths org.eclipse.ui.ide.completionField="40" org.eclipse.ui.ide.descriptionField="350" org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="188" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.priorityField="35" org.eclipse.ui.ide.resourceField="105"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.completionField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.priorityField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.descriptionField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
-</viewState>
-</view>
-<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
-<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
 <viewState/>
 </view>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.debug.ui.DebugPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -207,43 +234,30 @@
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.ui.views.TaskList"/>
 <fastViewBars/>
-<layout>
-<mainWindow>
-<info folder="true" part="topLeft">
-<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="topLeft">&#x0A;<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.team.ccvs.ui.RepositoriesView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@745a936b" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="topLeft">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@745a936b" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="topLeft">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25940594" ratioLeft="262" ratioRight="748" relationship="2" relative="topLeft"/>
-<info folder="true" part="bottomRight" ratio="0.6599064" ratioLeft="423" ratioRight="218" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.TaskList" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<info folder="true" part="bottomRight" ratio="0.6599064" ratioLeft="423" ratioRight="218" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.TaskList" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.team.ui.GenericHistoryView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="bottomLeft" ratio="0.49921995" ratioLeft="320" ratioRight="321" relationship="4" relative="topLeft">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="bottomLeft" ratio="0.49921995" ratioLeft="320" ratioRight="321" relationship="4" relative="topLeft">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
@@ -267,6 +281,7 @@
 <alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
 <show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
 <show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
 <show_view_action id="org.eclipse.jdt.ui.SourceView"/>
@@ -282,6 +297,7 @@
 <show_view_action id="org.eclipse.ui.texteditor.TemplatesView"/>
 <show_view_action id="org.eclipse.pde.runtime.LogView"/>
 <show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_in_time id="org.eclipse.ui.views.ResourceNavigator" time="1376200956996"/>
 <new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
 <new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
 <new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
@@ -301,23 +317,27 @@
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.ui.views.ResourceNavigator"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.jdt.ui.SourceView"/>
 <view id="org.eclipse.search.ui.views.SearchView"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.jdt.callhierarchy.view"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
 <info folder="true" part="left">
-<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.views.ResourceNavigator" appearance="2" expanded="2">
 <page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="Navigator"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
-<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
@@ -329,12 +349,14 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.32087734" ratioLeft="395" ratioRight="836" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.7493333" ratioLeft="562" ratioRight="188" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
+<info folder="true" part="bottom" ratio="0.7857961" ratioLeft="686" ratioRight="187" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.search.ui.views.SearchView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.jdt.callhierarchy.view" label="Call Hierarchy"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
@@ -343,6 +365,8 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
@@ -359,86 +383,290 @@
 </mainWindow>
 </layout>
 </perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.debug.internal.ui.DebugPerspectiveFactory" id="org.eclipse.debug.ui.DebugPerspective" label="Debug"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.debug.ui.debugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.debug.ui.DebugView"/>
+<show_view_action id="org.eclipse.debug.ui.VariableView"/>
+<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
+<show_view_action id="org.eclipse.debug.ui.ExpressionView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.cdt.debug.ui.SignalsView"/>
+<show_view_action id="org.eclipse.debug.ui.RegisterView"/>
+<show_view_action id="org.eclipse.debug.ui.ModuleView"/>
+<show_view_action id="org.eclipse.debug.ui.MemoryView"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.cdt.debug.ui.executablesView"/>
+<show_view_action id="org.eclipse.cdt.dsf.gdb.ui.tracecontrol.view"/>
+<show_view_action id="org.eclipse.cdt.dsf.debug.ui.disassembly.view"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.jdt.debug.ui.DisplayView"/>
+<perspective_action id="org.eclipse.cdt.ui.CPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.nodeclipse.ui.perspectives.NodePerspective"/>
+<hide_toolbar_item_id id="org.eclipse.debug.ui.commands.RunToLine"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.cdt.debug.ui.executablesView"/>
+<view id="org.eclipse.jdt.debug.ui.DisplayView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.debug.ui.VariableView"/>
+<view id="org.eclipse.debug.ui.BreakpointView"/>
+<view id="org.eclipse.debug.ui.ExpressionView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1254" ratioRight="418" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.62657505" ratioLeft="547" ratioRight="326" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.cdt.debug.ui.executablesView" label="Executables"/>
+<page content="org.eclipse.jdt.debug.ui.DisplayView" label="Display"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.86738354" ratioLeft="242" ratioRight="37" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="1254" ratioRight="418" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.dsf.gdb.ui.tracecontrol.view" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.7020854" ratioLeft="707" ratioRight="300" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.ExpressionView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
+<page content="org.eclipse.debug.ui.ExpressionView" label="Expressions"/>
+<page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.debug.ui.SignalsView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.ModuleView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
 </perspectives>
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/camel-sjms/src/main/java/org/apache/camel/component/sjms/SjmsEndpoint.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/camel-core/src/main/java/org/apache/camel/impl/UriEndpointConfiguration.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/spi-annotations/src/main/java/org/apache/camel/spi/UriEndpoint.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/camel-mongodb/src/test/java/org/apache/camel/component/mongodb/MongoDbFindOperationTest.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/camel-example-sql/src/main/java/org/apache/camel/example/sql/OrderBean.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/camel-example-sql/src/main/java/org/apache/camel/example/sql/DatabaseBean.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/camel-example-sql/src/main/resources/features.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/camel-example-sql/src/main/resources/META-INF/spring/camel-context.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/camel-example-etl/src/main/java/org/apache/camel/example/etl/Main.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/camel-example-etl/src/profiles/openjpa/META-INF/spring/camel-context.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/camel-example-etl/src/main/java/org/apache/camel/example/etl/EtlRoutes.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/camel-example-etl/src/main/java/org/apache/camel/example/etl/CustomerEntity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/camel-example-console/src/main/java/org/apache/camel/example/console/CamelConsoleMain.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/camel-hbase/src/main/java/org/apache/camel/component/hbase/HBaseHelper.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/camel-hbase/src/main/java/org/apache/camel/component/hbase/HBaseEndpoint.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/camel-hbase/src/main/java/org/apache/camel/component/hbase/HBaseConsumer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/camel-example-spring/src/main/java/com/greenlight/integration/Job.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/camel-example-spring/src/main/java/com/greenlight/integration/JobRouteBuilder.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/camel-example-twitter-websocket/src/main/java/org/apache/camel/example/websocket/TwitterWebSocketRoute.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/camel-example-twitter-websocket/src/main/java/org/apache/camel/example/websocket/CamelTwitterWebSocketMain.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/camel-core/src/main/java/org/apache/camel/CamelContext.java"/>
 </editors>
-<item historyLabel="SjmsEndpoint.java" index="0">
-<position info="not_deleted" x="1743" y="13"/>
+<item historyLabel="TwitterWebSocketRoute.java" index="2">
+<position info="not_deleted" x="3422" y="0"/>
 </item>
-<item historyLabel="SjmsEndpoint.java" index="0">
-<position info="not_deleted" x="1719" y="0"/>
+<item historyLabel="CamelTwitterWebSocketMain.java" index="3">
+<position info="not_deleted" x="3005" y="0"/>
 </item>
-<item historyLabel="UriEndpointConfiguration.java" index="1">
-<position info="not_deleted" x="1438" y="0"/>
+<item historyLabel="TwitterWebSocketRoute.java" index="2">
+<position info="not_deleted" x="3422" y="0"/>
 </item>
-<item historyLabel="UriEndpoint.java" index="2">
-<position info="not_deleted" x="1040" y="0"/>
+<item historyLabel="JobRouteBuilder.java" index="1">
+<position info="not_deleted" x="1138" y="0"/>
 </item>
-<item historyLabel="SjmsEndpoint.java" index="0">
-<position info="not_deleted" x="1743" y="13"/>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1041" y="0"/>
 </item>
-<item historyLabel="UriEndpoint.java" index="2">
-<position info="not_deleted" x="1040" y="0"/>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1250" y="0"/>
 </item>
-<item historyLabel="MongoDbFindOperationTest.java" index="3">
-<position info="not_deleted" x="5090" y="0"/>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1113" y="0"/>
 </item>
-<item historyLabel="OrderBean.java" index="4">
-<position info="not_deleted" x="1334" y="0"/>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1200" y="0"/>
 </item>
-<item historyLabel="DatabaseBean.java" index="5">
-<position info="not_deleted" x="4" y="0"/>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1026" y="0"/>
 </item>
-<item historyLabel="features.xml" index="6">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="JobRouteBuilder.java" index="1">
+<position info="not_deleted" x="1138" y="0"/>
 </item>
-<item historyLabel="camel-context.xml" index="7">
-<position info="not_deleted" x="3174" y="0"/>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1041" y="0"/>
 </item>
-<item historyLabel="Main.java" index="8">
-<position info="not_deleted" x="4" y="0"/>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1112" y="0"/>
 </item>
-<item historyLabel="camel-context.xml" index="9">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1113" y="0"/>
 </item>
-<item historyLabel="EtlRoutes.java" index="10">
-<position info="not_deleted" x="1151" y="0"/>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1464" y="0"/>
 </item>
-<item historyLabel="camel-context.xml" index="9">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Job.java" index="0">
+<position/>
 </item>
-<item historyLabel="CustomerEntity.java" index="11">
-<position info="not_deleted" x="4" y="0"/>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1112" y="0"/>
 </item>
-<item historyLabel="CamelConsoleMain.java" index="12">
-<position info="not_deleted" x="4" y="0"/>
+<item historyLabel="JobRouteBuilder.java" index="1">
+<position info="not_deleted" x="1213" y="0"/>
 </item>
-<item historyLabel="HBaseHelper.java" index="13">
-<position info="not_deleted" x="4" y="0"/>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1041" y="0"/>
 </item>
-<item historyLabel="HBaseEndpoint.java" index="14">
-<position info="not_deleted" x="4" y="0"/>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1199" y="0"/>
 </item>
-<item active="true" historyLabel="HBaseConsumer.java" index="15">
-<position info="not_deleted" x="4" y="0"/>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1113" y="0"/>
+</item>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1200" y="0"/>
+</item>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1378" y="0"/>
+</item>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1241" y="0"/>
+</item>
+<item historyLabel="CamelContext.java" index="4">
+<position info="not_deleted" x="15889" y="19"/>
+</item>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1176" y="0"/>
+</item>
+<item historyLabel="CamelContext.java" index="4">
+<position info="not_deleted" x="15457" y="20"/>
+</item>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1041" y="0"/>
+</item>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1113" y="0"/>
+</item>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1200" y="0"/>
+</item>
+<item historyLabel="Job.java" index="0">
+<position/>
+</item>
+<item historyLabel="JobRouteBuilder.java" index="1">
+<position info="not_deleted" x="1213" y="0"/>
+</item>
+<item historyLabel="JobRouteBuilder.java" index="1">
+<position info="not_deleted" x="1138" y="0"/>
+</item>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1041" y="0"/>
+</item>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1199" y="0"/>
+</item>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1113" y="0"/>
+</item>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1200" y="0"/>
+</item>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1378" y="0"/>
+</item>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1199" y="0"/>
+</item>
+<item historyLabel="JobRouteBuilder.java" index="1">
+<position info="not_deleted" x="1213" y="0"/>
+</item>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1378" y="0"/>
+</item>
+<item historyLabel="JobRouteBuilder.java" index="1">
+<position info="not_deleted" x="1213" y="0"/>
+</item>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1283" y="0"/>
+</item>
+<item historyLabel="JobRouteBuilder.java" index="1">
+<position info="not_deleted" x="1213" y="0"/>
+</item>
+<item historyLabel="JobRouteBuilder.java" index="1">
+<position info="not_deleted" x="1138" y="0"/>
+</item>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1041" y="0"/>
+</item>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1079" y="0"/>
+</item>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1113" y="0"/>
+</item>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1200" y="0"/>
+</item>
+<item historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1284" y="0"/>
+</item>
+<item active="true" historyLabel="Job.java" index="0">
+<position info="not_deleted" x="1378" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -453,55 +681,54 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.intro.impl.presentations.IntroLaunchBar"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HBaseConsumer.java" tooltip="camel-hbase/src/main/java/org/apache/camel/component/hbase/HBaseConsumer.java">
-<persistable path="/camel-hbase/src/main/java/org/apache/camel/component/hbase/HBaseConsumer.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CamelContext.java" tooltip="camel-core/src/main/java/org/apache/camel/CamelContext.java">
+<persistable path="/camel-core/src/main/java/org/apache/camel/CamelContext.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HBaseEndpoint.java" tooltip="camel-hbase/src/main/java/org/apache/camel/component/hbase/HBaseEndpoint.java">
-<persistable path="/camel-hbase/src/main/java/org/apache/camel/component/hbase/HBaseEndpoint.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CamelTwitterWebSocketMain.java" tooltip="camel-example-twitter-websocket/src/main/java/org/apache/camel/example/websocket/CamelTwitterWebSocketMain.java">
+<persistable path="/camel-example-twitter-websocket/src/main/java/org/apache/camel/example/websocket/CamelTwitterWebSocketMain.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HBaseHelper.java" tooltip="camel-hbase/src/main/java/org/apache/camel/component/hbase/HBaseHelper.java">
-<persistable path="/camel-hbase/src/main/java/org/apache/camel/component/hbase/HBaseHelper.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TwitterWebSocketRoute.java" tooltip="camel-example-twitter-websocket/src/main/java/org/apache/camel/example/websocket/TwitterWebSocketRoute.java">
+<persistable path="/camel-example-twitter-websocket/src/main/java/org/apache/camel/example/websocket/TwitterWebSocketRoute.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CamelConsoleMain.java" tooltip="camel-example-console/src/main/java/org/apache/camel/example/console/CamelConsoleMain.java">
-<persistable path="/camel-example-console/src/main/java/org/apache/camel/example/console/CamelConsoleMain.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RouteDefinition.java" tooltip="camel-core/src/main/java/org/apache/camel/model/RouteDefinition.java">
+<persistable path="/camel-core/src/main/java/org/apache/camel/model/RouteDefinition.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CustomerEntity.java" tooltip="camel-example-etl/src/main/java/org/apache/camel/example/etl/CustomerEntity.java">
-<persistable path="/camel-example-etl/src/main/java/org/apache/camel/example/etl/CustomerEntity.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JobStatus.java" tooltip="camel-example-spring/src/main/java/com/greenlight/integration/JobStatus.java">
+<persistable path="/camel-example-spring/src/main/java/com/greenlight/integration/JobStatus.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EtlRoutes.java" tooltip="camel-example-etl/src/main/java/org/apache/camel/example/etl/EtlRoutes.java">
-<persistable path="/camel-example-etl/src/main/java/org/apache/camel/example/etl/EtlRoutes.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Feed.java" tooltip="camel-example-spring/src/main/java/com/greenlight/integration/Feed.java">
+<persistable path="/camel-example-spring/src/main/java/com/greenlight/integration/Feed.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="camel-context.xml" tooltip="camel-example-etl/src/profiles/openjpa/META-INF/spring/camel-context.xml">
-<persistable path="/camel-example-etl/src/profiles/openjpa/META-INF/spring/camel-context.xml"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Thread.class" tooltip="java.lang.Thread">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=apt/\/usr\/lib\/jvm\/java-6-oracle\/jre\/lib\/rt.jar&lt;java.lang(Thread.class"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" tooltip="camel-example-etl/src/main/java/org/apache/camel/example/etl/Main.java">
-<persistable path="/camel-example-etl/src/main/java/org/apache/camel/example/etl/Main.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="pom.xml" tooltip="camel-example-spring/pom.xml">
+<persistable path="/camel-example-spring/pom.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="camel-context.xml" tooltip="camel-example-sql/src/main/resources/META-INF/spring/camel-context.xml">
-<persistable path="/camel-example-sql/src/main/resources/META-INF/spring/camel-context.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SchemaParser.java" tooltip="camel-example-spring/src/main/java/com/greenlight/integration/SchemaParser.java">
+<persistable path="/camel-example-spring/src/main/java/com/greenlight/integration/SchemaParser.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="features.xml" tooltip="camel-example-sql/src/main/resources/features.xml">
-<persistable path="/camel-example-sql/src/main/resources/features.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FeedRouteBuilder.java" tooltip="camel-example-spring/src/main/java/com/greenlight/integration/FeedRouteBuilder.java">
+<persistable path="/camel-example-spring/src/main/java/com/greenlight/integration/FeedRouteBuilder.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DatabaseBean.java" tooltip="camel-example-sql/src/main/java/org/apache/camel/example/sql/DatabaseBean.java">
-<persistable path="/camel-example-sql/src/main/java/org/apache/camel/example/sql/DatabaseBean.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="mongodb" tooltip="camel-mongodb/src/main/resources/META-INF/services/org/apache/camel/component/mongodb">
+<persistable path="/camel-mongodb/src/main/resources/META-INF/services/org/apache/camel/component/mongodb"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OrderBean.java" tooltip="camel-example-sql/src/main/java/org/apache/camel/example/sql/OrderBean.java">
-<persistable path="/camel-example-sql/src/main/java/org/apache/camel/example/sql/OrderBean.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NamedEndpointBean.java" tooltip="camel-cdi/src/test/java/org/apache/camel/cdi/support/NamedEndpointBean.java">
+<persistable path="/camel-cdi/src/test/java/org/apache/camel/cdi/support/NamedEndpointBean.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MongoDbFindOperationTest.java" tooltip="camel-mongodb/src/test/java/org/apache/camel/component/mongodb/MongoDbFindOperationTest.java">
-<persistable path="/camel-mongodb/src/test/java/org/apache/camel/component/mongodb/MongoDbFindOperationTest.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LdapComponent.java" tooltip="camel-ldap/src/main/java/org/apache/camel/component/ldap/LdapComponent.java">
+<persistable path="/camel-ldap/src/main/java/org/apache/camel/component/ldap/LdapComponent.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UriEndpoint.java" tooltip="spi-annotations/src/main/java/org/apache/camel/spi/UriEndpoint.java">
-<persistable path="/spi-annotations/src/main/java/org/apache/camel/spi/UriEndpoint.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LevelDBCamelCodec.java" tooltip="camel-leveldb/src/main/java/org/apache/camel/component/leveldb/LevelDBCamelCodec.java">
+<persistable path="/camel-leveldb/src/main/java/org/apache/camel/component/leveldb/LevelDBCamelCodec.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UriEndpointConfiguration.java" tooltip="camel-core/src/main/java/org/apache/camel/impl/UriEndpointConfiguration.java">
-<persistable path="/camel-core/src/main/java/org/apache/camel/impl/UriEndpointConfiguration.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LevelDBFile.java" tooltip="camel-leveldb/src/main/java/org/apache/camel/component/leveldb/LevelDBFile.java">
+<persistable path="/camel-leveldb/src/main/java/org/apache/camel/component/leveldb/LevelDBFile.java"/>
 </file>
 </mruList>
 </workbench>
