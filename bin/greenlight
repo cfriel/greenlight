@@ -73,15 +73,15 @@ esac
 
 launch_web()
 {
-    (cd $SITE_PATH; echo "writing meteor output to $LOGFILE"; meteor >> $LOGFILE) & pid="$!"
-    echo "Launched web [$pid]"
+    (cd $SITE_PATH; (meteor | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g") | while read line; do echo "\033[0;35;1mweb: \033[0m$line"; done  >> $LOGFILE) & pid="$!"
+    echo "\033[35;1mLaunched web [$pid]\033[0m"
     pids="$pids $pid"
 }
 
 launch_search()
 {
-    (cd $ELASTICSEARCH_PATH; echo "writing meteor output to $LOGFILE"; ./bin/elasticsearch -f >> $LOGFILE) & pid="$!"
-    echo "Launched search [$pid]"
+    (cd $ELASTICSEARCH_PATH;  ./bin/elasticsearch -f | while read line; do echo "\033[0;32;1msearch: \033[0m$line"; done >> $LOGFILE ) & pid="$!"
+    echo "\033[32;1mLaunched search [$pid]\033[0m"
     pids="$pids $pid"
 }
 
