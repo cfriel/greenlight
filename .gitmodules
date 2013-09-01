@@ -55,3 +55,6 @@
 [submodule "src/third-party/elasticsearch"]
 	path = src/third-party/elasticsearch
 	url = https://github.com/cfriel/elasticsearch.git
+[submodule "src/packages/greenlight-data"]
+	path = src/packages/greenlight-data
+	url = https://github.com/cfriel/greenlight-data.git
