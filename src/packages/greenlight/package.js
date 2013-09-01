@@ -59,6 +59,15 @@ Package.on_use(function (api, where) {
     api.add_files('client/greenlight.search.js', 'client');
     api.add_files('server/greenlight.search.js', 'server');
 
+    api.add_files('client/greenlight.endpoint.js', 'client');
+    api.add_files('server/greenlight.endpoint.js', 'server');
+
+    api.add_files('client/greenlight.transform.js', 'client');
+    api.add_files('server/greenlight.transform.js', 'server');
+
+    api.add_files('client/greenlight.stream.js', 'client');
+    api.add_files('server/greenlight.stream.js', 'server');
+
     api.export('Greenlight', 'client');
     api.export('Greenlight', 'server');
     api.export('Data', 'client');
