@@ -6,6 +6,8 @@ greenlight.prototype = new greenlight();
 
 greenlight.prototype.routes = {};
 
+greenlight.prototype.SubscriptionHandles = [];
+
 greenlight.prototype.register_site = function(site, callback)
 {
     Meteor.call('register_site', site, function(err, res){
@@ -29,6 +31,13 @@ greenlight.prototype.register_site = function(site, callback)
     });
 };
 
+greenlight.prototype.readyFns = [];
+
+greenlight.prototype.ready = function(f)
+{
+    this.readyFns.push(f);
+};
+
 greenlight.prototype.log = function(format, args)
 {
     if(!args)
@@ -38,6 +47,16 @@ greenlight.prototype.log = function(format, args)
     
     console.log(vsprintf(format, args));
     
+};
+
+greenlight.prototype.reactive_ready = function()
+{   
+    var isReady = Greenlight.SubscriptionHandles.every(function(handle)
+    {
+        return handle.ready();
+    });
+
+    return isReady;
 }
 
 greenlight.prototype.get_default_route = function(template)
@@ -159,8 +178,18 @@ greenlight.prototype.register_package = function(name, version, template)
 
 greenlight.prototype.init = function()
 {
-    this.instantiate_sites();
-    this.create_index();
+    Greenlight.ready(this.instantiate_sites);
+    Greenlight.ready(this.create_index);
+
+    Deps.autorun(function(){
+	if(Greenlight.reactive_ready())
+	{
+	    Greenlight.readyFns.every(function(handle){
+		handle();
+		return true;
+	    });
+	}
+    });
 };
 
 greenlight.prototype.create_index = function()

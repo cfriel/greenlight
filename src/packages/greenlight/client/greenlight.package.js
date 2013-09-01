@@ -33,9 +33,7 @@ greenlight.prototype.Package = function(obj)
 
 Greenlight.Packages = new Meteor.Collection("packages");
 
-Deps.autorun(function(){
-    Meteor.subscribe("packages");
-});
+Greenlight.SubscriptionHandles.push(Meteor.subscribe("packages"));
 
 greenlight.prototype.Package.prototype = new Greenlight.Entity();
 greenlight.prototype.Package.prototype.constructor = greenlight.prototype.Package;

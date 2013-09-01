@@ -26,9 +26,7 @@ greenlight.prototype.Notification = function(obj)
 
 Greenlight.Notifications = new Meteor.Collection("notifications");
 
-Deps.autorun(function(){
-    Meteor.subscribe("notifications");
-});
+Greenlight.SubscriptionHandles.push(Meteor.subscribe("notifications"));
 
 greenlight.prototype.Notification.prototype = new Greenlight.Entity();
 greenlight.prototype.Notification.prototype.constructor = greenlight.prototype.Notification;

@@ -13,9 +13,7 @@ greenlight.prototype.Stream = function(obj)
 
 Greenlight.Streams = new Meteor.Collection("streams");
 
-Deps.autorun(function(){
-    Meteor.subscribe("streams");
-});
+Greenlight.SubscriptionHandles.push(Meteor.subscribe("streams"));
 
 greenlight.prototype.Stream.prototype = new Greenlight.Entity();
 greenlight.prototype.Stream.prototype.constructor = greenlight.prototype.Stream;

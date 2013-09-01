@@ -24,9 +24,7 @@ greenlight.prototype.Server = function(obj)
 
 Greenlight.Servers = new Meteor.Collection("servers");
 
-Deps.autorun(function(){
-    Meteor.subscribe("servers");
-});
+Greenlight.SubscriptionHandles.push(Meteor.subscribe("servers"));
 
 greenlight.prototype.Server.prototype = new Greenlight.Entity();
 greenlight.prototype.Server.prototype.constructor = greenlight.prototype.Server;

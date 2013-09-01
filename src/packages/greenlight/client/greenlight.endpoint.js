@@ -13,9 +13,7 @@ greenlight.prototype.Endpoint = function(obj)
 
 Greenlight.Endpoints = new Meteor.Collection("endpoints");
 
-Deps.autorun(function(){
-    Meteor.subscribe("endpoints");
-});
+Greenlight.SubscriptionHandles.push(Meteor.subscribe("endpoints"));
 
 greenlight.prototype.Endpoint.prototype = new Greenlight.Entity();
 greenlight.prototype.Endpoint.prototype.constructor = greenlight.prototype.Endpoint;

@@ -15,9 +15,7 @@ greenlight.prototype.Search = function(obj)
 
 Greenlight.Search.Index = new Meteor.Collection("search_index");
 
-Deps.autorun(function(){
-    Meteor.subscribe("search_index");
-});
+Greenlight.SubscriptionHandles.push(Meteor.subscribe("search_index"));
 
 greenlight.prototype.Search.prototype = new Greenlight.Entity();
 greenlight.prototype.Search.prototype.constructor = greenlight.prototype.Search;

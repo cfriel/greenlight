@@ -27,9 +27,7 @@ greenlight.prototype.Entitlement = function(obj)
 
 Greenlight.Entitlements = new Meteor.Collection("entitlements");
 
-Deps.autorun(function(){
-    Meteor.subscribe("entitlements");
-});
+Greenlight.SubscriptionHandles.push(Meteor.subscribe("entitlements"));
 
 greenlight.prototype.Entitlement.prototype = new Greenlight.Entity();
 greenlight.prototype.Entitlement.prototype.constructor = greenlight.prototype.Entitlement;

@@ -18,9 +18,7 @@ greenlight.prototype.User = function(obj)
 
 Greenlight.Users = Meteor.users;
 
-Deps.autorun(function(){
-    Meteor.subscribe("users");
-});
+Greenlight.SubscriptionHandles.push(Meteor.subscribe("users"));
 
 greenlight.prototype.User.prototype = new Greenlight.Entity();
 greenlight.prototype.User.prototype.constructor = greenlight.prototype.User;

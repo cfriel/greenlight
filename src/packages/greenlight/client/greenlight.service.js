@@ -23,9 +23,7 @@ greenlight.prototype.Service = function(obj)
 
 Greenlight.Services = new Meteor.Collection("services");
 
-Deps.autorun(function(){
-    Meteor.subscribe("services");
-});
+Greenlight.SubscriptionHandles.push(Meteor.subscribe("services"));
 
 greenlight.prototype.Service.prototype = new Greenlight.Entity();
 greenlight.prototype.Service.prototype.constructor = greenlight.prototype.Service;

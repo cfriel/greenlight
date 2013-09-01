@@ -36,10 +36,8 @@ Meteor.startup(function(){
 
 Greenlight.Datasets = new Meteor.Collection("datasets");
 
-Deps.autorun(function(){
-    Meteor.subscribe("data");
-    Meteor.subscribe("datasets");
-});
+Greenlight.SubscriptionHandles.push(Meteor.subscribe("data"));
+Greenlight.SubscriptionHandles.push(Meteor.subscribe("datasets"));
 
 greenlight.prototype.Dataset.prototype = new Greenlight.Entity();
 greenlight.prototype.Dataset.prototype.constructor = greenlight.prototype.Dataset;

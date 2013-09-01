@@ -64,3 +64,12 @@
 [submodule "src/third-party/storm-starter"]
 	path = src/third-party/storm-starter
 	url = https://github.com/cfriel/storm-starter.git
+[submodule "src/third-party/kafka"]
+	path = src/third-party/kafka
+	url = https://github.com/cfriel/kafka.git
+[submodule "src/third-party/hadoop-common"]
+	path = src/third-party/hadoop-common
+	url = https://github.com/cfriel/hadoop-common.git
+[submodule "src/third-party/pig"]
+	path = src/third-party/pig
+	url = https://github.com/cfriel/pig.git

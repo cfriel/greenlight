@@ -26,9 +26,7 @@ greenlight.prototype.Site = function(obj)
 
 Greenlight.Sites = new Meteor.Collection("sites");
 
-Deps.autorun(function(){
-    Meteor.subscribe("sites");
-});
+Greenlight.SubscriptionHandles.push(Meteor.subscribe("sites"));
 
 greenlight.prototype.Site.prototype = new Greenlight.Entity();
 greenlight.prototype.Site.prototype.constructor = greenlight.prototype.Site;

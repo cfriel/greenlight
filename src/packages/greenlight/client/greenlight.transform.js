@@ -13,9 +13,7 @@ greenlight.prototype.Transform = function(obj)
 
 Greenlight.Transforms = new Meteor.Collection("transforms");
 
-Deps.autorun(function(){
-    Meteor.subscribe("transforms");
-});
+Greenlight.SubscriptionHandles.push(Meteor.subscribe("transforms"));
 
 greenlight.prototype.Transform.prototype = new Greenlight.Entity();
 greenlight.prototype.Transform.prototype.constructor = greenlight.prototype.Transform;

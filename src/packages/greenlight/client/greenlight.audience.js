@@ -22,9 +22,7 @@ greenlight.prototype.Audience = function()
 
 Greenlight.Audiences = new Meteor.Collection("audiences");
 
-Deps.autorun(function(){
-    Meteor.subscribe("audiences");
-});
+Greenlight.SubscriptionHandles.push(Meteor.subscribe("audiences"));
 
 greenlight.prototype.Audience.prototype = new Greenlight.Entity();
 greenlight.prototype.Audience.prototype.constructor = greenlight.prototype.Audience;

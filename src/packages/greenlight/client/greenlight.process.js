@@ -16,9 +16,7 @@ greenlight.prototype.Process = function(obj)
 
 Greenlight.Processes = new Meteor.Collection("processes");
 
-Deps.autorun(function(){
-    Meteor.subscribe("processes");
-});
+Greenlight.SubscriptionHandles.push(Meteor.subscribe("processes"));
 
 greenlight.prototype.Process.prototype = new Greenlight.Entity();
 greenlight.prototype.Process.prototype.constructor = greenlight.prototype.Process;

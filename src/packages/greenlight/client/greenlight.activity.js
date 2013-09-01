@@ -27,9 +27,7 @@ greenlight.prototype.Activity = function(obj)
 
 Greenlight.Activities = new Meteor.Collection("activities");
 
-Deps.autorun(function(){
-    Meteor.subscribe("activities");
-});
+Greenlight.SubscriptionHandles.push(Meteor.subscribe("activities"));
 
 greenlight.prototype.Activity.prototype = new Greenlight.Entity();
 greenlight.prototype.Activity.prototype.constructor = greenlight.prototype.Activity;
