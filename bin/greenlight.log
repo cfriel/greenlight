@@ -1,0 +1,163 @@
+Launching services
+[[[[[ /data/greenlight/src/site ]]]]]
+
+[2013-08-31 23:40:32,695][INFO ][node                     ] [Mauler] version[1.0.0.Beta1-SNAPSHOT], pid[21361], build[be00437/2013-08-30T15:37:59Z]
+[2013-08-31 23:40:32,695][INFO ][node                     ] [Mauler] initializing ...
+[2013-08-31 23:40:32,702][INFO ][plugins                  ] [Mauler] loaded [], sites []
+=> Errors prevented startup:
+
+While building the application:
+error: no such package: 'greenlight-feeds'
+error: no such package: 'greenlight-quality'
+
+=> Your application has errors. Waiting for file change.
+=> Meteor 0.6.5.1 is available. Update this project with 'meteor update'.
+[2013-08-31 23:40:34,873][INFO ][node                     ] [Mauler] initialized
+[2013-08-31 23:40:34,873][INFO ][node                     ] [Mauler] starting ...
+[2013-08-31 23:40:34,976][INFO ][transport                ] [Mauler] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.45.169:9300]}
+[2013-08-31 23:40:38,022][INFO ][cluster.service          ] [Mauler] new_master [Mauler][9SpPRovRTo-kogJ7UyY5uw][inet[/192.168.45.169:9300]], reason: zen-disco-join (elected_as_master)
+[2013-08-31 23:40:38,063][INFO ][discovery                ] [Mauler] elasticsearch/9SpPRovRTo-kogJ7UyY5uw
+[2013-08-31 23:40:38,087][INFO ][http                     ] [Mauler] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.45.169:9200]}
+[2013-08-31 23:40:38,088][INFO ][node                     ] [Mauler] started
+[2013-08-31 23:40:38,520][INFO ][gateway                  ] [Mauler] recovered [1] indices into cluster_state
+[2013-08-31 23:41:46,684][INFO ][node                     ] [Mauler] stopping ...
+[2013-08-31 23:41:46,727][INFO ][node                     ] [Mauler] stopped
+[2013-08-31 23:41:46,727][INFO ][node                     ] [Mauler] closing ...
+[2013-08-31 23:41:46,732][INFO ][node                     ] [Mauler] closed
+Launching services
+[[[[[ /data/greenlight/src/site ]]]]]
+
+[2013-08-31 23:42:17,974][INFO ][node                     ] [Lumpkin, Willie] version[1.0.0.Beta1-SNAPSHOT], pid[21824], build[be00437/2013-08-30T15:37:59Z]
+[2013-08-31 23:42:17,974][INFO ][node                     ] [Lumpkin, Willie] initializing ...
+[2013-08-31 23:42:17,983][INFO ][plugins                  ] [Lumpkin, Willie] loaded [], sites []
+=> Meteor 0.6.5.1 is available. Update this project with 'meteor update'.
+=> Errors prevented startup:
+
+While building the application:
+error: no such package: 'greenlight-feeds'
+error: no such package: 'greenlight-quality'
+
+=> Your application has errors. Waiting for file change.
+[2013-08-31 23:42:20,048][INFO ][node                     ] [Lumpkin, Willie] initialized
+[2013-08-31 23:42:20,048][INFO ][node                     ] [Lumpkin, Willie] starting ...
+[2013-08-31 23:42:20,150][INFO ][transport                ] [Lumpkin, Willie] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.45.169:9300]}
+[2013-08-31 23:42:23,182][INFO ][node                     ] [Lumpkin, Willie] stopping ...
+[2013-08-31 23:42:23,189][INFO ][cluster.service          ] [Lumpkin, Willie] new_master [Lumpkin, Willie][h8X_k5mmS9CQoAkY_DRTGA][inet[/192.168.45.169:9300]], reason: zen-disco-join (elected_as_master)
+[2013-08-31 23:42:23,230][INFO ][discovery                ] [Lumpkin, Willie] elasticsearch/h8X_k5mmS9CQoAkY_DRTGA
+[2013-08-31 23:42:23,247][INFO ][http                     ] [Lumpkin, Willie] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.45.169:9200]}
+[2013-08-31 23:42:23,247][INFO ][node                     ] [Lumpkin, Willie] started
+[2013-08-31 23:42:23,247][ERROR][bootstrap                ] [Lumpkin, Willie] {1.0.0.Beta1-SNAPSHOT}: Startup Failed ...
+- IllegalStateException[Shutdown in progress]
+Launching services
+[[[[[ /data/greenlight/src/site ]]]]]
+
+[2013-08-31 23:45:59,787][INFO ][node                     ] [Andrew Gervais] version[1.0.0.Beta1-SNAPSHOT], pid[22211], build[be00437/2013-08-30T15:37:59Z]
+[2013-08-31 23:45:59,787][INFO ][node                     ] [Andrew Gervais] initializing ...
+[2013-08-31 23:45:59,792][INFO ][plugins                  ] [Andrew Gervais] loaded [], sites []
+=> Meteor server running on: http://localhost:3000/
+=> Meteor 0.6.5.1 is available. Update this project with 'meteor update'.
+[34mI20130831-23:46:01.711(-4)? [39mregistering profile with version 1.0
+[2013-08-31 23:46:01,987][INFO ][node                     ] [Andrew Gervais] initialized
+[2013-08-31 23:46:01,987][INFO ][node                     ] [Andrew Gervais] starting ...
+[34mW20130831-23:46:01.996(-4)? (STDERR) [39m[35m/home/cfriel/.meteor/tools/4010e5731d/lib/node_modules/fibers/future.js:173[39m
+[34mW20130831-23:46:01.997(-4)? (STDERR) [39m[35m						throw(ex);[39m
+[34mW20130831-23:46:01.997(-4)? (STDERR) [39m[35m						      ^[39m
+[34mW20130831-23:46:02.015(-4)? (STDERR) [39m[35mError: A method named 'saveFile' is already defined[39m
+[34mW20130831-23:46:02.015(-4)? (STDERR) [39m[35m    at _.extend.methods (packages/livedata/livedata_server.js:1222)[39m
+[34mW20130831-23:46:02.015(-4)? (STDERR) [39m[35m    at Function._.each._.forEach (packages/underscore/underscore.js:87)[39m
+[34mW20130831-23:46:02.015(-4)? (STDERR) [39m[35m    at _.extend.methods (packages/livedata/livedata_server.js:1220)[39m
+[34mW20130831-23:46:02.015(-4)? (STDERR) [39m[35m    at Package (packages/greenlight-data/server/data.js:17)[39m
+[34mW20130831-23:46:02.016(-4)? (STDERR) [39m[35m    at packages/greenlight-data.js:77:4[39m
+[34mW20130831-23:46:02.016(-4)? (STDERR) [39m[35m    at packages/greenlight-data.js:84:3[39m
+[34mW20130831-23:46:02.016(-4)? (STDERR) [39m[35m    at mains (/data/greenlight/src/site/.meteor/local/build/programs/server/boot.js:153:10)[39m
+[34mW20130831-23:46:02.016(-4)? (STDERR) [39m[35m    at Array.forEach (native)[39m
+[34mW20130831-23:46:02.017(-4)? (STDERR) [39m[35m    at Function._.each._.forEach (/home/cfriel/.meteor/tools/4010e5731d/lib/node_modules/underscore/underscore.js:79:11)[39m
+[34mW20130831-23:46:02.018(-4)? (STDERR) [39m[35m    at /data/greenlight/src/site/.meteor/local/build/programs/server/boot.js:80:5[39m
+=> Exited with code: 1
+[2013-08-31 23:46:02,100][INFO ][transport                ] [Andrew Gervais] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.45.169:9300]}
+=> Meteor server restarted
+[34mI20130831-23:46:03.219(-4)? [39mregistering profile with version 1.0
+[34mW20130831-23:46:03.388(-4)? (STDERR) [39m[35m/home/cfriel/.meteor/tools/4010e5731d/lib/node_modules/fibers/future.js:173[39m
+[34mW20130831-23:46:03.389(-4)? (STDERR) [39m[35m						throw(ex);[39m
+[34mW20130831-23:46:03.389(-4)? (STDERR) [39m[35m						      ^[39m
+[34mW20130831-23:46:03.406(-4)? (STDERR) [39m[35mError: A method named 'saveFile' is already defined[39m
+[34mW20130831-23:46:03.406(-4)? (STDERR) [39m[35m    at _.extend.methods (packages/livedata/livedata_server.js:1222)[39m
+[34mW20130831-23:46:03.407(-4)? (STDERR) [39m[35m    at Function._.each._.forEach (packages/underscore/underscore.js:87)[39m
+[34mW20130831-23:46:03.407(-4)? (STDERR) [39m[35m    at _.extend.methods (packages/livedata/livedata_server.js:1220)[39m
+[34mW20130831-23:46:03.407(-4)? (STDERR) [39m[35m    at Package (packages/greenlight-data/server/data.js:17)[39m
+[34mW20130831-23:46:03.407(-4)? (STDERR) [39m[35m    at packages/greenlight-data.js:77:4[39m
+[34mW20130831-23:46:03.407(-4)? (STDERR) [39m[35m    at packages/greenlight-data.js:84:3[39m
+[34mW20130831-23:46:03.409(-4)? (STDERR) [39m[35m    at mains (/data/greenlight/src/site/.meteor/local/build/programs/server/boot.js:153:10)[39m
+[34mW20130831-23:46:03.409(-4)? (STDERR) [39m[35m    at Array.forEach (native)[39m
+[34mW20130831-23:46:03.409(-4)? (STDERR) [39m[35m    at Function._.each._.forEach (/home/cfriel/.meteor/tools/4010e5731d/lib/node_modules/underscore/underscore.js:79:11)[39m
+[34mW20130831-23:46:03.410(-4)? (STDERR) [39m[35m    at /data/greenlight/src/site/.meteor/local/build/programs/server/boot.js:80:5[39m
+=> Exited with code: 1
+=> Meteor server restarted
+[34mI20130831-23:46:04.591(-4)? [39mregistering profile with version 1.0
+[34mW20130831-23:46:04.763(-4)? (STDERR) [39m[35m/home/cfriel/.meteor/tools/4010e5731d/lib/node_modules/fibers/future.js:173[39m
+[34mW20130831-23:46:04.767(-4)? (STDERR) [39m[35m						throw(ex);[39m
+[34mW20130831-23:46:04.771(-4)? (STDERR) [39m[35m						      ^[39m
+[34mW20130831-23:46:04.807(-4)? (STDERR) [39m[35mError: A method named 'saveFile' is already defined[39m
+[34mW20130831-23:46:04.807(-4)? (STDERR) [39m[35m    at _.extend.methods (packages/livedata/livedata_server.js:1222)[39m
+[34mW20130831-23:46:04.808(-4)? (STDERR) [39m[35m    at Function._.each._.forEach (packages/underscore/underscore.js:87)[39m
+[34mW20130831-23:46:04.808(-4)? (STDERR) [39m[35m    at _.extend.methods (packages/livedata/livedata_server.js:1220)[39m
+[34mW20130831-23:46:04.808(-4)? (STDERR) [39m[35m    at Package (packages/greenlight-data/server/data.js:17)[39m
+[34mW20130831-23:46:04.808(-4)? (STDERR) [39m[35m    at packages/greenlight-data.js:77:4[39m
+[34mW20130831-23:46:04.809(-4)? (STDERR) [39m[35m    at packages/greenlight-data.js:84:3[39m
+[34mW20130831-23:46:04.809(-4)? (STDERR) [39m[35m    at mains (/data/greenlight/src/site/.meteor/local/build/programs/server/boot.js:153:10)[39m
+[34mW20130831-23:46:04.809(-4)? (STDERR) [39m[35m    at Array.forEach (native)[39m
+[34mW20130831-23:46:04.809(-4)? (STDERR) [39m[35m    at Function._.each._.forEach (/home/cfriel/.meteor/tools/4010e5731d/lib/node_modules/underscore/underscore.js:79:11)[39m
+[34mW20130831-23:46:04.809(-4)? (STDERR) [39m[35m    at /data/greenlight/src/site/.meteor/local/build/programs/server/boot.js:80:5[39m
+=> Exited with code: 1
+=> Your application is crashing. Waiting for file change.
+[2013-08-31 23:46:05,131][INFO ][cluster.service          ] [Andrew Gervais] new_master [Andrew Gervais][yz4SZAlDREKUVIMmvaY9oQ][inet[/192.168.45.169:9300]], reason: zen-disco-join (elected_as_master)
+[2013-08-31 23:46:05,162][INFO ][discovery                ] [Andrew Gervais] elasticsearch/yz4SZAlDREKUVIMmvaY9oQ
+[2013-08-31 23:46:05,207][INFO ][http                     ] [Andrew Gervais] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.45.169:9200]}
+[2013-08-31 23:46:05,208][INFO ][node                     ] [Andrew Gervais] started
+[2013-08-31 23:46:05,606][INFO ][gateway                  ] [Andrew Gervais] recovered [1] indices into cluster_state
+=> Modified -- restarting.
+=> Meteor server restarted
+[34mI20130831-23:47:17.387(-4)? [39mregistering profile with version 1.0
+[34mI20130831-23:47:17.560(-4)? [39mregistering data with version 1.0
+[34mI20130831-23:47:17.588(-4)? [39mloading and analyzing databases mongodb://127.0.0.1:27017/
+[34mI20130831-23:47:17.599(-4)? [39mconsidering database [object Object]
+[34mI20130831-23:47:17.600(-4)? [39mconsidering database [object Object]
+[34mI20130831-23:47:17.600(-4)? [39mloading schema mongodb://127.0.0.1:27017/, local, startup_log
+[34mI20130831-23:47:17.609(-4)? [39mfound schema for mongodb://127.0.0.1:27017/, local, startup_log
+[34mI20130831-23:47:17.611(-4)? [39mconsidering database [object Object]
+[34mI20130831-23:47:17.612(-4)? [39mloading schema mongodb://127.0.0.1:27017/, examples, system
+[34mI20130831-23:47:17.616(-4)? [39mfound schema for mongodb://127.0.0.1:27017/, examples, system
+[34mI20130831-23:47:17.621(-4)? [39mloading schema mongodb://127.0.0.1:27017/, examples, zips
+[34mI20130831-23:47:17.625(-4)? [39mfound schema for mongodb://127.0.0.1:27017/, examples, zips
+[34mI20130831-23:47:17.631(-4)? [39minvestments already populated
+[34mI20130831-23:47:17.631(-4)? [39macquisitions already populated
+[34mI20130831-23:47:17.632(-4)? [39mloading schema mongodb://127.0.0.1:27017/, examples, companies
+[34mI20130831-23:47:17.637(-4)? [39mrounds already populated
+[34mI20130831-23:47:17.638(-4)? [39mPeople exist
+[34mI20130831-23:47:17.639(-4)? [39mcompanies already populated
+[34mI20130831-23:47:17.641(-4)? [39mfound schema for mongodb://127.0.0.1:27017/, examples, companies
+[34mI20130831-23:47:17.643(-4)? [39mloading schema mongodb://127.0.0.1:27017/, examples, rounds
+[34mI20130831-23:47:17.643(-4)? [39minvestors already populated
+[34mI20130831-23:47:17.645(-4)? [39mfound schema for mongodb://127.0.0.1:27017/, examples, rounds
+[34mI20130831-23:47:17.646(-4)? [39mloading schema mongodb://127.0.0.1:27017/, examples, investments
+[34mI20130831-23:47:17.647(-4)? [39mfound schema for mongodb://127.0.0.1:27017/, examples, investments
+[34mI20130831-23:47:17.649(-4)? [39mloading schema mongodb://127.0.0.1:27017/, examples, investors
+[34mI20130831-23:47:17.651(-4)? [39mfound schema for mongodb://127.0.0.1:27017/, examples, investors
+[34mI20130831-23:47:17.651(-4)? [39mloading schema mongodb://127.0.0.1:27017/, examples, acquisitions
+[34mI20130831-23:47:17.654(-4)? [39mfound schema for mongodb://127.0.0.1:27017/, examples, acquisitions
+[34mI20130831-23:47:17.654(-4)? [39mloading schema mongodb://127.0.0.1:27017/, examples, people
+[34mI20130831-23:47:17.656(-4)? [39mfound schema for mongodb://127.0.0.1:27017/, examples, people
+[34mI20130831-23:47:17.657(-4)? [39mloading forms package
+[34mI20130831-23:47:17.658(-4)? [39mregistering forms with version 1.0
+[34mI20130831-23:47:17.658(-4)? [39mloading create package
+[34mI20130831-23:47:17.658(-4)? [39mregistering create with version 1.0
+[34mI20130831-23:47:17.659(-4)? [39mloading analytics package
+[34mI20130831-23:47:17.659(-4)? [39mregistering analytics with version 1.0
+[34mI20130831-23:47:17.659(-4)? [39mloading sites package
+[34mI20130831-23:47:17.659(-4)? [39mregistering sites with version 1.0
+[34mI20130831-23:47:17.660(-4)? [39mloading services package
+[34mI20130831-23:47:17.660(-4)? [39mregistering services with version 1.0
+[34mI20130831-23:47:17.660(-4)? [39mloading sheets package
+[34mI20130831-23:47:17.660(-4)? [39mregistering sheets with version 1.0
+[34mI20130831-23:47:17.660(-4)? [39mloading hosted package
+[34mI20130831-23:47:17.661(-4)? [39mregistering hosted with version 1.0
