@@ -206,6 +206,17 @@ greenlight.prototype.create_index = function()
 
 	    Greenlight.Search.Index.add([username, email], username, url, 'users', metadata);
 	}
+
+	var packages = Greenlight.Packages.find({}).fetch();
+
+	for(var i = 0; i < packages.length; i++)
+	{
+	    var pkg = packages[i];
+	    
+	    var name = pkg.name;
+
+	    Greenlight.Search.Index.add([name], name, '/'+name, 'packages');
+	}
     });
 
 };

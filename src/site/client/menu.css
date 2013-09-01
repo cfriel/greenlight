@@ -63,10 +63,13 @@
   margin: 0;
 }
 
-.category-name {
-  margin: 0 20px 5px 20px;
-  padding: 3px 0;
-  border-bottom: 1px solid #ccc;
+.category-name 
+{
+    margin: 0 10px 5px 0px;
+    padding: 6px 5px;
+    border-bottom: 1px solid #CCC;
+    border-top: 1px solid #CCC;
+    background-color: white;
 }
 
 .search-icon-small

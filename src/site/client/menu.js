@@ -5,6 +5,7 @@ var bind_search = function()
     var ta = $('.search.typeahead');
     var users = Greenlight.Search.index('users');
     var sites = Greenlight.Search.index('sites');
+    var packages = Greenlight.Search.index('packages');
 
     if(users && sites && ta.typeahead)
     {
@@ -28,7 +29,17 @@ var bind_search = function()
 	    template: '<p><img src="{{metadata.icon}}" onerror="this.onerror=null;this.src=\'/default-user.jpg\'" class="search-icon-small"/><strong>{{value}}</strong> – {{url}}</p>',
 	    header: '<h3 class="category-name">Users</h3>',
 	    engine: Hogan
+	},
+	{
+	    name: 'search-packages'+new Date().getTime(),
+	    local: packages,
+	    //remote: '../data/films/queries/%QUERY.json',
+	    //prefetch: '../data/films/post_1960.json',
+	    template: '<p><strong>{{value}}</strong> – {{url}}</p>',
+	    header: '<h3 class="category-name">Packages</h3>',
+	    engine: Hogan
 	}
+
 
 	]);
 
