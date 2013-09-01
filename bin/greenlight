@@ -1,0 +1,191 @@
+#!/bin/sh
+
+CDPATH=""
+SCRIPT="$0"
+
+# SCRIPT may be an arbitrarily deep series of symlinks. Loop until we have the concrete path.
+while [ -h "$SCRIPT" ] ; do
+  ls=`ls -ld "$SCRIPT"`
+  # Drop everything prior to ->
+  link=`expr "$ls" : '.*-> \(.*\)$'`
+  if expr "$link" : '/.*' > /dev/null; then
+    SCRIPT="$link"
+  else
+    SCRIPT=`dirname "$SCRIPT"`/"$link"
+  fi
+done
+
+# determine greenlight home
+GL_HOME=`dirname "$SCRIPT"`/..
+
+# make GREENLIGHT_HOME absolute
+GL_HOME=`cd "$GL_HOME"; pwd`
+
+ELASTICSEARCH_PATH="$GL_HOME/src/third-party/elasticsearch/dist/elasticsearch-1.0.0.Beta1-SNAPSHOT/"
+STORM_PATH="$GL_HOME/src/third-party/storm/"
+HADOOP_PATH="$GL_HOME/src/third-party/hadoop/"
+SITE_PATH="$GL_HOME/src/site/"
+
+# If an include wasn't specified in the environment, then search for one...
+if [ "x$GL_INCLUDE" = "x" ]; then
+    # Locations (in order) to use when searching for an include file.
+    for include in /usr/share/greenlight/greenlight.in.sh \
+                   /usr/local/share/greenlight/greenlight.in.sh \
+                   /opt/greenlight/greenlight.in.sh \
+                   ~/.greenlight.in.sh \
+                   `dirname "$0"`/greenlight.in.sh; do
+        if [ -r "$include" ]; then
+            . "$include"
+            break
+        fi
+    done
+
+# ...otherwise, source the specified include.
+elif [ -r "$GL_INCLUDE" ]; then
+    . "$GL_INCLUDE"
+fi
+
+if [ -x "$JAVA_HOME/bin/java" ]; then
+    JAVA="$JAVA_HOME/bin/java"
+else
+    JAVA=$(which java)
+fi
+
+if [ ! -x "$JAVA" ]; then
+    echo "Could not find any executable java binary. Please install java in your PATH or set JAVA_HOME"
+    exit 1
+fi
+
+if [ -z "$GL_CLASSPATH" ]; then
+    echo "You must set the GL_CLASSPATH var" >&2
+    exit 1
+fi
+
+# Special-case path variables.
+case `uname` in
+    CYGWIN*)
+        GL_CLASSPATH=`cygpath -p -w "GL_CLASSPATH"`
+        GL_HOME=`cygpath -p -w "$GL_HOME"`
+    ;;
+esac
+
+
+launch_web()
+{
+    (cd $SITE_PATH; meteor > /dev/null) & pid="$!"
+    echo "Launched web [$pid]"
+    pids="$pids $pid"
+}
+
+launch_search()
+{
+    (cd $ELASTICSEARCH_PATH; ./bin/elasticsearch -f > /dev/null) & pid="$!"
+    echo "Launched search [$pid]"
+    pids="$pids $pid"
+}
+
+launch_streams()
+{
+    echo "launching streams"
+}
+
+launch_batch()
+{
+    echo "launching batch"
+}
+
+launch_service()
+{
+    pidpath=$1
+    foreground=$2
+    props=$3
+    gl_parms="-Dgreenlight"
+
+    if [ "x$pidpath" != "x" ]; then
+        gl_parms="$gl_parms -Dgl.pidfile=$pidpath"
+    fi
+
+    if [ "x$foreground" != "x" ]; then
+        gl_parms="$gl_parms -Dgl.foreground=yes"
+        exec "$JAVA" $JAVA_OPTS $GL_JAVA_OPTS $gl_parms -Dgl.path.home="$GL_HOME" -cp "$GL_CLASSPATH" $props \
+                com.greenlight.bootstrap.Greenlight
+    else
+        exec "$JAVA" $JAVA_OPTS $GL_JAVA_OPTS $gl_parms -Dgl.path.home="$GL_HOME" -cp "$GL_CLASSPATH" $props \
+                    com.greenlight.bootstrap.Greenlight <&- &
+        return $?
+    fi
+}
+
+args=`getopt vfhp:D:X: "$@"`
+eval set -- "$args"
+
+while true; do
+    case $1 in
+        -v)
+            "$JAVA" $JAVA_OPTS $GL_JAVA_OPTS $gl_parms -Dgl.path.home="$GL_HOME" -cp "$GL_CLASSPATH" $props \
+                    com.greenlight.Version
+            exit 0
+        ;;
+        -p)
+            pidfile="$2"
+            shift 2
+        ;;
+        -f)
+            foreground="yes"
+            shift
+        ;;
+        -h)
+            echo "Usage: $0 [-f] [-h] [-p pidfile]"
+            exit 0
+        ;;
+        -D)
+            properties="$properties -D$2"
+            shift 2
+        ;;
+        -X)
+            properties="$properties -X$2"
+            shift 2
+        ;;
+        --)
+            shift
+            break
+        ;;
+        *)
+            echo "Error parsing argument $1!" >&2
+            exit 1
+        ;;
+    esac
+done
+
+# Start up the service
+# launch_service "$pidfile" "$foreground" "$properties"
+
+for var in "$@"
+do
+    case $var in
+	web)
+	    launch_web
+	;;
+	search)
+	    launch_search
+	;;
+	streams)
+	    launch streams
+	;;
+	batch)
+	    launch_batch
+	;;
+    esac
+done
+
+cleanup() 
+{
+    # echo "killing $pids"
+    [ -n "$pids" ] && kill $pids
+}
+
+trap "cleanup" INT QUIT TERM EXIT
+
+wait $(jobs -p)
+
+exit $?
