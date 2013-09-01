@@ -61,3 +61,6 @@
 [submodule "src/third-party/storm"]
 	path = src/third-party/storm
 	url = https://github.com/cfriel/storm.git
+[submodule "src/third-party/storm-starter"]
+	path = src/third-party/storm-starter
+	url = https://github.com/cfriel/storm-starter.git
