@@ -25,6 +25,7 @@ ELASTICSEARCH_PATH="$GL_HOME/src/third-party/elasticsearch/dist/elasticsearch-1.
 STORM_PATH="$GL_HOME/src/third-party/storm/"
 HADOOP_PATH="$GL_HOME/src/third-party/hadoop/"
 SITE_PATH="$GL_HOME/src/site/"
+LOGFILE="$GL_HOME/bin/greenlight.log"
 
 # If an include wasn't specified in the environment, then search for one...
 if [ "x$GL_INCLUDE" = "x" ]; then
@@ -72,14 +73,14 @@ esac
 
 launch_web()
 {
-    (cd $SITE_PATH; meteor > /dev/null) & pid="$!"
+    (cd $SITE_PATH; echo "writing meteor output to $LOGFILE"; meteor >> $LOGFILE) & pid="$!"
     echo "Launched web [$pid]"
     pids="$pids $pid"
 }
 
 launch_search()
 {
-    (cd $ELASTICSEARCH_PATH; ./bin/elasticsearch -f > /dev/null) & pid="$!"
+    (cd $ELASTICSEARCH_PATH; echo "writing meteor output to $LOGFILE"; ./bin/elasticsearch -f >> $LOGFILE) & pid="$!"
     echo "Launched search [$pid]"
     pids="$pids $pid"
 }
@@ -160,6 +161,8 @@ done
 # Start up the service
 # launch_service "$pidfile" "$foreground" "$properties"
 
+echo "Launching services" >> $LOGFILE
+
 for var in "$@"
 do
     case $var in
@@ -185,6 +188,10 @@ cleanup()
 }
 
 trap "cleanup" INT QUIT TERM EXIT
+
+tail -f $LOGFILE & pid="$!"
+echo "Tailing log [$pid]"
+pids="$pids $pid"
 
 wait $(jobs -p)
 

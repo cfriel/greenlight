@@ -21,13 +21,12 @@ greenlight-analytics
 pagination
 meteor-select2
 greenlight-profile
-greenlight-feeds
 greenlight-sites
 meteor-bootstrap
 greenlight-services
 greenlight-sheets
-greenlight-quality
 greenlight-hosted
 router
 examples
 page-js-ie-support
+greenlight-data

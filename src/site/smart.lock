@@ -36,17 +36,14 @@
       "greenlight-forms": {
         "path": "../packages/greenlight-forms"
       },
-      "greenlight-feeds": {
-        "path": "../packages/greenlight-feeds"
-      },
       "greenlight-sites": {
         "path": "../packages/greenlight-sites"
       },
       "greenlight-hosted": {
         "path": "../packages/greenlight-hosted"
       },
-      "greenlight-quality": {
-        "path": "../packages/greenlight-quality"
+      "greenlight-data": {
+        "path": "../packages/greenlight-data"
       },
       "examples": {
         "path": "../examples/databases"
@@ -91,17 +88,14 @@
       "greenlight-forms": {
         "path": "../packages/greenlight-forms"
       },
-      "greenlight-feeds": {
-        "path": "../packages/greenlight-feeds"
-      },
       "greenlight-sites": {
         "path": "../packages/greenlight-sites"
       },
       "greenlight-hosted": {
         "path": "../packages/greenlight-hosted"
       },
-      "greenlight-quality": {
-        "path": "../packages/greenlight-quality"
+      "greenlight-data": {
+        "path": "../packages/greenlight-data"
       },
       "examples": {
         "path": "../examples/databases"
