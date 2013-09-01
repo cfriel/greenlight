@@ -25,9 +25,6 @@
 [submodule "src/packages/greenlight-create"]
 	path = src/packages/greenlight-create
 	url = https://github.com/cfriel/greenlight-create.git
-[submodule "src/packages/greenlight-feeds"]
-	path = src/packages/greenlight-feeds
-	url = https://github.com/cfriel/greenlight-feeds.git
 [submodule "src/packages/greenlight-sheets"]
 	path = src/packages/greenlight-sheets
 	url = https://github.com/cfriel/greenlight-sheets.git
