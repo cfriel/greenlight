@@ -31,9 +31,6 @@
 [submodule "src/packages/greenlight-sites"]
 	path = src/packages/greenlight-sites
 	url = https://github.com/cfriel/greenlight-sites.git
-[submodule "src/third-party/camel"]
-	path = src/third-party/camel
-	url = https://github.com/cfriel/camel.git
 [submodule "src/third-party/bootstrap"]
 	path = src/third-party/bootstrap
 	url = https://github.com/cfriel/bootstrap.git
@@ -49,9 +46,6 @@
 [submodule "src/third-party/meteor"]
 	path = src/third-party/meteor
 	url = https://github.com/cfriel/meteor.git
-[submodule "src/third-party/xsd-forms"]
-	path = src/third-party/xsd-forms
-	url = https://github.com/cfriel/xsd-forms.git
 [submodule "src/third-party/CodeMirror"]
 	path = src/third-party/CodeMirror
 	url = https://github.com/cfriel/CodeMirror.git
