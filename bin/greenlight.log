@@ -6939,3 +6939,289 @@ Launching services
 [0;35;1mweb: [0mI20130901-04:53:53.945(-4)? acquisitions already populated
 [0;35;1mweb: [0mI20130901-04:53:53.946(-4)? People exist
 [0;35;1mweb: [0mI20130901-04:53:53.946(-4)? loading schema mongodb://127.0.0.1:27017/, examples, companies
+[0;35;1mweb: [0mI20130901-04:53:53.947(-4)? investors already populated
+[0;35;1mweb: [0mI20130901-04:53:53.948(-4)? rounds already populated
+[0;35;1mweb: [0mI20130901-04:53:53.949(-4)? investments already populated
+[0;35;1mweb: [0mI20130901-04:53:53.950(-4)? found schema for mongodb://127.0.0.1:27017/, examples, companies
+[0;35;1mweb: [0mI20130901-04:53:53.951(-4)? loading schema mongodb://127.0.0.1:27017/, examples, rounds
+[0;35;1mweb: [0mI20130901-04:53:53.954(-4)? found schema for mongodb://127.0.0.1:27017/, examples, rounds
+[0;35;1mweb: [0mI20130901-04:53:53.955(-4)? loading schema mongodb://127.0.0.1:27017/, examples, investments
+[0;35;1mweb: [0mI20130901-04:53:53.957(-4)? found schema for mongodb://127.0.0.1:27017/, examples, investments
+[0;35;1mweb: [0mI20130901-04:53:53.957(-4)? loading schema mongodb://127.0.0.1:27017/, examples, investors
+[0;35;1mweb: [0mI20130901-04:53:53.959(-4)? found schema for mongodb://127.0.0.1:27017/, examples, investors
+[0;35;1mweb: [0mI20130901-04:53:53.960(-4)? loading schema mongodb://127.0.0.1:27017/, examples, acquisitions
+[0;35;1mweb: [0mI20130901-04:53:53.962(-4)? found schema for mongodb://127.0.0.1:27017/, examples, acquisitions
+[0;35;1mweb: [0mI20130901-04:53:53.963(-4)? loading schema mongodb://127.0.0.1:27017/, examples, people
+[0;35;1mweb: [0mI20130901-04:53:53.965(-4)? found schema for mongodb://127.0.0.1:27017/, examples, people
+[0;35;1mweb: [0mI20130901-04:53:53.966(-4)? loading forms package
+[0;35;1mweb: [0mI20130901-04:53:53.967(-4)? registering forms with version 1.0
+[0;35;1mweb: [0mI20130901-04:53:53.967(-4)? loading create package
+[0;35;1mweb: [0mI20130901-04:53:53.969(-4)? registering create with version 1.0
+[0;35;1mweb: [0mI20130901-04:53:53.970(-4)? loading analytics package
+[0;35;1mweb: [0mI20130901-04:53:53.970(-4)? registering analytics with version 1.0
+[0;35;1mweb: [0mI20130901-04:53:53.971(-4)? loading sites package
+[0;35;1mweb: [0mI20130901-04:53:53.971(-4)? registering sites with version 1.0
+[0;35;1mweb: [0mI20130901-04:53:53.971(-4)? loading services package
+[0;35;1mweb: [0mI20130901-04:53:53.971(-4)? registering services with version 1.0
+[0;35;1mweb: [0mI20130901-04:53:53.972(-4)? loading sheets package
+[0;35;1mweb: [0mI20130901-04:53:53.972(-4)? registering sheets with version 1.0
+[0;35;1mweb: [0mI20130901-04:53:53.973(-4)? loading hosted package
+[0;35;1mweb: [0mI20130901-04:53:53.973(-4)? registering hosted with version 1.0
+[0;35;1mweb: [0m=> Meteor server restarted
+[0;35;1mweb: [0mI20130901-04:59:40.062(-4)? registering profile with version 1.0
+[0;35;1mweb: [0mI20130901-04:59:40.306(-4)? registering data with version 1.0
+[0;35;1mweb: [0mI20130901-04:59:40.330(-4)? loading and analyzing databases mongodb://127.0.0.1:27017/
+[0;35;1mweb: [0mI20130901-04:59:40.343(-4)? considering database [object Object]
+[0;35;1mweb: [0mI20130901-04:59:40.344(-4)? considering database [object Object]
+[0;35;1mweb: [0mI20130901-04:59:40.344(-4)? loading schema mongodb://127.0.0.1:27017/, local, startup_log
+[0;35;1mweb: [0mI20130901-04:59:40.348(-4)? found schema for mongodb://127.0.0.1:27017/, local, startup_log
+[0;35;1mweb: [0mI20130901-04:59:40.352(-4)? considering database [object Object]
+[0;35;1mweb: [0mI20130901-04:59:40.352(-4)? loading schema mongodb://127.0.0.1:27017/, examples, system
+[0;35;1mweb: [0mI20130901-04:59:40.355(-4)? found schema for mongodb://127.0.0.1:27017/, examples, system
+[0;35;1mweb: [0mI20130901-04:59:40.359(-4)? loading schema mongodb://127.0.0.1:27017/, examples, zips
+[0;35;1mweb: [0mI20130901-04:59:40.361(-4)? found schema for mongodb://127.0.0.1:27017/, examples, zips
+[0;35;1mweb: [0mI20130901-04:59:40.366(-4)? investments already populated
+[0;35;1mweb: [0mI20130901-04:59:40.367(-4)? investors already populated
+[0;35;1mweb: [0mI20130901-04:59:40.367(-4)? companies already populated
+[0;35;1mweb: [0mI20130901-04:59:40.367(-4)? acquisitions already populated
+[0;35;1mweb: [0mI20130901-04:59:40.368(-4)? People exist
+[0;35;1mweb: [0mI20130901-04:59:40.368(-4)? loading schema mongodb://127.0.0.1:27017/, examples, companies
+[0;35;1mweb: [0mI20130901-04:59:40.369(-4)? rounds already populated
+[0;35;1mweb: [0mI20130901-04:59:40.371(-4)? found schema for mongodb://127.0.0.1:27017/, examples, companies
+[0;35;1mweb: [0mI20130901-04:59:40.373(-4)? loading schema mongodb://127.0.0.1:27017/, examples, rounds
+[0;35;1mweb: [0mI20130901-04:59:40.376(-4)? found schema for mongodb://127.0.0.1:27017/, examples, rounds
+[0;35;1mweb: [0mI20130901-04:59:40.377(-4)? loading schema mongodb://127.0.0.1:27017/, examples, investments
+[0;35;1mweb: [0mI20130901-04:59:40.379(-4)? found schema for mongodb://127.0.0.1:27017/, examples, investments
+[0;35;1mweb: [0mI20130901-04:59:40.380(-4)? loading schema mongodb://127.0.0.1:27017/, examples, investors
+[0;35;1mweb: [0mI20130901-04:59:40.383(-4)? found schema for mongodb://127.0.0.1:27017/, examples, investors
+[0;35;1mweb: [0mI20130901-04:59:40.384(-4)? loading schema mongodb://127.0.0.1:27017/, examples, acquisitions
+[0;35;1mweb: [0mI20130901-04:59:40.387(-4)? found schema for mongodb://127.0.0.1:27017/, examples, acquisitions
+[0;35;1mweb: [0mI20130901-04:59:40.388(-4)? loading schema mongodb://127.0.0.1:27017/, examples, people
+[0;35;1mweb: [0mI20130901-04:59:40.391(-4)? found schema for mongodb://127.0.0.1:27017/, examples, people
+[0;35;1mweb: [0mI20130901-04:59:40.392(-4)? loading forms package
+[0;35;1mweb: [0mI20130901-04:59:40.393(-4)? registering forms with version 1.0
+[0;35;1mweb: [0mI20130901-04:59:40.394(-4)? loading create package
+[0;35;1mweb: [0mI20130901-04:59:40.394(-4)? registering create with version 1.0
+[0;35;1mweb: [0mI20130901-04:59:40.395(-4)? loading analytics package
+[0;35;1mweb: [0mI20130901-04:59:40.395(-4)? registering analytics with version 1.0
+[0;35;1mweb: [0mI20130901-04:59:40.396(-4)? loading sites package
+[0;35;1mweb: [0mI20130901-04:59:40.396(-4)? registering sites with version 1.0
+[0;35;1mweb: [0mI20130901-04:59:40.397(-4)? loading services package
+[0;35;1mweb: [0mI20130901-04:59:40.397(-4)? registering services with version 1.0
+[0;35;1mweb: [0mI20130901-04:59:40.398(-4)? loading sheets package
+[0;35;1mweb: [0mI20130901-04:59:40.398(-4)? registering sheets with version 1.0
+[0;35;1mweb: [0mI20130901-04:59:40.399(-4)? loading hosted package
+[0;35;1mweb: [0mI20130901-04:59:40.400(-4)? registering hosted with version 1.0
+[0;35;1mweb: [0m=> Meteor server restarted
+[0;35;1mweb: [0mI20130901-05:03:18.456(-4)? registering profile with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:18.638(-4)? registering data with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:18.657(-4)? loading and analyzing databases mongodb://127.0.0.1:27017/
+[0;35;1mweb: [0mI20130901-05:03:18.671(-4)? considering database [object Object]
+[0;35;1mweb: [0mI20130901-05:03:18.671(-4)? considering database [object Object]
+[0;35;1mweb: [0mI20130901-05:03:18.671(-4)? loading schema mongodb://127.0.0.1:27017/, local, startup_log
+[0;35;1mweb: [0mI20130901-05:03:18.675(-4)? found schema for mongodb://127.0.0.1:27017/, local, startup_log
+[0;35;1mweb: [0mI20130901-05:03:18.678(-4)? considering database [object Object]
+[0;35;1mweb: [0mI20130901-05:03:18.678(-4)? loading schema mongodb://127.0.0.1:27017/, examples, system
+[0;35;1mweb: [0mI20130901-05:03:18.681(-4)? found schema for mongodb://127.0.0.1:27017/, examples, system
+[0;35;1mweb: [0mI20130901-05:03:18.684(-4)? loading schema mongodb://127.0.0.1:27017/, examples, zips
+[0;35;1mweb: [0mI20130901-05:03:18.686(-4)? found schema for mongodb://127.0.0.1:27017/, examples, zips
+[0;35;1mweb: [0mI20130901-05:03:18.689(-4)? investments already populated
+[0;35;1mweb: [0mI20130901-05:03:18.690(-4)? companies already populated
+[0;35;1mweb: [0mI20130901-05:03:18.722(-4)? People exist
+[0;35;1mweb: [0mI20130901-05:03:18.722(-4)? acquisitions already populated
+[0;35;1mweb: [0mI20130901-05:03:18.722(-4)? loading schema mongodb://127.0.0.1:27017/, examples, companies
+[0;35;1mweb: [0mI20130901-05:03:18.722(-4)? found schema for mongodb://127.0.0.1:27017/, examples, companies
+[0;35;1mweb: [0mI20130901-05:03:18.723(-4)? rounds already populated
+[0;35;1mweb: [0mI20130901-05:03:18.723(-4)? investors already populated
+[0;35;1mweb: [0mI20130901-05:03:18.723(-4)? loading schema mongodb://127.0.0.1:27017/, examples, rounds
+[0;35;1mweb: [0mI20130901-05:03:18.723(-4)? found schema for mongodb://127.0.0.1:27017/, examples, rounds
+[0;35;1mweb: [0mI20130901-05:03:18.723(-4)? loading schema mongodb://127.0.0.1:27017/, examples, investments
+[0;35;1mweb: [0mI20130901-05:03:18.723(-4)? found schema for mongodb://127.0.0.1:27017/, examples, investments
+[0;35;1mweb: [0mI20130901-05:03:18.723(-4)? loading schema mongodb://127.0.0.1:27017/, examples, investors
+[0;35;1mweb: [0mI20130901-05:03:18.723(-4)? found schema for mongodb://127.0.0.1:27017/, examples, investors
+[0;35;1mweb: [0mI20130901-05:03:18.723(-4)? loading schema mongodb://127.0.0.1:27017/, examples, acquisitions
+[0;35;1mweb: [0mI20130901-05:03:18.724(-4)? found schema for mongodb://127.0.0.1:27017/, examples, acquisitions
+[0;35;1mweb: [0mI20130901-05:03:18.724(-4)? loading schema mongodb://127.0.0.1:27017/, examples, people
+[0;35;1mweb: [0mI20130901-05:03:18.724(-4)? found schema for mongodb://127.0.0.1:27017/, examples, people
+[0;35;1mweb: [0mI20130901-05:03:18.724(-4)? loading forms package
+[0;35;1mweb: [0mI20130901-05:03:18.724(-4)? registering forms with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:18.724(-4)? loading create package
+[0;35;1mweb: [0mI20130901-05:03:18.725(-4)? registering create with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:18.725(-4)? loading analytics package
+[0;35;1mweb: [0mI20130901-05:03:18.725(-4)? registering analytics with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:18.725(-4)? loading sites package
+[0;35;1mweb: [0mI20130901-05:03:18.725(-4)? registering sites with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:18.725(-4)? loading services package
+[0;35;1mweb: [0mI20130901-05:03:18.725(-4)? registering services with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:18.725(-4)? loading sheets package
+[0;35;1mweb: [0mI20130901-05:03:18.726(-4)? registering sheets with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:18.726(-4)? loading hosted package
+[0;35;1mweb: [0mI20130901-05:03:18.726(-4)? registering hosted with version 1.0
+[0;35;1mweb: [0m=> Meteor server restarted
+[0;35;1mweb: [0mI20130901-05:03:47.508(-4)? registering profile with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:47.684(-4)? registering data with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:47.701(-4)? loading and analyzing databases mongodb://127.0.0.1:27017/
+[0;35;1mweb: [0mI20130901-05:03:47.706(-4)? considering database [object Object]
+[0;35;1mweb: [0mI20130901-05:03:47.707(-4)? considering database [object Object]
+[0;35;1mweb: [0mI20130901-05:03:47.707(-4)? loading schema mongodb://127.0.0.1:27017/, local, startup_log
+[0;35;1mweb: [0mI20130901-05:03:47.714(-4)? found schema for mongodb://127.0.0.1:27017/, local, startup_log
+[0;35;1mweb: [0mI20130901-05:03:47.718(-4)? considering database [object Object]
+[0;35;1mweb: [0mI20130901-05:03:47.719(-4)? loading schema mongodb://127.0.0.1:27017/, examples, system
+[0;35;1mweb: [0mI20130901-05:03:47.722(-4)? found schema for mongodb://127.0.0.1:27017/, examples, system
+[0;35;1mweb: [0mI20130901-05:03:47.723(-4)? loading schema mongodb://127.0.0.1:27017/, examples, zips
+[0;35;1mweb: [0mI20130901-05:03:47.728(-4)? found schema for mongodb://127.0.0.1:27017/, examples, zips
+[0;35;1mweb: [0mI20130901-05:03:47.729(-4)? loading schema mongodb://127.0.0.1:27017/, examples, companies
+[0;35;1mweb: [0mI20130901-05:03:47.732(-4)? investors already populated
+[0;35;1mweb: [0mI20130901-05:03:47.732(-4)? investments already populated
+[0;35;1mweb: [0mI20130901-05:03:47.732(-4)? acquisitions already populated
+[0;35;1mweb: [0mI20130901-05:03:47.733(-4)? companies already populated
+[0;35;1mweb: [0mI20130901-05:03:47.733(-4)? People exist
+[0;35;1mweb: [0mI20130901-05:03:47.734(-4)? found schema for mongodb://127.0.0.1:27017/, examples, companies
+[0;35;1mweb: [0mI20130901-05:03:47.735(-4)? loading schema mongodb://127.0.0.1:27017/, examples, rounds
+[0;35;1mweb: [0mI20130901-05:03:47.735(-4)? rounds already populated
+[0;35;1mweb: [0mI20130901-05:03:47.737(-4)? found schema for mongodb://127.0.0.1:27017/, examples, rounds
+[0;35;1mweb: [0mI20130901-05:03:47.739(-4)? loading schema mongodb://127.0.0.1:27017/, examples, investments
+[0;35;1mweb: [0mI20130901-05:03:47.741(-4)? found schema for mongodb://127.0.0.1:27017/, examples, investments
+[0;35;1mweb: [0mI20130901-05:03:47.742(-4)? loading schema mongodb://127.0.0.1:27017/, examples, investors
+[0;35;1mweb: [0mI20130901-05:03:47.744(-4)? found schema for mongodb://127.0.0.1:27017/, examples, investors
+[0;35;1mweb: [0mI20130901-05:03:47.745(-4)? loading schema mongodb://127.0.0.1:27017/, examples, acquisitions
+[0;35;1mweb: [0mI20130901-05:03:47.747(-4)? found schema for mongodb://127.0.0.1:27017/, examples, acquisitions
+[0;35;1mweb: [0mI20130901-05:03:47.748(-4)? loading schema mongodb://127.0.0.1:27017/, examples, people
+[0;35;1mweb: [0mI20130901-05:03:47.750(-4)? found schema for mongodb://127.0.0.1:27017/, examples, people
+[0;35;1mweb: [0mI20130901-05:03:47.751(-4)? loading forms package
+[0;35;1mweb: [0mI20130901-05:03:47.752(-4)? registering forms with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:47.753(-4)? loading create package
+[0;35;1mweb: [0mI20130901-05:03:47.753(-4)? registering create with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:47.754(-4)? loading analytics package
+[0;35;1mweb: [0mI20130901-05:03:47.754(-4)? registering analytics with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:47.755(-4)? loading sites package
+[0;35;1mweb: [0mI20130901-05:03:47.755(-4)? registering sites with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:47.756(-4)? loading services package
+[0;35;1mweb: [0mI20130901-05:03:47.756(-4)? registering services with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:47.757(-4)? loading sheets package
+[0;35;1mweb: [0mI20130901-05:03:47.758(-4)? registering sheets with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:47.758(-4)? loading hosted package
+[0;35;1mweb: [0mI20130901-05:03:47.759(-4)? registering hosted with version 1.0
+[0;35;1mweb: [0m=> Meteor server restarted
+[0;35;1mweb: [0mI20130901-05:03:50.972(-4)? registering profile with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:51.150(-4)? registering data with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:51.169(-4)? loading and analyzing databases mongodb://127.0.0.1:27017/
+[0;35;1mweb: [0mI20130901-05:03:51.175(-4)? considering database [object Object]
+[0;35;1mweb: [0mI20130901-05:03:51.175(-4)? considering database [object Object]
+[0;35;1mweb: [0mI20130901-05:03:51.175(-4)? loading schema mongodb://127.0.0.1:27017/, local, startup_log
+[0;35;1mweb: [0mI20130901-05:03:51.184(-4)? found schema for mongodb://127.0.0.1:27017/, local, startup_log
+[0;35;1mweb: [0mI20130901-05:03:51.188(-4)? considering database [object Object]
+[0;35;1mweb: [0mI20130901-05:03:51.188(-4)? loading schema mongodb://127.0.0.1:27017/, examples, system
+[0;35;1mweb: [0mI20130901-05:03:51.192(-4)? found schema for mongodb://127.0.0.1:27017/, examples, system
+[0;35;1mweb: [0mI20130901-05:03:51.194(-4)? loading schema mongodb://127.0.0.1:27017/, examples, zips
+[0;35;1mweb: [0mI20130901-05:03:51.199(-4)? found schema for mongodb://127.0.0.1:27017/, examples, zips
+[0;35;1mweb: [0mI20130901-05:03:51.200(-4)? loading schema mongodb://127.0.0.1:27017/, examples, companies
+[0;35;1mweb: [0mI20130901-05:03:51.202(-4)? investors already populated
+[0;35;1mweb: [0mI20130901-05:03:51.203(-4)? investments already populated
+[0;35;1mweb: [0mI20130901-05:03:51.203(-4)? companies already populated
+[0;35;1mweb: [0mI20130901-05:03:51.203(-4)? acquisitions already populated
+[0;35;1mweb: [0mI20130901-05:03:51.204(-4)? People exist
+[0;35;1mweb: [0mI20130901-05:03:51.206(-4)? found schema for mongodb://127.0.0.1:27017/, examples, companies
+[0;35;1mweb: [0mI20130901-05:03:51.207(-4)? loading schema mongodb://127.0.0.1:27017/, examples, rounds
+[0;35;1mweb: [0mI20130901-05:03:51.207(-4)? rounds already populated
+[0;35;1mweb: [0mI20130901-05:03:51.209(-4)? found schema for mongodb://127.0.0.1:27017/, examples, rounds
+[0;35;1mweb: [0mI20130901-05:03:51.212(-4)? loading schema mongodb://127.0.0.1:27017/, examples, investments
+[0;35;1mweb: [0mI20130901-05:03:51.214(-4)? found schema for mongodb://127.0.0.1:27017/, examples, investments
+[0;35;1mweb: [0mI20130901-05:03:51.214(-4)? loading schema mongodb://127.0.0.1:27017/, examples, investors
+[0;35;1mweb: [0mI20130901-05:03:51.217(-4)? found schema for mongodb://127.0.0.1:27017/, examples, investors
+[0;35;1mweb: [0mI20130901-05:03:51.218(-4)? loading schema mongodb://127.0.0.1:27017/, examples, acquisitions
+[0;35;1mweb: [0mI20130901-05:03:51.220(-4)? found schema for mongodb://127.0.0.1:27017/, examples, acquisitions
+[0;35;1mweb: [0mI20130901-05:03:51.221(-4)? loading schema mongodb://127.0.0.1:27017/, examples, people
+[0;35;1mweb: [0mI20130901-05:03:51.224(-4)? found schema for mongodb://127.0.0.1:27017/, examples, people
+[0;35;1mweb: [0mI20130901-05:03:51.225(-4)? loading forms package
+[0;35;1mweb: [0mI20130901-05:03:51.225(-4)? registering forms with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:51.226(-4)? loading create package
+[0;35;1mweb: [0mI20130901-05:03:51.226(-4)? registering create with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:51.227(-4)? loading analytics package
+[0;35;1mweb: [0mI20130901-05:03:51.227(-4)? registering analytics with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:51.228(-4)? loading sites package
+[0;35;1mweb: [0mI20130901-05:03:51.229(-4)? registering sites with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:51.229(-4)? loading services package
+[0;35;1mweb: [0mI20130901-05:03:51.230(-4)? registering services with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:51.231(-4)? loading sheets package
+[0;35;1mweb: [0mI20130901-05:03:51.231(-4)? registering sheets with version 1.0
+[0;35;1mweb: [0mI20130901-05:03:51.232(-4)? loading hosted package
+[0;35;1mweb: [0mI20130901-05:03:51.232(-4)? registering hosted with version 1.0
+[0;35;1mweb: [0m=> Meteor server restarted
+[0;35;1mweb: [0mI20130901-05:05:16.091(-4)? registering profile with version 1.0
+[0;35;1mweb: [0mI20130901-05:05:16.310(-4)? registering data with version 1.0
+[0;35;1mweb: [0mI20130901-05:05:16.327(-4)? loading and analyzing databases mongodb://127.0.0.1:27017/
+[0;35;1mweb: [0mI20130901-05:05:16.332(-4)? considering database [object Object]
+[0;35;1mweb: [0mI20130901-05:05:16.332(-4)? considering database [object Object]
+[0;35;1mweb: [0mI20130901-05:05:16.333(-4)? loading schema mongodb://127.0.0.1:27017/, local, startup_log
+[0;35;1mweb: [0mI20130901-05:05:16.341(-4)? found schema for mongodb://127.0.0.1:27017/, local, startup_log
+[0;35;1mweb: [0mI20130901-05:05:16.344(-4)? considering database [object Object]
+[0;35;1mweb: [0mI20130901-05:05:16.344(-4)? loading schema mongodb://127.0.0.1:27017/, examples, system
+[0;35;1mweb: [0mI20130901-05:05:16.347(-4)? found schema for mongodb://127.0.0.1:27017/, examples, system
+[0;35;1mweb: [0mI20130901-05:05:16.349(-4)? loading schema mongodb://127.0.0.1:27017/, examples, zips
+[0;35;1mweb: [0mI20130901-05:05:16.354(-4)? found schema for mongodb://127.0.0.1:27017/, examples, zips
+[0;35;1mweb: [0mI20130901-05:05:16.354(-4)? loading schema mongodb://127.0.0.1:27017/, examples, companies
+[0;35;1mweb: [0mI20130901-05:05:16.359(-4)? investors already populated
+[0;35;1mweb: [0mI20130901-05:05:16.359(-4)? investments already populated
+[0;35;1mweb: [0mI20130901-05:05:16.359(-4)? companies already populated
+[0;35;1mweb: [0mI20130901-05:05:16.359(-4)? People exist
+[0;35;1mweb: [0mI20130901-05:05:16.360(-4)? acquisitions already populated
+[0;35;1mweb: [0mI20130901-05:05:16.362(-4)? found schema for mongodb://127.0.0.1:27017/, examples, companies
+[0;35;1mweb: [0mI20130901-05:05:16.363(-4)? loading schema mongodb://127.0.0.1:27017/, examples, rounds
+[0;35;1mweb: [0mI20130901-05:05:16.363(-4)? rounds already populated
+[0;35;1mweb: [0mI20130901-05:05:16.365(-4)? found schema for mongodb://127.0.0.1:27017/, examples, rounds
+[0;35;1mweb: [0mI20130901-05:05:16.369(-4)? loading schema mongodb://127.0.0.1:27017/, examples, investments
+[0;35;1mweb: [0mI20130901-05:05:16.371(-4)? found schema for mongodb://127.0.0.1:27017/, examples, investments
+[0;35;1mweb: [0mI20130901-05:05:16.372(-4)? loading schema mongodb://127.0.0.1:27017/, examples, investors
+[0;35;1mweb: [0mI20130901-05:05:16.375(-4)? found schema for mongodb://127.0.0.1:27017/, examples, investors
+[0;35;1mweb: [0mI20130901-05:05:16.376(-4)? loading schema mongodb://127.0.0.1:27017/, examples, acquisitions
+[0;35;1mweb: [0mI20130901-05:05:16.378(-4)? found schema for mongodb://127.0.0.1:27017/, examples, acquisitions
+[0;35;1mweb: [0mI20130901-05:05:16.379(-4)? loading schema mongodb://127.0.0.1:27017/, examples, people
+[0;35;1mweb: [0mI20130901-05:05:16.381(-4)? found schema for mongodb://127.0.0.1:27017/, examples, people
+[0;35;1mweb: [0mI20130901-05:05:16.383(-4)? loading forms package
+[0;35;1mweb: [0mI20130901-05:05:16.383(-4)? registering forms with version 1.0
+[0;35;1mweb: [0mI20130901-05:05:16.384(-4)? loading create package
+[0;35;1mweb: [0mI20130901-05:05:16.384(-4)? registering create with version 1.0
+[0;35;1mweb: [0mI20130901-05:05:16.385(-4)? loading analytics package
+[0;35;1mweb: [0mI20130901-05:05:16.385(-4)? registering analytics with version 1.0
+[0;35;1mweb: [0mI20130901-05:05:16.386(-4)? loading sites package
+[0;35;1mweb: [0mI20130901-05:05:16.386(-4)? registering sites with version 1.0
+[0;35;1mweb: [0mI20130901-05:05:16.387(-4)? loading services package
+[0;35;1mweb: [0mI20130901-05:05:16.387(-4)? registering services with version 1.0
+[0;35;1mweb: [0mI20130901-05:05:16.388(-4)? loading sheets package
+[0;35;1mweb: [0mI20130901-05:05:16.388(-4)? registering sheets with version 1.0
+[0;35;1mweb: [0mI20130901-05:05:16.389(-4)? loading hosted package
+[0;35;1mweb: [0mI20130901-05:05:16.389(-4)? registering hosted with version 1.0
+[0;35;1mweb: [0m=> Meteor server restarted
+[0;35;1mweb: [0mI20130901-05:05:30.194(-4)? registering profile with version 1.0
+[0;35;1mweb: [0mI20130901-05:05:30.370(-4)? registering data with version 1.0
+[0;35;1mweb: [0mI20130901-05:05:30.387(-4)? loading and analyzing databases mongodb://127.0.0.1:27017/
+[0;35;1mweb: [0mI20130901-05:05:30.392(-4)? considering database [object Object]
+[0;35;1mweb: [0mI20130901-05:05:30.393(-4)? considering database [object Object]
+[0;35;1mweb: [0mI20130901-05:05:30.393(-4)? loading schema mongodb://127.0.0.1:27017/, local, startup_log
+[0;35;1mweb: [0mI20130901-05:05:30.399(-4)? found schema for mongodb://127.0.0.1:27017/, local, startup_log
+[0;35;1mweb: [0mI20130901-05:05:30.402(-4)? considering database [object Object]
+[0;35;1mweb: [0mI20130901-05:05:30.403(-4)? loading schema mongodb://127.0.0.1:27017/, examples, system
+[0;35;1mweb: [0mI20130901-05:05:30.406(-4)? found schema for mongodb://127.0.0.1:27017/, examples, system
+[0;35;1mweb: [0mI20130901-05:05:30.407(-4)? loading schema mongodb://127.0.0.1:27017/, examples, zips
+[0;35;1mweb: [0mI20130901-05:05:30.412(-4)? found schema for mongodb://127.0.0.1:27017/, examples, zips
+[0;35;1mweb: [0mI20130901-05:05:30.412(-4)? loading schema mongodb://127.0.0.1:27017/, examples, companies
+[0;35;1mweb: [0mI20130901-05:05:30.416(-4)? investors already populated
+[0;35;1mweb: [0mI20130901-05:05:30.417(-4)? investments already populated
+[0;35;1mweb: [0mI20130901-05:05:30.417(-4)? companies already populated
+[0;35;1mweb: [0mI20130901-05:05:30.417(-4)? acquisitions already populated
+[0;35;1mweb: [0mI20130901-05:05:30.417(-4)? People exist
+[0;35;1mweb: [0mI20130901-05:05:30.419(-4)? found schema for mongodb://127.0.0.1:27017/, examples, companies
+[0;35;1mweb: [0mI20130901-05:05:30.420(-4)? loading schema mongodb://127.0.0.1:27017/, examples, rounds
+[0;35;1mweb: [0mI20130901-05:05:30.420(-4)? rounds already populated
+[0;35;1mweb: [0mI20130901-05:05:30.421(-4)? found schema for mongodb://127.0.0.1:27017/, examples, rounds
+[0;35;1mweb: [0mI20130901-05:05:30.423(-4)? loading schema mongodb://127.0.0.1:27017/, examples, investments
+[0;35;1mweb: [0mI20130901-05:05:30.425(-4)? found schema for mongodb://127.0.0.1:27017/, examples, investments
+[0;35;1mweb: [0mI20130901-05:05:30.426(-4)? loading schema mongodb://127.0.0.1:27017/, examples, investors
+[0;35;1mweb: [0mI20130901-05:05:30.428(-4)? found schema for mongodb://127.0.0.1:27017/, examples, investors
+[0;35;1mweb: [0mI20130901-05:05:30.429(-4)? loading schema mongodb://127.0.0.1:27017/, examples, acquisitions
+[0;35;1mweb: [0mI20130901-05:05:30.431(-4)? found schema for mongodb://127.0.0.1:27017/, examples, acquisitions
+[0;35;1mweb: [0mI20130901-05:05:30.432(-4)? loading schema mongodb://127.0.0.1:27017/, examples, people
+[0;35;1mweb: [0mI20130901-05:05:30.434(-4)? found schema for mongodb://127.0.0.1:27017/, examples, people
+[0;35;1mweb: [0mI20130901-05:05:30.435(-4)? loading forms package
+[0;35;1mweb: [0mI20130901-05:05:30.435(-4)? registering forms with version 1.0

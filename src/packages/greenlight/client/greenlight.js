@@ -182,8 +182,7 @@ greenlight.prototype.init = function()
     Greenlight.ready(this.create_index);
 
     Deps.autorun(function(){
-	if(Greenlight.reactive_ready())
-	{
+	if(Greenlight.reactive_ready()){
 	    Greenlight.readyFns.every(function(handle){
 		handle();
 		return true;

@@ -21,11 +21,22 @@ greenlight.prototype.Search.prototype = new Greenlight.Entity();
 greenlight.prototype.Search.prototype.constructor = greenlight.prototype.Search;
 Greenlight.Datasets.entity = greenlight.prototype.Search;
 
+greenlight.prototype.Search.init = function()
+{
+    Greenlight.Search.ready();
+};
+
+greenlight.prototype.Search.ready = function()
+{
+    Session.set("Greenlight:index-ready", new Date().getTime());
+};
+
 greenlight.prototype.Search.index = function(category)
 {
     var react = Session.get("Greenlight:index-updated");
-
-    if(react)
+    var ready = Session.get("Greenlight:index-ready");
+    
+    if(react || ready)
     {
 	return Greenlight.Search.Index.find({category:category}).fetch();
     }
@@ -40,3 +51,5 @@ greenlight.prototype.Search.Index.add = function(tokens, value, url, category, m
 	Session.set("Greenlight:index-updated", new Date().getTime());
     }
 };
+
+Greenlight.ready(Greenlight.Search.init);
