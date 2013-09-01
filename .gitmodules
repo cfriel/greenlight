@@ -73,3 +73,6 @@
 [submodule "src/third-party/pig"]
 	path = src/third-party/pig
 	url = https://github.com/cfriel/pig.git
+[submodule "src/third-party/mongo"]
+	path = src/third-party/mongo
+	url = https://github.com/cfriel/mongo.git
