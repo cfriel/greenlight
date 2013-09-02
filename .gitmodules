@@ -76,3 +76,6 @@
 [submodule "src/third-party/mongo"]
 	path = src/third-party/mongo
 	url = https://github.com/cfriel/mongo.git
+[submodule "src/third-party/Prozess"]
+	path = src/third-party/Prozess
+	url = https://github.com/cfriel/Prozess.git

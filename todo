@@ -20,3 +20,239 @@ page presence
 messaging
 file storage
 email notifications
+
+curl -X PUT http://localhost:9200/data3 -d ' 
+{
+  "settings":{
+    "analysis":{
+      "analyzer":{
+        "autocomplete":{
+          "type":"custom",
+          "tokenizer":"standard",
+          "filter":[ "standard", "lowercase", "stop", "kstem", "edgeNGram" ] 
+        }
+      },
+      "filter":{
+        "ngram":{
+          "type":"ngram",
+          "min_gram":2,
+          "max_gram":15
+        }
+      }
+    }
+  }
+}'
+
+curl -XPUT 'http://localhost:9200/data3/tweet/1' -d '
+{ 
+    "user": "kimchy", 
+    "postDate": "2009-11-15T13:12:00", 
+    "message": "Trying out Elastic Search, so far so good?" 
+}'
+
+curl -XPUT 'http://localhost:9200/data3/tweet/2' -d '
+{ 
+    "user": "cfriel", 
+    "postDate": "2009-11-15T13:12:00", 
+    "message": "Trying out Elastic Search, so far so bad?" 
+}'
+
+curl -XGET 'http://localhost:9200/data/tweet/_search?q=user:kimchy&pretty=true'
+
+curl -XGET 'http://127.0.0.1:9200/data3/_analyze?pretty=1&text=My_file_2012.01.13.doc&tokenizer=lowercase' 
+
+curl -XPUT 'localhost:9200/test' -d '
+    {
+        "settings" : {
+            "analysis" : {
+                "analyzer" : {
+                    "my_edge_ngram_analyzer" : {
+                        "tokenizer" : "my_edge_ngram_tokenizer"
+                    }
+                },
+                "tokenizer" : {
+                    "my_edge_ngram_tokenizer" : {
+                        "type" : "edgeNGram",
+                        "min_gram" : "2",
+                        "max_gram" : "5",
+                        "token_chars": [ "letter", "digit" ]
+                    }
+                }
+            }
+        }
+    }'
+
+curl 'localhost:9200/test/_analyze?pretty=1&analyzer=my_edge_ngram_analyzer' -d 'FC Schalke 04'	
+
+curl -XPUT 'http://localhost:9200/test/tweet/2' -d '
+{ 
+    "user": "cfriel", 
+    "postDate": "2009-11-15T13:12:00", 
+    "message": "Trying out Elastic Search, so far so bad?" 
+}'
+
+curl -XGET 'http://127.0.0.1:9200/test/_analyze?pretty=1&text=My_first_file_2012.01.13.doc&analyzer=filename_index' 
+curl -X POST "http://localhost:9200/test/file" -d '{ "filename" : "My_first_file_created_at_2012.01.13.doc" }'
+curl -X POST "http://localhost:9200/test/file" -d '{ "filename" : "My_second_file_created_at_2012.01.13.pdf" }'
+curl -X POST "http://localhost:9200/test/file" -d '{ "filename" : "Another file.txt" }'
+curl -X POST "http://localhost:9200/test/file" -d '{ "filename" : "And_again_another_file.docx" }'
+curl -X POST "http://localhost:9200/test/file" -d '{ "filename" : "foo.bar.txt" }'
+curl -X POST "http://localhost:9200/test/_refresh"
+
+curl -XGET 'http://127.0.0.1:9200/test/file/_search?pretty=1'  -d '
+{
+   "query" : {
+    "query_string" : {
+         "fields" : [
+            "filename"
+         ],
+         "query" : "alexander"
+      }
+   }
+}
+'
+
+
+# [Tue Jun 21 12:05:39 2011] Protocol: http, Server: 192.168.5.103:9200
+curl -XPUT 'http://127.0.0.1:9200/gist/?pretty=1'  -d '
+{
+   "mappings" : {
+      "contact" : {
+         "properties" : {
+            "twitter" : {
+               "type" : "object",
+               "properties" : {
+                  "profile" : {
+                     "fields" : {
+                        "profile" : {
+                           "type" : "string",
+                           "analyzer" : "left"
+                        }
+                     },
+                     "type" : "multi_field"
+                  }
+               }
+            }
+         }
+      }
+   },
+   "settings" : {
+      "analysis" : {
+         "analyzer" : {
+            "left" : {
+               "filter" : [
+                  "standard",
+                  "lowercase",
+                  "stop"
+               ],
+               "type" : "custom",
+               "tokenizer" : "left_tokenizer"
+            }
+         },
+         "tokenizer" : {
+            "left_tokenizer" : {
+               "side" : "front",
+               "max_gram" : 20,
+               "type" : "edgeNGram"
+            }
+         }
+      }
+   }
+}
+'
+ 
+# [Tue Jun 21 12:05:39 2011] Response:
+# {
+#    "ok" : true,
+#    "acknowledged" : true
+# }
+ 
+# [Tue Jun 21 12:05:44 2011] Protocol: http, Server: 192.168.5.103:9200
+curl -XPOST 'http://127.0.0.1:9200/gist/contact?pretty=1'  -d '
+{
+   "twitter" : {
+      "profile" : "alexander smith"
+   }
+}
+'
+ 
+# [Tue Jun 21 12:05:44 2011] Response:
+# {
+#    "ok" : true,
+#    "_index" : "gist",
+#    "_id" : "qvpprlH9Rg-znLPfi0JUdA",
+#    "_type" : "contact",
+#    "_version" : 1
+# }
+ 
+# [Tue Jun 21 12:05:47 2011] Protocol: http, Server: 192.168.5.103:9200
+curl -XPOST 'http://127.0.0.1:9200/gist/contact?pretty=1'  -d '
+{
+   "twitter" : {
+      "profile" : "ben alexander"
+   }
+}
+'
+ 
+# [Tue Jun 21 12:05:47 2011] Response:
+# {
+#    "ok" : true,
+#    "_index" : "gist",
+#    "_id" : "R5_r5kYhTwarSV92DY_9Fg",
+#    "_type" : "contact",
+#    "_version" : 1
+# }
+ 
+# [Tue Jun 21 12:05:50 2011] Protocol: http, Server: 192.168.5.103:9200
+curl -XGET 'http://127.0.0.1:9200/gist/contact/_search?pretty=1'  -d '
+{
+   "query" : {
+      "query_string" : {
+         "fields" : [
+            "twitter.profile",
+            "twitter.profile.reverse_profile"
+         ],
+         "query" : "alexander"
+      }
+   }
+}
+'
+ 
+# [Tue Jun 21 12:05:50 2011] Response:
+# {
+#    "hits" : {
+#       "hits" : [
+#          {
+#             "_source" : {
+#                "twitter" : {
+#                   "profile" : "ben alexander"
+#                }
+#             },
+#             "_score" : 0.07490276,
+#             "_index" : "gist",
+#             "_id" : "R5_r5kYhTwarSV92DY_9Fg",
+#             "_type" : "contact"
+#          },
+#          {
+#             "_source" : {
+#                "twitter" : {
+#                   "profile" : "alexander smith"
+#                }
+#             },
+#             "_score" : 0.062772445,
+#             "_index" : "gist",
+#             "_id" : "qvpprlH9Rg-znLPfi0JUdA",
+#             "_type" : "contact"
+#          }
+#       ],
+#       "max_score" : 0.07490276,
+#       "total" : 2
+#    },
+#    "timed_out" : false,
+#    "_shards" : {
+#       "failed" : 0,
+#       "successful" : 5,
+#       "total" : 5
+#    },
+#    "took" : 6
+# }

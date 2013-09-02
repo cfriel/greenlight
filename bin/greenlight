@@ -23,6 +23,7 @@ GL_HOME=`cd "$GL_HOME"; pwd`
 
 ELASTICSEARCH_PATH="$GL_HOME/src/third-party/elasticsearch/dist/elasticsearch-1.0.0.Beta1-SNAPSHOT/"
 STORM_PATH="$GL_HOME/src/third-party/storm/"
+KAFKA_PATH="$GL_HOME/src/third-party/kafka/"
 HADOOP_PATH="$GL_HOME/src/third-party/hadoop/"
 SITE_PATH="$GL_HOME/src/site/"
 LOGFILE="$GL_HOME/bin/greenlight.log"
@@ -87,7 +88,21 @@ launch_search()
 
 launch_streams()
 {
-    echo "launching streams"
+
+    # start zookeeper
+    (cd $KAFKA_PATH; bin/zookeeper-server-start.sh config/zookeeper.properties | while read line; do printf "\033[0;33;1mzookeeper: \033[0m"; echo "$line"; done >> $LOGFILE ) & pid="$!"
+
+    pids="$pids $pid"
+
+    echo "\033[33;1mLaunched zookeeper [$pid]\033[0m"
+	
+    # start kafka
+    (cd $KAFKA_PATH; bin/kafka-server-start.sh config/server.properties | while read line; do printf "\033[0;34;1mkafka: \033[0m"; echo "$line"; done >> $LOGFILE ) & pid="$!"
+
+    pids="$pids $pid"
+    
+    echo "\033[34;1mLaunched kafka [$pid]\033[0m"
+
 }
 
 launch_batch()
@@ -173,7 +188,7 @@ do
 	    launch_search
 	;;
 	streams)
-	    launch streams
+	    launch_streams
 	;;
 	batch)
 	    launch_batch
@@ -184,7 +199,8 @@ done
 cleanup() 
 {
     # echo "killing $pids"
-    [ -n "$pids" ] && kill $pids
+   # [ -n "$pids" ] && kill $pids
+    [ -n "$pids" ] && (for pid in $pids; do pkill -TERM -P $pid; done)
 }
 
 trap "cleanup" INT QUIT TERM EXIT

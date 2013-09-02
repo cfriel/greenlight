@@ -38,6 +38,35 @@ var bind_search = function()
 	    template: '<p><strong>{{value}}</strong> – {{url}}</p>',
 	    header: '<h3 class="category-name">Packages</h3>',
 	    engine: Hogan
+	},
+	{
+	    name: 'search-elastic'+new Date().getTime(),
+	    //local: packages,
+	    remote: {
+                url: '/autocomplete/%QUERY',
+                beforeSend: function(jqXhr, settings) {
+                    jqXhr.setRequestHeader('token', "123456");
+		},
+		filter: function(resp, status, jqXhr) {
+                    var newResp = [];
+		    var hits = resp.hits.hits;
+
+		    if(hits)
+		    {
+			for (var i=0; i < hits.length; i++) 
+			{
+			    hits[i].text = hits[i]._source.twitter.profile;
+			    newResp.push(hits[i]);
+			}
+		    }
+                    return newResp;
+		}
+            },
+            limit: 5,
+	    //prefetch: '../data/films/post_1960.json',
+	    template: '<p><strong>{{_source.twitter.profile}}</strong> – {{url}}</p>',
+	    header: '<h3 class="category-name">Other</h3>',
+	    engine: Hogan
 	}
 
 
