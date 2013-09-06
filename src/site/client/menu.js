@@ -49,13 +49,13 @@ var bind_search = function()
 		},
 		filter: function(resp, status, jqXhr) {
                     var newResp = [];
-		    var hits = resp.hits.hits;
+		    var hits = resp;
 
 		    if(hits)
 		    {
 			for (var i=0; i < hits.length; i++) 
 			{
-			    hits[i].text = hits[i]._source.twitter.profile;
+			    hits[i].text = hits[i];
 			    newResp.push(hits[i]);
 			}
 		    }
@@ -64,7 +64,7 @@ var bind_search = function()
             },
             limit: 5,
 	    //prefetch: '../data/films/post_1960.json',
-	    template: '<p><strong>{{_source.twitter.profile}}</strong> – {{url}}</p>',
+	    template: '<p><strong>{{value}}</strong> – {{url}}</p>',
 	    header: '<h3 class="category-name">Other</h3>',
 	    engine: Hogan
 	}
