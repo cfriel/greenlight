@@ -13,6 +13,7 @@
 # Maven
 log/
 target/
+var/
 
 # Logs
 *.log
