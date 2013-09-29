@@ -209,9 +209,8 @@ curl -XGET 'http://127.0.0.1:9200/gist/contact/_search?pretty=1'  -d '
    "query" : {
       "query_string" : {
          "fields" : [
-            "twitter.profile",
-            "twitter.profile.reverse_profile"
-         ],
+            "twitter.profile"
+          ],
          "query" : "alexander"
       }
    }
@@ -256,3 +255,22 @@ curl -XGET 'http://127.0.0.1:9200/gist/contact/_search?pretty=1'  -d '
 #    },
 #    "took" : 6
 # }
+
+
+1. specify endpoints
+a. mysql, psql, mongodb
+b. twitter
+c. upload file
+
+2. define bolts / transforms
+
+3. create dataset
+
+3I. create stream / topology
+a. choose endpoint
+b. add transforms
+c. configure topology
+
+3III. specify virtual dataset
+a. choose collection
+b. create query

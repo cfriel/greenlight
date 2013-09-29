@@ -79,3 +79,6 @@
 [submodule "src/third-party/Prozess"]
 	path = src/third-party/Prozess
 	url = https://github.com/cfriel/Prozess.git
+[submodule "src/third-party/meteor-smart-collections"]
+	path = src/third-party/meteor-smart-collections
+	url = https://github.com/cfriel/meteor-smart-collections.git
