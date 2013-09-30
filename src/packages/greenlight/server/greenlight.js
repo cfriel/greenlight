@@ -33,7 +33,8 @@ greenlight.prototype.init = function()
     Greenlight.Helpers.load_and_analyze_databases(
 	'mongodb://127.0.0.1:27017/'
     );
-    
+ 
+    Greenlight.Helpers.create_default_adapters();
 };
 
 greenlight.prototype.get_templates = function()

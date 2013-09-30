@@ -19,6 +19,16 @@ greenlight.prototype.Endpoint.prototype = new Greenlight.Entity();
 greenlight.prototype.Endpoint.prototype.constructor = greenlight.prototype.Endpoint;
 Greenlight.Endpoints.entity = greenlight.prototype.Endpoint;
 
+greenlight.prototype.Endpoint.prototype.save = function()
+{
+    var self = this;
+
+    Greenlight.Endpoints.insert({ owner: Meteor.userId(), 
+				  name: self.name,
+				  adapter: self.adapter,
+				  configuration: self.configuration});
+};
+
 greenlight.prototype.Endpoint.prototype.create = function()
 {
 };

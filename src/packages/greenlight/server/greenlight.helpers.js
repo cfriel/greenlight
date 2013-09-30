@@ -70,6 +70,24 @@ helpers.prototype.load_schema =
     
 };
 
+helpers.prototype.create_default_adapters = function()
+{
+    Greenlight.log("creating default adapters");
+
+    var adapters = ["jdbc", "jms", "file", "mongodb", "couchdb", "kafka"];
+
+    for(var i = 0; i < adapters.length; i++)
+    {
+
+	var _name = adapters[i];
+	var _description = adapters[i];
+	
+	var adapter = new Greenlight.Adapter(_name, _description);
+
+	adapter.save();
+    }
+};
+
 helpers.prototype.load_and_analyze_databases = function(server)
 {
     Greenlight.log("loading and analyzing databases %s", [server]);
