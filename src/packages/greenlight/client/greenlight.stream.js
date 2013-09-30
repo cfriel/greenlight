@@ -19,6 +19,15 @@ greenlight.prototype.Stream.prototype = new Greenlight.Entity();
 greenlight.prototype.Stream.prototype.constructor = greenlight.prototype.Stream;
 Greenlight.Streams.entity = greenlight.prototype.Stream;
 
+greenlight.prototype.Stream.prototype.save = function()
+{
+    var self = this;
+
+    Greenlight.Streams.insert({ owner: Meteor.userId(), 
+				   name: self.name,
+				   configuration: self.configuration});
+};
+
 greenlight.prototype.Stream.prototype.create = function()
 {
 };
