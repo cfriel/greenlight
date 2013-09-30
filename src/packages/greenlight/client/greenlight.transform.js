@@ -24,8 +24,8 @@ greenlight.prototype.Transform.prototype.save = function()
     var self = this;
 
     Greenlight.Transforms.insert({ owner: Meteor.userId(), 
-				  name: self.name,
-				  configuration: self.configuration});
+				   name: self.name,
+				   configuration: self.configuration});
 };
 
 greenlight.prototype.Transform.prototype.create = function()
