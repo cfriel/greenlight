@@ -25,7 +25,9 @@ greenlight.prototype.Stream.prototype.save = function()
 
     Greenlight.Streams.insert({ owner: Meteor.userId(), 
 				   name: self.name,
-				   configuration: self.configuration});
+				endpoint: self.endpoint,
+				transform: self.transform,
+				dataset : self.dataset});
 };
 
 greenlight.prototype.Stream.prototype.create = function()
