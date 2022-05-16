@@ -5,6 +5,7 @@ A data-centric web platform built on top of mongodb.
 
 # Source layout
 
+```
 -> src - Source directory
 --> greenlight - Meteor source for the website
 ---> client - client side
@@ -12,6 +13,7 @@ A data-centric web platform built on top of mongodb.
 ---> public - public dependencies
 --> third-party - third party libraries / dependencies
 -> docs - documentation
+```
 
 # Getting Started
 
